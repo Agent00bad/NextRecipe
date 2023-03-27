@@ -1,0 +1,27 @@
+body{
+    background-color: var(--pink-dark);
+}
+
+.img{
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+}
+
+.box1{
+    background-color: var(--pink-bright);
+    margin: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.box1 p{
+    background-color: var(--white);
+    margin: 8px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.box2{
+    
+}

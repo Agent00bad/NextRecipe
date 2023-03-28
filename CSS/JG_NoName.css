@@ -1,32 +1,68 @@
 body{
     background-color: var(--pink-dark);
-    position: absolute;
-    left: 50%;
-    right: 50%;
 }
 
-.img{
-    width: fit-content;
-    height: fit-content;
-    margin: 20px;
+div{
+    margin: auto;
+}
+
+h3{
+    text-align: center;
+    vertical-align: center;
+}
+
+
+.headImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .box1{
     background-color: var(--pink-bright);
-    margin: 20px;
-    /* width: fit-content;
-    height: fit-content; */
-    width: 380px;
+    width: fit-content;
+    max-width: 800;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 4%;
 }
 
-.box1 p{
+.innerBox{
     background-color: var(--white);
     margin: 8px;
-    /* width: fit-content;
-    height: fit-content; */
+    width: fit-content;
+    height: fit-content; 
     width: 390px;
+    padding: 5px;
+    border-radius: 4%;
 }
 
+.innerBox p{
+    margin-left: 10px;
+}
 .box2{
-    
+    background-color: var(--pink-bright);
+    width: fit-content;
+    max-width: 800;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 4%;
+}
+
+.box2 img{
+    width: 90px;
+    height: 90px;
+    border-radius: 10%;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container img{
+    margin: 10px;
 }

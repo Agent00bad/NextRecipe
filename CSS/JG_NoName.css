@@ -1,5 +1,8 @@
 body{
     background-color: var(--pink-dark);
+    position: absolute;
+    left: 50%;
+    right: 50%;
 }
 
 .img{
@@ -11,15 +14,17 @@ body{
 .box1{
     background-color: var(--pink-bright);
     margin: 20px;
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content;
+    height: fit-content; */
+    width: 380px;
 }
 
 .box1 p{
     background-color: var(--white);
     margin: 8px;
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content;
+    height: fit-content; */
+    width: 390px;
 }
 
 .box2{

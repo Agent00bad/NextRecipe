@@ -1,16 +1,26 @@
 body{
     background-color: var(--pink-dark);
+    width: 100vw; min-width: 390px; height: 100vh;   
+    padding-bottom: 30px;
+    overflow-x: hidden;
     
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 div{
-    style="font-size 100vw;"
     margin: auto;
 }
 
 h3{
     text-align: center;
     vertical-align: center;
+}
+
+#Responsive{
+
 }
 
 .headImg{
@@ -22,7 +32,6 @@ h3{
 
 .boxParent{
     width: fit-content;
-    max-width: 800;
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -32,7 +41,15 @@ h3{
 .box1{
     background-color: var(--pink-bright);
     width: fit-content;
-    max-width: 800;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 4%;
+}
+
+.box2{
+    background-color: var(--pink-bright);
+    width: fit-content;
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -44,7 +61,7 @@ h3{
     margin: 8px;
     width: fit-content;
     height: fit-content; 
-    width: 390px;
+    /* width: 390px; */
     padding: 5px;
     border-radius: 4%;
 }
@@ -52,7 +69,7 @@ h3{
 .innerBoxRecomendedDrink{
     background-color: var(--white);
     margin: 8px;
-    width: fit-content;
+    /* width: fit-content; */
     height: fit-content; 
     max-width: 390px;
     padding: 5px;
@@ -63,23 +80,13 @@ h3{
     margin-left: 10px;
 }
 
-.box2{
-    background-color: var(--pink-bright);
-    width: fit-content;
-    max-width: 800;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-radius: 4%;
-}
-
 .box2RecomendedDrink{
-    max-width: 80%;
+    /* max-width: 80%; */
 }
 
 .box2 img{
-    width: 90px;
-    height: 90px;
+    max-width: 75%;
+    max-height: 75%;
     border-radius: 10%;
 }
 

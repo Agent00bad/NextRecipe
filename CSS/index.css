@@ -1,0 +1,11 @@
+body{
+
+}
+/*image manipulation in recepie container/section*/
+.recipe-image{
+    max-height: 2rem;
+}
+.recipe-image img {
+    max-height: 20rem;
+    width: 18%;
+}

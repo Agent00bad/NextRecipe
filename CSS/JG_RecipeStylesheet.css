@@ -1,8 +1,10 @@
 body{
     background-color: var(--pink-dark);
+    
 }
 
 div{
+    style="font-size 100vw;"
     margin: auto;
 }
 

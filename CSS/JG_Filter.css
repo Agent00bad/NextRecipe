@@ -1,0 +1,63 @@
+body{
+    background-color: var(--pink-bright);
+}
+
+button{
+
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    padding: 12px 17px;
+    border-radius: 50px;
+    background-color: #867c7c;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease 0s;
+    margin-bottom: 20px;
+}
+
+hr{
+    margin-bottom: 15px;
+}
+
+button     :hover {
+    background-color: #2222221a;
+}
+
+h2{
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.apply-clear button{
+    margin: auto;
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+.arrow{
+    max-width: 30px;
+    max-height: 20px;
+    margin-right: 30px;
+}
+
+#apply-button{
+    background-color: rgb(56, 179, 56);
+    padding-bottom: 40px;
+}
+#clear-button{
+    background-color: rgb(255, 70, 70);
+    padding-bottom: 40px;
+}
+

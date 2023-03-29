@@ -18,6 +18,15 @@ h3{
 
 }
 
+.boxParent{
+    width: fit-content;
+    max-width: 800;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 4%;
+}
+
 .box1{
     background-color: var(--pink-bright);
     width: fit-content;
@@ -38,9 +47,20 @@ h3{
     border-radius: 4%;
 }
 
+.innerBoxRecomendedDrink{
+    background-color: var(--white);
+    margin: 8px;
+    width: fit-content;
+    height: fit-content; 
+    max-width: 390px;
+    padding: 5px;
+    border-radius: 4%;
+}
+
 .innerBox p{
     margin-left: 10px;
 }
+
 .box2{
     background-color: var(--pink-bright);
     width: fit-content;
@@ -49,6 +69,10 @@ h3{
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 4%;
+}
+
+.box2RecomendedDrink{
+    max-width: 80%;
 }
 
 .box2 img{
@@ -64,4 +88,10 @@ h3{
 
 .flex-container img{
     margin: 10px;
+}
+
+.arrow{
+    position:static;
+    align-self: center;
+    width: 10%;
 }

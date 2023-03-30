@@ -1,0 +1,80 @@
+
+/*********************************************
+    * ColorPattern:
+    * Darker - #FE91C6
+    * Lighter - #FEAFC7
+    * Light - #FECEC7
+    * White - #FFFFFF
+**********************************************/
+
+body{
+    display: flex;
+    justify-content: center;
+
+    background-color: #fecec7
+}
+
+#filtersTag{
+    border: 2px solid #FE91C6;
+    border-radius: 8%;
+    background-color: #FECEC7;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    width: fit-content;
+    font-size: large;
+}
+
+.card{
+    display: flex;
+    justify-content: left;
+
+    background-color: #FFFFFF;
+
+    border: 2px solid #FE91C6;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px grey;
+
+    padding: 10px 30px;
+    margin-top: 10px;
+    max-width: 520px;
+}
+
+/*image manipulation in recepie container/section*/
+.recipe-image{
+    max-height: 2rem;
+}
+.recipe-image img {
+    max-height: 20rem;
+    width: 18%;
+}
+/* Filter Container */
+.filterCard{
+    display: flex;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+
+    border: 2px solid #FE91C6;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px grey;
+
+    padding: 10px;
+    margin-top: 10px;
+    max-width: 520px;
+}
+
+.activeFiltersContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.activeFilters{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.activeFilters > li{
+    margin-right: 10px;
+    margin-left: 10px;
+}

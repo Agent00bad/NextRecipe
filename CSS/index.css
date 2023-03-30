@@ -1,12 +1,17 @@
 /*
-#FE91C6; - pills
-#FEAFC7; - boarder
-#FECEC7; - header
-#FFFF; - background
+#FE91C6; - Light
+#FEAFC7; - Lighter
+#FECEC7; - Dark
+#FFFF; - White
 */
 
 body{
     font-family:Arial, Helvetica, sans-serif
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 /*Manages logo*/
 .logo{
@@ -63,4 +68,58 @@ body{
     border-radius: 15px;
     box-shadow: 2px 3px 5px #c14983;
     color: #FE91C6;
+}
+
+/*Recipe And Drink Card*/
+
+.recipe-drink-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-drink-flex section{
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+
+    margin-top: 20px;
+}
+.recipe-image{
+    display: flex;
+    justify-content: end;
+    margin: 0px 10px 10px 0px;
+    width: 40%;
+    height: 50%;
+}
+
+.recipe-image img{
+    width: 70%;
+
+}
+.inner-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+.info{
+    background-color:#c14983;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.description{
+    background-color: #FFFF;
+
+}
+.specifics{
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    height: 1%;
 }

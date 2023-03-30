@@ -1,80 +1,66 @@
-
-/*********************************************
-    * ColorPattern:
-    * Darker - #FE91C6
-    * Lighter - #FEAFC7
-    * Light - #FECEC7
-    * White - #FFFFFF
-**********************************************/
+/*
+#FE91C6; - pills
+#FEAFC7; - boarder
+#FECEC7; - header
+#FFFF; - background
+*/
 
 body{
+    font-family:Arial, Helvetica, sans-serif
+}
+/*Manages logo*/
+.logo{
     display: flex;
     justify-content: center;
-
-    background-color: #fecec7
+}
+.logo img{
+    width: 80%;
+    height: auto;
 }
 
-#filtersTag{
-    border: 2px solid #FE91C6;
-    border-radius: 8%;
-    background-color: #FECEC7;
-    color: black;
-    text-decoration: none;
-    padding: 5px;
-    width: fit-content;
-    font-size: large;
-}
-
+/*Base card*/
 .card{
     display: flex;
-    justify-content: left;
-
-    background-color: #FFFFFF;
-
-    border: 2px solid #FE91C6;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0px grey;
-
-    padding: 10px 30px;
-    margin-top: 10px;
-    max-width: 520px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #FEAFC7;
+    width: 82%;
+    border-radius: 15px;
+    box-shadow : 0px 3px 5px gray;
 }
 
-/*image manipulation in recepie container/section*/
-.recipe-image{
-    max-height: 2rem;
-}
-.recipe-image img {
-    max-height: 20rem;
-    width: 18%;
-}
-/* Filter Container */
-.filterCard{
+/*Filters*/
+.filter-flex{
     display: flex;
     justify-content: center;
-
-    background-color: #FFFFFF;
-
-    border: 2px solid #FE91C6;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0px grey;
-
-    padding: 10px;
-    margin-top: 10px;
-    max-width: 520px;
 }
-
-.activeFiltersContainer{
+.filter-list{
     display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-.activeFilters{
-    display: flex;
-    flex-flow: row wrap;
     justify-content: center;
 }
-.activeFilters > li{
-    margin-right: 10px;
-    margin-left: 10px;
+.filter-list ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #FFFF;
+    margin: 10px;
+    border-radius: 10px;
+}
+.filter-list li{
+    margin: 0rem 0.8rem;
+    font-size: 1rem;
+}
+.filter-tag{
+    background-color: #FFFF;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 40%;
+    padding: 5px 0px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 3px 5px #c14983;
+    color: #FE91C6;
 }

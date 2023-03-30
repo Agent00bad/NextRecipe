@@ -1,34 +1,11 @@
 body{
-    background-color: var(--pink-bright);
+    background-color: var(--white);
     width: 100vw;
     height: 100vh;
 }
 
-button{
-
-    display: inline-block;
-    outline: 0;
-    border: none;
-    cursor: pointer;
-    height: 40px;
-    padding: 12px 17px;
-    border-radius: 50px;
-    background-color: #867c7c;
-    color: #222;
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease 0s;
-    margin-bottom: 20px;
-}
-
 hr{
     margin-bottom: 15px;
-}
-
-button     :hover {
-    background-color: #2222221a;
 }
 
 h2{
@@ -58,6 +35,7 @@ h2{
     background-color: rgb(56, 179, 56);
     padding-bottom: 40px;
 }
+
 #clear-button{
     background-color: rgb(255, 70, 70);
     padding-bottom: 40px;

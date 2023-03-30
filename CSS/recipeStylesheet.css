@@ -1,5 +1,5 @@
 body{
-    background-color: var(--pink-dark);
+    background-color: var(--white);
     width: 100vw; min-width: 390px; height: 100vh;   
     padding-bottom: 30px;
     overflow-x: hidden;
@@ -39,16 +39,18 @@ h3{
 }
 
 .box1{
-    background-color: var(--pink-bright);
+    background-color: var(--pink-regular);
     width: fit-content;
+    min-width: 350px;
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 4%;
 }
 
+
 .box2{
-    background-color: var(--pink-bright);
+    background-color: var(--pink-regular);
     width: fit-content;
     padding: 10px;
     margin-bottom: 20px;
@@ -61,6 +63,7 @@ h3{
     margin: 8px;
     width: fit-content;
     height: fit-content; 
+    min-width: 320;
     /* width: 390px; */
     padding: 5px;
     border-radius: 4%;

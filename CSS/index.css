@@ -13,6 +13,13 @@ main{
     justify-content: center;
     flex-direction: column;
 }
+.recipe-container a{
+    text-decoration: none;
+    color: #000;
+}
+.recipe-container.card li{
+    list-style-type: none;
+}
 /*Manages logo*/
 .logo{
     display: flex;
@@ -71,6 +78,17 @@ main{
 }
 
 /*Recipe And Drink Card*/
+#recipe-list{
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: start;   
+}
+
+#recipe-list > li{
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+}
 
 .recipe-drink-flex{
     display: flex;
@@ -89,13 +107,14 @@ main{
 .recipe-image{
     display: flex;
     justify-content: end;
-    margin: 0px 10px 10px 0px;
+    margin: 0px 10px 10px 5px;
     width: 40%;
     height: 50%;
+    border: 2px solid #FFFF ;
 }
 
 .recipe-image img{
-    width: 70%;
+    width: 100%;
 
 }
 .inner-container{
@@ -105,21 +124,24 @@ main{
 
 }
 .info{
-    background-color:#c14983;
     display: flex;
     flex-direction: column;
-    width: 10rem;
+    width: 15rem;
     margin-left: 20px;
     margin-bottom: 10px;
 }
 
 .description{
     background-color: #FFFF;
-
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 5px;
 }
 .specifics{
     display: flex;
     flex-direction: row;
-    padding: 3px;
-    height: 1%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: #FFFF;
+    padding: 2px;
 }

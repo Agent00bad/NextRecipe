@@ -84,12 +84,18 @@ main{
     justify-content: start;   
 }
 
-#recipe-list > li{
+.select-card header{
     text-decoration: none;
     color: white;
     margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.select-card p{
+    margin-right: 15px;
+}
 .recipe-drink-flex{
     display: flex;
     flex-direction: column;
@@ -123,7 +129,6 @@ main{
 .inner-container{
     display: flex;
     flex-direction: row;
-
 }
 .info{
     display: flex;

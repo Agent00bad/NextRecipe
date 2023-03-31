@@ -61,7 +61,7 @@ main{
     border-radius: 10px;
 }
 .filter-list li{
-    margin: 0rem 0.8rem;
+    margin: 0rem 0.7rem;
     font-size: 1rem;
 }
 .filter-tag{
@@ -111,24 +111,26 @@ main{
     width: 40%;
     height: 50%;
     border: 2px solid #FFFF ;
+    border-radius: 5px;
+    background-color: #FFFF;
 }
 
 .recipe-image img{
     width: 100%;
+    border-radius: 5px;
 
 }
 .inner-container{
     display: flex;
-    justify-content: space-evenly;
     flex-direction: row;
 
 }
 .info{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 15rem;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin: 0px 5px 3px 5px;
 }
 
 .description{
@@ -136,11 +138,12 @@ main{
     margin-bottom: 5px;
     border-radius: 10px;
     padding: 5px;
+    min-width: 90%;
 }
 .specifics{
     display: flex;
     flex-direction: row;
-    margin-bottom: 5px;
+    margin: 0px 5px 3px 5px;
     border-radius: 10px;
     background-color: #FFFF;
     padding: 2px;

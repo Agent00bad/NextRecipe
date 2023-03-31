@@ -1,5 +1,5 @@
 body{
- 
+  
 }
 
 .container{
@@ -7,12 +7,12 @@ body{
     height: 35rem;
     width: 100%;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .loading-logo {
-    height: 50%;
     width: 65%;
+    height: auto;
     animation: pulse 1.39s infinite;
     margin: 0 auto;
     display: table;

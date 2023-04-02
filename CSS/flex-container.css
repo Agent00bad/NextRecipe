@@ -1,0 +1,33 @@
+/* .flex-container { 
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container img {
+    margin: 10px;
+} */
+
+/*CenterText (applied in .one) {
+    text-align: center;
+    max-width: 50%;
+    margin-left: 0%;
+} */
+
+.RecDOne {
+    text-align: center;
+    max-width: 50%;
+    margin-left: 0%;
+}
+
+.RecDTwo {
+    object-fit: contain;
+    height: 400;
+    background-size: contain;
+}
+
+.Three {
+}
+
+.Four {
+    
+}

@@ -14,13 +14,11 @@
   .search-container img{
     max-width: 31px;
     max-height: 31.5px;
-    float: right;
-          display: block;
-          text-align: left;
-          width: 100%;
-          cursor: pointer;
-          border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
       }
 .topnav input[type=text] {
     float: left;

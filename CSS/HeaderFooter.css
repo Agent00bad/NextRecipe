@@ -14,9 +14,19 @@
     
 }
 
-.header > a{
-    margin-left: 18%;
-    margin-right: 18%;
+.menu-link{
+    margin-left: 15px;
+}
+.logo-link{
+}
+.login-link{
+    margin-right: 15px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header > a > img{   
@@ -38,7 +48,6 @@
 
     padding: 10px 30px;
     margin-top: 10px;
-    max-width: 520px;
 }
 .footer > t{
     margin-left: 20%;

@@ -8,14 +8,31 @@
     <!-- <link href="CSS/recipeStylesheet.css" rel="stylesheet" > -->
     <link href="CSS/recipe.css" rel="stylesheet" >
     <link href="CSS/flex-container.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/HeaderFooter.css">
+    <link href="CSS/search_bar.css"  rel="stylesheet" />
 </head>
 <body>
-    <div class="center">
-        <div class="headImg">
+    <header>
+        <div class="header">
+            <a href="#" class="menu-link"><img src="Images/menu-icon.png"></a>
+            <a href="#" class="logo-link"><img src="Images/logo.png"></a>
+            <a href="#" class="login-link"><img src="Images/user-icon.png"></a>
+        </div>   
+        <div class="topnav">
+            <div class="search-container" class="flex-container">
+                <input type="text" placeholder="Search..">
+                <img class="search-button" src="Images/Search_Button.png"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="center">
+            <div class="headImg">
             <img src="Images/image.jpg" alt="Plate with salmon, potatoes, carrots and broccoli">
         </div>
         
-        <div class="boxA">
+        <div class="boxA box-shadow">
             <h3>BBQ salmon with veggies</h3>
             <div class="innerBox">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ipsum, aspernatur assumenda laboriosam nulla blanditiis aut a ipsa facere nihil, optio facilis ab! Expedita adipisci nostrum eveniet obcaecati quis dolor.</p>
@@ -27,7 +44,7 @@
                 <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
             </svg>
             
-            <div class="boxA">
+            <div class="boxA box-shadow">
             <h3>Recomended drink</h3>
                 
                 <div class="boxA flex-container flex-wrap">
@@ -46,7 +63,7 @@
             </svg>
         </div>
 
-        <div class="boxA">
+        <div class="boxA box-shadow">
             <h3>Ingredients:</h3>
             <div class="innerBox">
                 <ul>
@@ -61,7 +78,7 @@
             </div>
         </div>
 
-        <div class="boxA">
+        <div class="boxA box-shadow">
             <h3>How to:</h3>
             <div class="innerBox">
                 <ol>
@@ -73,5 +90,10 @@
             </div>
         </div>
     </div>
+</main>
+<footer class="footer">
+    <t><a href="">Contact</a></t>
+    <t><a href="">About</a></t>
+</footer>
 </body>
 </html>

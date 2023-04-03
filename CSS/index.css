@@ -1,80 +1,155 @@
-
-/*********************************************
-    * ColorPattern:
-    * Darker - #FE91C6
-    * Lighter - #FEAFC7
-    * Light - #FECEC7
-    * White - #FFFFFF
-**********************************************/
+/*
+#FE91C6; - Light
+#FEAFC7; - Lighter
+#FECEC7; - Dark
+#FFFF; - White
+*/
 
 body{
+    font-family:Arial, Helvetica, sans-serif
+}
+main{
     display: flex;
     justify-content: center;
-
-    background-color: #fecec7
+    flex-direction: column;
 }
-
-#filtersTag{
-    border: 2px solid #FE91C6;
-    border-radius: 8%;
-    background-color: #FECEC7;
-    color: black;
+.recipe-container a{
     text-decoration: none;
-    padding: 5px;
-    width: fit-content;
-    font-size: large;
+    color: #000;
+}
+.recipe-container.card li{
+    list-style-type: none;
+}
+/*Manages logo*/
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    width: 80%;
+    height: auto;
 }
 
+/*Base card*/
 .card{
     display: flex;
-    justify-content: left;
-
-    background-color: #FFFFFF;
-
-    border: 2px solid #FE91C6;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0px grey;
-
-    padding: 10px 30px;
-    margin-top: 10px;
-    max-width: 520px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #FEAFC7;
+    width: 82%;
+    border-radius: 15px;
+    box-shadow : 0px 3px 5px gray;
 }
 
-/*image manipulation in recepie container/section*/
-.recipe-image{
-    max-height: 2rem;
-}
-.recipe-image img {
-    max-height: 20rem;
-    width: 18%;
-}
-/* Filter Container */
-.filterCard{
+/*Filters*/
+.filter-flex{
     display: flex;
     justify-content: center;
-
-    background-color: #FFFFFF;
-
-    border: 2px solid #FE91C6;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0px grey;
-
-    padding: 10px;
+}
+.filter-list{
+    display: flex;
+    justify-content: center;
+}
+.filter-list ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #FFFF;
+    margin: 10px;
+    border-radius: 10px;
+}
+.filter-list li{
+    margin: 0rem 0.7rem;
+    font-size: 1rem;
+}
+.filter-tag{
+    background-color: #FFFF;
+    font-size: 18px;
+    text-decoration: none;
     margin-top: 10px;
-    max-width: 520px;
+    width: 40%;
+    padding: 5px 0px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 3px 5px #c14983;
+    color: #FE91C6;
 }
 
-.activeFiltersContainer{
+/*Recipe And Drink Card*/
+#recipe-list{
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap; 
+    justify-content: start;   
+}
+
+.select-card header{
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
-.activeFilters{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+.select-card p{
+    margin-right: 15px;
 }
-.activeFilters > li{
-    margin-right: 10px;
-    margin-left: 10px;
+.recipe-drink-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-drink-flex section{
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+
+    margin-top: 20px;
+}
+.recipe-image{
+    display: flex;
+    justify-content: end;
+    margin: 0px 10px 10px 5px;
+    width: 40%;
+    height: 50%;
+    border: 2px solid #FFFF ;
+    border-radius: 5px;
+    background-color: #FFFF;
+}
+
+.recipe-image img{
+    width: 100%;
+    border-radius: 5px;
+
+}
+.inner-container{
+    display: flex;
+    flex-direction: row;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15rem;
+    margin: 0px 5px 3px 5px;
+}
+
+.description{
+    background-color: #FFFF;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    min-width: 90%;
+}
+.specifics{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5px 3px 5px;
+    border-radius: 10px;
+    background-color: #FFFF;
+    padding: 2px;
 }

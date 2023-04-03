@@ -4,9 +4,10 @@ HTML {
 
 body {
     background-color: var(--white);
-    width: 100vw; min-width: 390px; height: 100vh;   
+    width: 100vw; min-width: 390px; height: 100vh;
     padding-bottom: 30px;
-    overflow-x: hidden;   
+    overflow-x: hidden;
+    align-content: center;
 }
 
 div {
@@ -22,10 +23,10 @@ h3 {
 
 }
 
-.flex-container { 
+/* .flex-container {
     display: flex;
     flex-direction: row;
-}
+} */
 
 .flex-container img {
     margin: 10px;
@@ -48,17 +49,22 @@ h3 {
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
-    border-radius: 4%;
+    /* border-radius: 4%; */
+    border-radius: 5px;
 }
 
 .boxA /* Previously known as "box1" */{
     background-color: var(--pink-regular);
+    align-content: center;
     width: fit-content;
     /* min-width: 350px; */
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
-    border-radius: 4%;
+    /* border-radius: 4%; */
+    border-radius: 5px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
 }
 
 /* .minWidh350 {
@@ -67,7 +73,7 @@ h3 {
 
 /* .boxB /* Replaced with "BoxA" in conjunction with "minWidht350 */ /*{
 
-    
+
     /* background-color: var(--pink-regular);
     width: fit-content;
     padding: 10px;
@@ -78,13 +84,19 @@ h3 {
 
 .innerbox /*used in coonjunction wtih BoxA*/{
     background-color: var(--white);
+    align-content: center;
     margin: 8px;
     /* width: fit-content; */
-    height: fit-content; 
+    height: fit-content;
     min-width: 320;
     /* width: 390px; */
     padding: 5px;
     /* border-radius: 4%; */
+}
+
+.img-responsive {
+    width: auto;
+    height: fit-content;
 }
 
 /* .BoxAminwidth350IMG {

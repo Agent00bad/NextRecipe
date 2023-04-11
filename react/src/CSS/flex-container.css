@@ -1,0 +1,51 @@
+.flex-container { 
+    display: flex;
+    flex-direction: row;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.horizontal-flex-container-reverse{
+}
+
+
+/* .flex-container img {
+    margin: 10px;
+} */
+
+.Center {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2%;
+}
+
+.CenterText {
+    text-align: center;
+    max-width: 50%;
+    margin-left: 0%;
+}
+
+.RecDOne {
+    text-align: center;
+    max-width: 50%;
+    margin-left: 0%;
+}
+
+.RecDTwo {
+    object-fit: contain;
+    height: 400;
+    background-size: contain;
+}
+
+.Three {
+}
+
+.Four {
+    
+}
+

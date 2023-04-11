@@ -1,0 +1,31 @@
+.topnav {
+    display: block;
+    overflow: hidden;
+    background-color: #FEAFC7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 2px gray;
+  }
+.search-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+  .search-container img{
+    max-width: 31px;
+    max-height: 31.5px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+      }
+.topnav input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-bottom: 8px;
+    font-size: 17px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }

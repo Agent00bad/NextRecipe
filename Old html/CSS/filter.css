@@ -1,0 +1,39 @@
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body{
+    background-color: var(--white);
+
+    display: block;
+    margin: 8px;
+}
+
+h2{
+    justify-content: center;
+    vertical-align: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    
+}
+
+.flex-container-horizontal{
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+.apply-clear button{
+    margin: auto;
+}
+
+#main-div{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}

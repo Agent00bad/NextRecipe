@@ -1,7 +1,10 @@
 body{
     background-color: var(--white);
+    /*
     width: 100vw;
     height: 100vh;
+    */
+    padding-bottom: 10px;
 }
 
 hr{

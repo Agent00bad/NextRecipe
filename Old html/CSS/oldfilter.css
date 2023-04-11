@@ -1,0 +1,44 @@
+body{
+    background-color: var(--white);
+    width: 100vw;
+    height: 100vh;
+}
+
+hr{
+    margin-bottom: 30px;
+}
+
+h2{
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+    font-size: 60px;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.apply-clear button{
+    margin: auto;
+    margin-top: 60px;
+    font-size: 80px;
+}
+
+.arrow{
+    max-width: 60px;
+    max-height: 40px;
+    margin-right: 60px;
+}
+
+#apply-button{
+    background-color: rgb(56, 179, 56);
+    padding-bottom: 40px;
+}
+
+#clear-button{
+    background-color: rgb(255, 70, 70);
+    padding-bottom: 40px;
+}
+

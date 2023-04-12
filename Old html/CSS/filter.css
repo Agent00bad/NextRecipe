@@ -15,24 +15,25 @@ h2{
     text-align: center;
     vertical-align: center;
     margin: auto;
-    font-size: 60px;
+    font-size: 30px;
 }
 
 .flex-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .apply-clear button{
     margin: auto;
-    margin-top: 60px;
-    font-size: 80px;
+    margin-top: 30px;
+    font-size: 40px;
 }
 
 .arrow{
-    max-width: 60px;
-    max-height: 40px;
-    margin-right: 60px;
+    max-width: 30px;
+    max-height: 20px;
+    margin-right: 30px;
 }
 
 #apply-button{

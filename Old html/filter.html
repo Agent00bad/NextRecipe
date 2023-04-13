@@ -2,37 +2,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=div" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="CSS/colorscheme.css" rel="stylesheet" />
     <link href="CSS/filter.css" rel="stylesheet" />
     <link href="CSS/button.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="css/HeaderFooter.css">
     <link href="CSS/search_bar.css"  rel="stylesheet" />
   </head>
-  <header> 
-    <div class="header">
-      <a href="index.html" class="menu-link"><img src="Images/cross-icon.png"></a>
-      <a href="index.html" class="logo-link"><img src="Images/logo.png"></a>
-      <a href="loading.html" class="login-link"><img src="Images/user-icon.png"></a>
-  </div>     
-    <div class="topnav">
-        <div class="search-container" class="">
-            <input type="text" placeholder="Search..">
-            <img class="search-button" src="Images/Search_Button.png"><i class="fa fa-search"></i></button>
-        </div>
-    </div>
-</header>
   <body>
+    <header> 
+      <div class="header">
+        <a href="index.html" class="menu-link"><img src="Images/cross-icon.png"></a>
+        <a href="index.html" class="logo-link"><img src="Images/logo.png"></a>
+        <a href="loading.html" class="login-link"><img src="Images/user-icon.png"></a>
+      </div>     
+      <div class="topnav">
+          <div class="search-container" class="">
+              <input type="text" placeholder="Search..">
+              <img class="search-button" src="Images/Search_Button.png"><i class="fa fa-search"></i></button>
+          </div>
+      </div>
+    </header>
     <main>
+      <div id="main-div">
       <div>
-        <div class="flex-container">
+        <hr />
+        <div class="flex-container-horizontal">
           <h2>Meal Options</h2>
           <img class="arrow" src="Images/arrow-down.png" alt="Arrow down" />
         </div>
         <hr />
-        <div class="flex-container">
+        <div class="flex-container-horizontal">
           <button>Breakfast</button>
           <button>Lunch</button>
           <button>Dinner</button>
@@ -41,12 +42,12 @@
       </div>
       <div>
         <hr />
-        <div class="flex-container">
+        <div class="flex-container-horizontal">
           <h2>Allergies/Diet</h2>
           <img class="arrow" src="Images/arrow-down.png" alt="Arrow down" />
         </div>
         <hr />
-        <div class="flex-container test">
+        <div class="flex-container-horizontal">
           <button>Gluten</button>
           <button class="selected">Nuts</button>
           <button>Milk</button>
@@ -57,12 +58,12 @@
       </div>
       <div>
         <hr />
-        <div class="flex-container test">
+        <div class="flex-container-horizontal">
           <h2>Drinks</h2>
           <img class="arrow" src="Images/arrow-down.png" alt="Arrow down" />
         </div>
         <hr />
-        <div class="flex-container test2">
+        <div class="flex-container-horizontal">
           <button>Beer</button>
           <button>Wine</button>
           <button>Milk</button>
@@ -73,12 +74,12 @@
       </div>
       <div>
         <hr />
-        <div class="flex-container">
+        <div class="flex-container-horizontal">
           <h2>Match drinks with food</h2>
           <img class="arrow" src="Images/arrow-down.png" alt="Arrow down" />
         </div>
         <hr />
-        <div class="flex-container test3">
+        <div class="flex-container-horizontal">
           <button>Breakfast</button>
           <button>Lunch</button>
           <button>Dinner</button>
@@ -86,11 +87,13 @@
         </div>
       </div>
       <div>
-        <div class="flex-container apply-clear">
+        <hr />
+        <div class="flex-container-horizontal apply-clear">
           <button id="apply-button">Apply</button>
           <button id="clear-button">Clear</button>
         </div>
       </div>
+    </div>
     </main>
     <footer class="footer">
       <t><a href="">Contact</a></t>

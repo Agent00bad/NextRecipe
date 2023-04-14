@@ -27,7 +27,7 @@ display: inline-block;
 */
 
 .selected{
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
     background-color: #FE91C6;
 }
 

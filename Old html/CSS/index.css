@@ -129,6 +129,7 @@ main{
 .inner-container{
     display: flex;
     flex-direction: row;
+    margin-left: 6px;
 }
 .info{
     display: flex;
@@ -148,7 +149,7 @@ main{
 .specifics{
     display: flex;
     flex-direction: row;
-    margin: 0px 5px 3px 5px;
+    margin: 0px 10px 10px 10px;
     border-radius: 10px;
     background-color: #FFFF;
     padding: 2px;

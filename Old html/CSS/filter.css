@@ -26,6 +26,7 @@ h2{
     display: flex;
     
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .apply-clear button{

@@ -1,48 +1,40 @@
-body{
-    background-color: var(--white);
-    /*
-    width: 100vw;
-    height: 100vh;
-    */
-    padding-bottom: 10px;
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-hr{
-    margin-bottom: 30px;
+body{
+    background-color: var(--white);
+
+    display: block;
+    margin: 8px;
 }
 
 h2{
-    text-align: center;
+    justify-content: center;
     vertical-align: center;
+    text-align: center;
     margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 30px;
+    
 }
 
-.flex-container{
+.flex-container-horizontal{
     display: flex;
+    
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .apply-clear button{
     margin: auto;
-    margin-top: 30px;
-    font-size: 40px;
 }
 
-.arrow{
-    max-width: 30px;
-    max-height: 20px;
-    margin-right: 30px;
+#main-div{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
 }
-
-#apply-button{
-    background-color: rgb(56, 179, 56);
-    padding-bottom: 40px;
-}
-
-#clear-button{
-    background-color: rgb(255, 70, 70);
-    padding-bottom: 40px;
-}
-

@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 
-import '../../CSS/colorscheme.css';
-import '../../CSS/filter.css';
-import '../../CSS/button.css';
+import '../../css/colorscheme.css';
+import '../../css/filter.css';
+import '../../css/button.css';
 
 export default function Filter() {
     return(

@@ -16,22 +16,42 @@ div {
 }
 
 h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
     vertical-align: center;
 }
 
-#Responsive {
-
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
+ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ol{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.RecDOne{
+    margin: 0px;
+    width: fit-content;
+    height: fit-content;
+    align-content: center;
+}
+
+
 
 /* .flex-container {
     display: flex;
     flex-direction: row;
 } */
 
-.flex-container img {
-    margin: 10px;
-}
+
 
 .arrow{
     position:static;
@@ -41,10 +61,20 @@ h3 {
     margin-right:2px; */
 }
 
-.headimg {
+.headImg {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
+}
+
+.headImg img{
+    width: 100%;
+}
+
+.center {
+    max-width: 600px;
+    min-width: 300px;
 }
 
 .boxParent{
@@ -56,6 +86,7 @@ h3 {
     margin-top: 20px;
     /* border-radius: 4%; */
     border-radius: 5px;
+    
 }
 
 .boxA /* Previously known as "box1" */{
@@ -71,7 +102,36 @@ h3 {
     border-radius: 5px;
     /* margin-left: 10px;
     margin-right: 10px; */
+    
 }
+
+.boxB /* Previously known as "box1" */{
+    background-color: var(--pink-regular);
+    align-content: center;
+    /*width: fit-content;*/
+    box-sizing: border-box;
+    /*min-width: 70%; */
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    /* border-radius: 4%; */
+    border-radius: 5px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px){
+    #recommendedDrinkBox{
+        width: 80%;
+    }
+}
+
+#recommendedDrinkBox{
+    max-width: 480px;
+}
+
 
 /* .minWidh350 {
     min-width: 300px;
@@ -94,7 +154,7 @@ h3 {
     /* margin-left: 10px; */
     width: fit-content;
     height: fit-content;
-    min-width: 280;
+    
     /* width: 390px; */
     padding: 5px;
     border-radius: 4%;
@@ -113,3 +173,12 @@ h3 {
     max-height: 75%;
     border-radius: 10%;
 } */
+
+.RecDTwo img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    border-radius: 5px;
+}

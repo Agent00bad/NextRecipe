@@ -5,73 +5,53 @@ import '../../css/filter.css';
 import '../../css/button.css';
 
 export default function Filter() {
+  /* Arrayer för alla knappar */
+  const mealType = ["Breakfast", "Lunch", "Dinner"]
+  const allergies = ["Gluten", "Nuts", "Milk", "Lactose", "Vegeterian", "Vegan"]
+  const drinks = ["Beer", "Wine", "Milk", "Juice", "Coffee", "Tea"]
+
+  function handleClick(i){
+    /* TODO - Gör så att knappen ändrar css */
+  }
     return(
-        <div>
-          <div>
-            <div className="flex-container">
-              <h2>Meal Options</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
+        <>
+            section("Meal options", mealType, true);
             <hr />
-            <div className="flex-container">
-              <button>Breakfast</button>
-              <button>Lunch</button>
-              <button>Dinner</button>
-              <button>Match meal with time?</button>
-            </div>
-          </div>
-          <div>
+            section("Allergies/Diet", allergies, false)
             <hr />
-            <div className="flex-container">
-              <h2>Allergies/Diet</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
+            section("Drinks", drinks, false)
             <hr />
-            <div className="flex-container test">
-              <button>Gluten</button>
-              <button className="selected">Nuts</button>
-              <button>Milk</button>
-              <button>Lactose</button>
-              <button className="selected">Vegeterian</button>
-              <button>Vegan</button>
-            </div>
-          </div>
-          <div>
-            <hr />
-            <div className="flex-container test">
-              <h2>Drinks</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
-            <hr />
-            <div className="flex-container test2">
-              <button>Beer</button>
-              <button>Wine</button>
-              <button>Milk</button>
-              <button>Juice</button>
-              <button>Coffe</button>
-              <button>Tea</button>
-            </div>
-          </div>
-          <div>
-            <hr />
-            <div className="flex-container">
-              <h2>Match drinks with food</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
-            <hr />
-            <div className="flex-container test3">
-              <button>Breakfast</button>
-              <button>Lunch</button>
-              <button>Dinner</button>
-              <button>Match meal with time?</button>
-            </div>
-          </div>
-          <div>
+            section("Match drinks with food", mealType, true)
             <div className="flex-container apply-clear">
               <button id="apply-button">Apply</button>
               <button id="clear-button">Clear</button>
             </div>
-          </div>
-      </div>
+      </>
     )
 }
+
+function Button({value, onButtonClick}){
+  return(
+    <button className="pillButton" onClick={onButtonClick}>value</button>
+  );
+}
+
+function section({header, array, match}){
+  <>
+     <div className="flex-container">
+        <h2>header</h2>
+        <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
+      </div>
+      <hr />
+      <div className="flex-container">
+        for (let i = 0; i < array.length; i++){
+          <Button value = {array[i]} onButtonClick={() => handleClick()}/>
+         }
+         if (match) {
+         /* TODO - fixa funktionen som matchar måltidstypen med vad klockan är */ 
+        <Button value = "Match meal with time?" onButtonClick={() => handleClick()}/>
+        }
+      </div>
+  </>
+}
+

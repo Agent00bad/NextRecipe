@@ -4,10 +4,11 @@ HTML {
 
 body {
     background-color: var(--white);
-    width: 100vw; min-width: 390px; height: 100vh;
+    /*width: 100vw; min-width: 390px; height: 100vh;*/
     padding-bottom: 30px;
     overflow-x: hidden;
     align-content: center;
+    padding-bottom: 10px;
 }
 
 div {
@@ -15,49 +16,85 @@ div {
 }
 
 h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
     vertical-align: center;
 }
 
-#Responsive {
-
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
+ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ol{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.RecDOne{
+    margin: 0px;
+    width: fit-content;
+    height: fit-content;
+    align-content: center;
+}
+
+
 
 /* .flex-container {
     display: flex;
     flex-direction: row;
 } */
 
-.flex-container img {
-    margin: 10px;
-}
+
 
 .arrow{
     position:static;
     align-self: center;
     max-width: 10%;
+    /* margin-left: 2px;
+    margin-right:2px; */
 }
 
-.headimg {
+.headImg {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
+}
+
+.headImg img{
+    width: 100%;
+}
+
+.center {
+    max-width: 600px;
+    min-width: 300px;
 }
 
 .boxParent{
     width: fit-content;
-    padding: 10px;
+    /*min-width: 70%;*/
+    box-sizing: border-box;
+    /*padding: 10px;*/
     margin-bottom: 20px;
     margin-top: 20px;
     /* border-radius: 4%; */
     border-radius: 5px;
+    
 }
 
 .boxA /* Previously known as "box1" */{
     background-color: var(--pink-regular);
     align-content: center;
-    width: fit-content;
-    /* min-width: 350px; */
+    /*width: fit-content;*/
+    box-sizing: border-box;
+    /*min-width: 70%; */
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -65,15 +102,42 @@ h3 {
     border-radius: 5px;
     /* margin-left: 10px;
     margin-right: 10px; */
+    
 }
+
+.boxB /* Previously known as "box1" */{
+    background-color: var(--pink-regular);
+    align-content: center;
+    /*width: fit-content;*/
+    box-sizing: border-box;
+    /*min-width: 70%; */
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    /* border-radius: 4%; */
+    border-radius: 5px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px){
+    #recommendedDrinkBox{
+        width: 80%;
+    }
+}
+
+#recommendedDrinkBox{
+    max-width: 480px;
+}
+
 
 /* .minWidh350 {
     min-width: 300px;
 } */
 
 /* .boxB /* Replaced with "BoxA" in conjunction with "minWidht350 */ /*{
-
-
     /* background-color: var(--pink-regular);
     width: fit-content;
     padding: 10px;
@@ -85,13 +149,15 @@ h3 {
 .innerbox /*used in coonjunction wtih BoxA*/{
     background-color: var(--white);
     align-content: center;
-    margin: 8px;
-    /* width: fit-content; */
+    /* margin: auto; */
+    /* margin-right: 8px; */
+    /* margin-left: 10px; */
+    width: fit-content;
     height: fit-content;
-    min-width: 320;
+    
     /* width: 390px; */
     padding: 5px;
-    /* border-radius: 4%; */
+    border-radius: 4%;
 }
 
 .img-responsive {
@@ -107,3 +173,12 @@ h3 {
     max-height: 75%;
     border-radius: 10%;
 } */
+
+.RecDTwo img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    border-radius: 5px;
+}

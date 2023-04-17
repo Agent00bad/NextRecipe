@@ -53,12 +53,26 @@ ol{
 
 
 
-.arrow{
-    position:static;
+.arrowRight{
+    width: 35px; 
+    height: 35px; 
+    fill: "currentColor"; 
+    margin: auto;
+    position:static; 
     align-self: center;
     max-width: 10%;
-    /* margin-left: 2px;
-    margin-right:2px; */
+    cursor: pointer;
+}
+
+.arrowLeft{
+    width: 35px; 
+    height: 35px; 
+    fill: "currentColor"; 
+    margin: auto;
+    position:static; 
+    align-self: center;
+    max-width: 10%;
+    cursor: pointer;
 }
 
 .headImg {
@@ -80,8 +94,12 @@ ol{
 .boxParent{
     width: fit-content;
     /*min-width: 70%;*/
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /*padding: 10px;*/
+    /* margin-left: 0px;
+    margin-right: 0px; */
+    /* padding: 10px; */
+    margin: 0px;
     margin-bottom: 20px;
     margin-top: 20px;
     /* border-radius: 4%; */

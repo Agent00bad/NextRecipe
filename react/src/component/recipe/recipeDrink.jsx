@@ -10,7 +10,7 @@ import RecDrinkImage from "../../Images/wine.jpg"
 export default function Drink(){
     return(
         <div className="boxB box-shadow" id="recommendedDrinkBox">
-                <h3>Recomended drink</h3>
+                <h3>Recommended drink</h3>
             <div className="RecDTwo img-responsive">
                     <img src={RecDrinkImage} alt="No Image"></img>
             </div>

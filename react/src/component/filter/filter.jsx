@@ -11,6 +11,7 @@ export default function Filter() {
   const drinks = ["Beer", "Wine", "Milk", "Juice", "Coffee", "Tea"]
 
   function handleClick(i){
+
     /* TODO - Gör så att knappen ändrar css */
   }
     return(
@@ -36,28 +37,33 @@ function Button({value, onButtonClick}){
   );
 }
 
-function ForButton(array){
-  for (let i = 0; i < array.length; i++){
-    <Button value = {array[i]} onButtonClick={() => handleClick()}/>
-   }
+function ForButton(a){
+
+  return a.forEach(b => {<Button value = {b}/>});
 }
 
-function Section({header, array, match}){
+//{array.forEach(a => {<Button value = {a}/>})}
+// <Button value = {a} onButtonClick={() => handleClick()}/>
+//<Button value = {array[i]}/>
 
+function Section({header, array, match}){
+return(
   <>
-     <div className="flex-container-horizontal">
-        <h2>header</h2>
-        <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-      </div>
-      <hr />
-      <div className="flex-container">
-        <ForButton array={array}/>
-         if (match) {
-         /* TODO - fixa funktionen som matchar måltidstypen med vad klockan är */ 
-        <Button value = "Match meal with time?" onButtonClick={() => handleClick()}/>
-        }
-      </div>
+    <div className="flex-container-horizontal">
+      <h2>{header}</h2>
+      <img className="arrow" src="../../../Images/arrow-down.png" alt="Arrow down" />
+    </div>
+    <hr />
+    <div className="flex-container">
+     <ForButton a={array}/>
+        {/*if (match) {
+        TODO - fixa funktionen som matchar måltidstypen med vad klockan är
+      <Button value = "Match meal with time?" onButtonClick={() => handleClick()}/>
+        }*/} 
+    </div>
   </>
+)
+
 }
  function filter(){
   <>

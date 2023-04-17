@@ -1,30 +1,20 @@
 import "../../CSS/index.css"
 import {Card} from "./card"
+import { ActiveFilter } from "./activeFilter"
+import logo from '../../Images/logo.png';
 
 export default function Index()
 {
     return(
         <>
         <div className="logo">
-    <img src="images/logo.png" alt="WelcomeImage" />
+    <img src={logo} alt="WelcomeImage" />
   </div>
     {/* <!--Displays active filters--> */}
-  <div className="filter-flex">
-    <div className="card">
-      <a id="filtersTag" className="filter-tag" href="filter.html"><b>Filters</b></a>
-      <div className="filter-list">
-        <ul className="activeFilters">
-          <li>dinner</li>
-          <li>Vegan</li>
-          <li>High Protein</li>
-          <li>dinner</li>
-          <li>Vegan</li>
-          <li>dinner</li>
-          <li>High Protein</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <ActiveFilter
+        filters={["Dinner", "Lactose Free", "Gluten Free", "Alcphol Free", "High Protein"]}
+        header={"Active Filter"}
+      />
   <main>
       {/* <!--Shows overview recipe details and works as a selection--> */}
       <div className="recipe-drink-flex">

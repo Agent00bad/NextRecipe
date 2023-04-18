@@ -6,7 +6,7 @@ import "../../CSS/flex-container.css";
 import "../../CSS/HeaderFooter.css";
 
 import RecDrinkImage from "../../Images/wine.jpg"
-export  function Drink({description, recipeDrinkImage}){
+export default  function Drink({description, recipeDrinkImage}){
     return(
         <div className="boxB box-shadow" id="recommendedDrinkBox">
                 <h3>Recommended drink</h3>

@@ -5,10 +5,10 @@ import "../../CSS/recipe.css";
 import "../../CSS/flex-container.css";
 import "../../CSS/HeaderFooter.css";
 
-export  function Description({description}){
+export default function Description({description, title}){
     return(
             <div className="boxA box-shadow">
-                <h3>BBQ salmon with veggies</h3>
+                <h3>{title}</h3>
                 <div className="innerBox">
                     <p>{description}</p>
                 </div>

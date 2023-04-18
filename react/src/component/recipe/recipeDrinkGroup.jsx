@@ -10,15 +10,16 @@ import LeftArrow from "./recipeArrowLeft";
 import Drink from "./recipeDrink";
 import RecDrinkImage from "../../Images/wine.jpg"
 
-export  function DrinkGroup(){
+export default  function DrinkGroup(){
     return(
         <div className="box flex-container">
             <LeftArrow/>
 
             <Drink
             recipeDrinkImage = {RecDrinkImage}
+            description = "Description"
             />
-            
+
             <RightArrow/>
         </div>
 

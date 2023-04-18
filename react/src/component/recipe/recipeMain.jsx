@@ -4,26 +4,31 @@ import "../../CSS/colorscheme.css";
 import "../../CSS/recipe.css";
 import "../../CSS/flex-container.css";
 import "../../CSS/HeaderFooter.css";
-import {HeadImage} from "./recipeHeadImage";
-import {Description} from "./recipeDescription";
-import {DrinkGroup} from "./recipeDrinkGroup";
-import {Ingredients} from "./recipeIngredients";
-import {HowTo} from "./recipeHowTo";
-import {RecipeImage} from "../../Images/image.jpg"
+import HeadImage from "./recipeHeadImage";
+import Description from "./recipeDescription";
+import DrinkGroup from "./recipeDrinkGroup";
+import RecipeImage from "../../Images/image.jpg"
 import RecDrinkImage from "../../Images/wine.jpg"
+import RecipeListCard from "./recipeListCard";
+
+const ingredientsList = ["Carrots", "Potatoes", "Pasta", "Onion", "Rice"] 
+const HowToList = ["Boil the potatoes", "Skin the carrots"]
+
+
 export default function Recipe(){
     return(
         <div className="center">
 
             {/* Head Image */}
                 <HeadImage
-                description = {"Hej på dig"}
+                description = "HeadDesciption"
                 recipeImage = {RecipeImage}
                 />
             
             {/* Description */}
                 <Description
-                description = "asdasdasd"
+                description = "Description"
+                title= "Title"
                 />
 
             {/* Recommended Drink */}
@@ -31,13 +36,15 @@ export default function Recipe(){
                 />
 
             {/* Ingredients */}
-                <Ingredients
-                ingredients = {["Salmon","Broccoli", "Carrots", "Potatoes", "Salt", "Pepper", "Butter"]}                    
+                <RecipeListCard
+                isOrdered = {false}
+                Listitems = {ingredientsList}                    
                 />
             
             {/* How to */}
-                <HowTo
-                instructions = {["Put salt and pepper on the salmon", "Boil potatoes", "Put the salmon on the grill", "Boil broccoli and carrots"]}
+                <RecipeListCard
+                isOrdered = {true}
+                Listitems = {HowToList}
                 />
 
         </div>

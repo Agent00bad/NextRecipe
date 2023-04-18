@@ -6,6 +6,7 @@ import Filter from './component/filter/filter'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Recipe/>
+    <p>Hej</p>
     {/* <Filter /> */}
   </React.StrictMode>,
 )

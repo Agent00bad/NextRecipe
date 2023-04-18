@@ -8,15 +8,17 @@ import "../../CSS/HeaderFooter.css";
 import RightArrow from "./recipeArrowRight";
 import LeftArrow from "./recipeArrowLeft";
 import Drink from "./recipeDrink";
-import RecipeImage from "../../Images/image.jpg"
 import RecDrinkImage from "../../Images/wine.jpg"
-export default function DrinkGroup(){
+
+export  function DrinkGroup(){
     return(
         <div className="box flex-container">
             <LeftArrow/>
 
-            <Drink/>
-
+            <Drink
+            recipeDrinkImage = {RecDrinkImage}
+            />
+            
             <RightArrow/>
         </div>
 

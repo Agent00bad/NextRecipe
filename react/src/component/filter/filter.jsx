@@ -3,156 +3,128 @@ import React, { Fragment } from "react";
 import '../../css/colorscheme.css';
 import '../../css/filter.css';
 import '../../css/button.css';
+import arrowDown from '../../Images/arrow-down.png';
+
 
 export default function Filter() {
-  /* Arrayer för alla knappar */
   const mealType = ["Breakfast", "Lunch", "Dinner"]
   const allergies = ["Gluten", "Nuts", "Milk", "Lactose", "Vegeterian", "Vegan"]
   const drinks = ["Beer", "Wine", "Milk", "Juice", "Coffee", "Tea"]
+  const apply = ["Apply"]
+  const clear = ["Clear"]
 
+  // return(
+  //   <>
+  //     <Section header="Meal Options"/>
+  //     <Pills types={mealType}/>
+  //     <MatchPills/>
+  //     <hr />
 
-  function handleClick(i){
+  //     <Section header="Meal Allergies/Diet"/>
+  //     <Pills types={allergies}/>
+  //     <hr />
 
-    /* TODO - Gör så att knappen ändrar css */
-  }
-    return(
-        <>
-            <Section header="Meal Options" array={mealType} match={true} />
-            <Lister types={mealType}/>
-            <hr />
-            <Section header="Meal Allergies/Diet" array={allergies} match={false} />
-            <Lister types={allergies}/>
-            <hr />
-            <Section header="Drinks" array={drinks} match={false} />
-            <Lister types={drinks}/>
-            <hr />
-            <Section header="Match drinks with food" array={mealType} match={true} />
-            <div className="flex-container apply-clear">
-              <button id="apply-button">Apply</button>
-              <button id="clear-button">Clear</button>
-            </div>
-      </>
-    )
-}
+  //     <Section header="Drinks"/>
+  //     <Pills types={drinks}/>
+  //     <hr />
 
-function Button({value, onButtonClick}){
+  //     <Section header="Match drinks with food"/>
+  //     <Pills types={mealType}/>
+  //     <MatchPills/>
+  //     <hr />
+
+  //     <div className="flex-container apply-clear">
+  //       <ApplyClearPills types={apply} id="apply-button"/>
+  //       <ApplyClearPills types={clear} id="clear-button"/>
+  //     </div>
+  //   </>
+  // )
+
   return(
-    <button className="pillButton" onClick={onButtonClick}>value</button>
-  );
+    <>
+      <Section header="Meal Options"/>
+      <Lister types={mealType}/>
+      <MatchLister/>
+      <hr />
+
+      <Section header="Meal Allergies/Diet"/>
+      <Lister types={allergies}/>
+      <hr />
+
+      <Section header="Drinks"/>
+      <Lister types={drinks}/>
+      <hr />
+
+      <Section header="Match drinks with food"/>
+      <Lister types={mealType}/>
+      <MatchLister/>
+      <hr />
+
+      <div className="flex-container apply-clear">
+        <ApplyClearPills types={apply} id="apply-button"/>
+        <ApplyClearPills types={clear} id="clear-button"/>
+      </div>
+    </>
+  )
 }
 
-export function Lister({types}){
+
+function Lister({types}){
   return (
     <div>
       <ul>
         {types.map(data =>
-        {return(
-          <li>{data}</li>
+          {return(
+            <li>{data}</li>
         )})}
       </ul>
     </div>
   )
 }
 
+function MatchLister(){
+  return(
+    <ul><li>Match meal with time?</li></ul>
+  )
+}
 
-// function ForButton(a){
+function Pills({types}){
+  return (
+    <>
+      {types.map((data) =>
+        <button onClick={() => id={id}}>{data}</button>
+      )}
+    </>
+  );
+}
 
-//   // return a.forEach(b => {<Button value = {b}/>});
-  
+function ApplyClearPills({types, id}){
+  return (
+    <>
+      {types.map((data) =>
+        <button id={id} onClick={() => id={id}}>{data}</button>
+      )}
+    </>
+  );
+}
 
-// };
+function MatchPills(){
+  return (
+    <>
+      <button onClick={() => setText("")}>Match meal with time?</button>
+    </>
+  );
+}
 
-//{array.forEach(a => {<Button value = {a}/>})}
-// <Button value = {a} onButtonClick={() => handleClick()}/>
-//<Button value = {array[i]}/>
-
-function Section({header, array, match}){
+function Section({header}){
 return(
   <>
     <div className="flex-container-horizontal">
       <h2>{header}</h2>
-      <img className="arrow" src="../../../Images/arrow-down.png" alt="Arrow down" />
+      {/* <button id="arrowButton"> */}
+        <img className="arrow" src={arrowDown} alt="Arrow down" />
+      {/* </button> */}
     </div>
     <hr />
-    <div className="flex-container">
-     {/* <forbutton a={array}/> */}
-        {/*if (match) {
-        TODO - fixa funktionen som matchar måltidstypen med vad klockan är
-      <Button value = "Match meal with time?" onButtonClick={() => handleClick()}/>
-        }*/} 
-    </div>
   </>
-)
-
-}
- function filter(){
-  <>
-  <div>
-        <hr />
-        <div className="flex-container-horizontal">
-          <h2>Meal Options</h2>
-          <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-        </div>
-        <hr />
-        <div className="flex-container-horizontal">
-          <button>breakfast</button>
-          <button>lunch</button>
-          <button>dinner</button>
-          <button>Match meal with time?</button>
-        </div>
-      </div>
-      <div>
-        <hr />
-        <div className="flex-container-horizontal">
-          <h2>Allergies/Diet</h2>
-          <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-        </div>
-        <hr />
-        <div className="flex-container-horizontal">
-          <button>Gluten</button>
-          <button className="selected">Nuts</button>
-          <button>Milk</button>
-          <button>Lactose</button>
-          <button className="selected">Vegeterian</button>
-          <button>Vegan</button>
-        </div>
-      </div>
-      <div>
-        <hr />
-        <div lassNames="flex-container-horizontal">
-          <h2>Drinks</h2>
-          <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-        </div>
-        <hr />
-        <div className="flex-container-horizontal">
-          <button>Beer</button>
-          <button>Wine</button>
-          <button>Milk</button>
-          <button>Juice</button>
-          <button>Coffe</button>
-          <button>Tea</button>
-        </div>
-      </div>
-      <div>
-        <hr />
-        <div className="flex-container-horizontal">
-          <h2>Match drinks with food</h2>
-          <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-        </div>
-        <hr />
-        <div className="flex-container-horizontal">
-          <button>Breakfast</button>
-          <button>Lunch</button>
-          <button>Dinner</button>
-          <button>Match meal with time?</button>
-        </div>
-      </div>
-      <div>
-        <hr />
-        <div className="flex-container-horizontal apply-clear">
-          <button id="apply-button">Apply</button>
-          <button id="clear-button">Clear</button>
-        </div>
-      </div>
-  </>
- }
+)}

@@ -8,6 +8,7 @@
 body{
     font-family:Arial, Helvetica, sans-serif
 }
+
 main{
     display: flex;
     justify-content: center;
@@ -29,6 +30,42 @@ main{
     }
  }
  */
+ @media screen and (width > 815px) {
+    #filtersTag{
+        display: flex;
+        flex-direction: column;
+        align-content: start;
+        margin-left: 30%;
+    }
+    #filterList{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        width: 85%;
+        min-height: 100px;
+    }
+    #filterCard{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: fit-content;
+        height: fit-content;
+        position:fixed ;
+        left: 0;
+        top: 100px;
+    }
+    .CardSpace{
+        width: 100%;
+        /* position: relative; Ifall vi vill skjuta alla kort lite åt höger */
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        left: 100px;
+    }
+}
 .recipe-container a{
     text-decoration: none;
     color: #000;
@@ -46,7 +83,6 @@ main{
     height: auto;
     max-width: 500px;
 }
-
 /*Base card*/
 .card{
     display: flex;
@@ -61,8 +97,14 @@ main{
     max-height: fit-content;
     margin: 10px;
 }
+.CardSpace{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
 
 /*Filters*/
+
 .filter-flex{
     display: flex;
     justify-content: center;
@@ -70,15 +112,21 @@ main{
 .filter-list{
     display: flex;
     justify-content: center;
+    width: 350px;
+    min-height: 80px;
+
 }
 .filter-list ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     background-color: #FFFF;
     margin: 10px;
     border-radius: 10px;
+    min-width: 230px;
+
 }
 .filter-list li{
     margin: 0rem 0.7rem;
@@ -90,8 +138,9 @@ main{
     text-decoration: none;
     margin-top: 10px;
     width: 40%;
+    height: 1.5rem;
     padding: 5px 0px;
-    text-align: center;
+    text-align:center;
     border-radius: 15px;
     box-shadow: 2px 3px 5px #c14983;
     color: #FE91C6;

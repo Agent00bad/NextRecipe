@@ -1,8 +1,9 @@
-import "../../CSS/headerfooter.css"
-import "../../CSS/search_bar.css"
+import "./CSS/headerfooter.css"
+import "./CSS/search_bar.css"
 import menuicon from "../../Images/menu-icon.png"
 import logo from "../../Images/perfectpair_transparent.png"
 import userIcon from "../../Images/user-icon.png"
+import searchImage from "../../Images/Search_Button.png"
 
 export default function Header()
 {
@@ -17,7 +18,7 @@ export default function Header()
     <div className="topnav">
         <div className="search-container">
             <input type="text" placeholder="Search.."/>
-           <button type="submit"><img className="search-button" src="Images/Search_Button.png"/><i className="fa fa-search"></i></button>
+           <button type="submit"><img className="search-button" src={searchImage}/></button>
         </div>
     </div>
 </header>

@@ -9,6 +9,6 @@ import Footer from "./component/footer/footer"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Index/>
+    <Header/>
   </React.StrictMode>,
 )

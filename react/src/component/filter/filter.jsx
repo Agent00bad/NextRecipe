@@ -4,6 +4,7 @@ import '../../css/colorscheme.css';
 import '../../css/filter.css';
 import '../../css/button.css';
 import arrowDown from '../../Images/arrow-down.png';
+import CheckMarkSquare from '../../images/pink-square.png'
 
 
 export default function Filter() {

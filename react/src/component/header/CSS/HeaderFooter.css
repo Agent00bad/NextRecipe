@@ -27,6 +27,18 @@
 		background-position: 0% 50%;
 	}
 }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .menu-link{
     margin-left: 15px;
@@ -62,7 +74,6 @@
 
     padding: 10px 30px;
     margin-top: 10px;
-
     background: linear-gradient(-45deg, #b00e3e, #fe91c6, #FECEC7, #e73c7e);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;

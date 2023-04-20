@@ -8,10 +8,63 @@
 body{
     font-family:Arial, Helvetica, sans-serif
 }
+
 main{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-flow: row wrap;
+}
+/*
+@media screen and (width > 391px) {
+    main {
+        display: flex;
+        justify-content: start;
+        flex-direction: row wrap;
+    }
+    .card{
+        max-width: 390px;
+        max-height: 300px;
+    }
+    .recipe-drink-flex{
+        background-color: violet;
+    }
+ }
+ */
+ @media screen and (width > 815px) {
+    #filtersTag{
+        display: flex;
+        flex-direction: column;
+        align-content: start;
+        margin-left: 20%;
+    }
+    #filterList{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        width: 85%;
+        min-height: 100px;
+    }
+    #filterCard{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 28%;
+        height: fit-content;
+        position:fixed;
+        left: 0;
+        top: 303px;
+    }
+    #CardSpace{
+        width: 66%;
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        left: 10%;
+    }
 }
 .recipe-container a{
     text-decoration: none;
@@ -28,8 +81,8 @@ main{
 .logo img{
     width: 80%;
     height: auto;
+    max-width: 500px;
 }
-
 /*Base card*/
 .card{
     display: flex;
@@ -40,9 +93,18 @@ main{
     width: 82%;
     border-radius: 15px;
     box-shadow : 0px 3px 5px gray;
+    max-width: 390px;
+    max-height: fit-content;
+    margin: 10px;
+}
+.CardSpace{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
 /*Filters*/
+
 .filter-flex{
     display: flex;
     justify-content: center;
@@ -50,15 +112,22 @@ main{
 .filter-list{
     display: flex;
     justify-content: center;
+    width: 90%;
+    min-height: 80px;
+
 }
 .filter-list ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     background-color: #FFFF;
     margin: 10px;
     border-radius: 10px;
+    /* min-width: 230px; */
+    width: 100%;
+
 }
 .filter-list li{
     margin: 0rem 0.7rem;
@@ -70,8 +139,9 @@ main{
     text-decoration: none;
     margin-top: 10px;
     width: 40%;
+    height: 1.5rem;
     padding: 5px 0px;
-    text-align: center;
+    text-align:center;
     border-radius: 15px;
     box-shadow: 2px 3px 5px #c14983;
     color: #FE91C6;
@@ -98,7 +168,8 @@ main{
 }
 .recipe-drink-flex{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -129,6 +200,7 @@ main{
 .inner-container{
     display: flex;
     flex-direction: row;
+    margin-left: 6px;
 }
 .info{
     display: flex;
@@ -144,11 +216,12 @@ main{
     border-radius: 10px;
     padding: 5px;
     min-width: 90%;
+    height: 208px;
 }
 .specifics{
     display: flex;
     flex-direction: row;
-    margin: 0px 5px 3px 5px;
+    margin: 0px 10px 10px 10px;
     border-radius: 10px;
     background-color: #FFFF;
     padding: 2px;

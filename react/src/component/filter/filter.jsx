@@ -14,6 +14,7 @@ export default function Filter() {
   const apply = ["Apply"]
   const clear = ["Clear"]
 
+  //
   // return(
   //   <>
   //     <Section header="Meal Options"/>
@@ -40,20 +41,20 @@ export default function Filter() {
   //     </div>
   //   </>
   // )
-
+  
   return(
     <>
       <SectionDesktop header="Meal Options"/>
-      <Desktop types={mealType}/>
+      <DesktopCheckbox types={mealType}/>
       <MatchCheckbox/>
       <hr />
 
       <SectionDesktop header="Meal Allergies/Diet"/>
-      <Desktop types={allergies}/>
+      <DesktopCheckbox types={allergies}/>
       <hr />
 
       <SectionDesktop header="Drinks"/>
-      <Desktop types={drinks}/>
+      <DesktopCheckbox types={drinks}/>
       <hr />
 
       <div className="flex-container apply-clear">
@@ -63,6 +64,8 @@ export default function Filter() {
     </>
   )
 }
+
+// -------    MOBILE    -------
 
 function Pills({types}){
   return (
@@ -94,6 +97,8 @@ return(
   </>
 )}
 
+// -------    BOTH    -------
+
 function ApplyClearPills({types, id}){
   return (
     <>
@@ -104,18 +109,26 @@ function ApplyClearPills({types, id}){
   );
 }
 
-function Desktop({types}){
+// -------    DESKTOP    -------
+
+function DesktopCheckbox({types}){
   return(
     types.map((item, index) => (
       <div key={index}>
-        <label><input type="checkbox"/>{item}</label>
+        <label className="container">{item}
+          <input type="checkbox"/>
+          <span className="checkmark"></span>
+        </label>
       </div>
   )))
 }
 
 function MatchCheckbox(){
   return(
-    <label><input type="checkbox" />Match meal with time?</label>
+    <label className="container">Match meal with time?
+      <input type="checkbox"/>
+      <span className="checkmark"></span>
+    </label>
   )
 }
 
@@ -131,16 +144,3 @@ function SectionDesktop({header}){
       <hr />
     </>
   )}
-
-  // function Lister({types}){
-//   return (
-//     <div>
-//       <ul>
-//         {types.map(data =>
-//           {return(
-//             <li>{data}</li>
-//         )})}
-//       </ul>
-//     </div>
-//   )
-// }

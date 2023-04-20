@@ -4,6 +4,7 @@ import '../../css/colorscheme.css';
 import '../../css/filter.css';
 import '../../css/button.css';
 import arrowDown from '../../Images/arrow-down.png';
+import CheckMarkSquare from '../../images/pink-square.png'
 
 
 export default function Filter() {
@@ -42,6 +43,17 @@ export default function Filter() {
 
   return(
     <>
+  {/* <div className="flexColumn"> */}
+
+    <div>
+      {/* <input type="checkbox" className="NRCheckbox" name={allergies} /> */}
+      <input type="checkbox" />
+        <span className="NRCheckbox" name={allergies} />
+      <label for={allergies}>{allergies}</label>
+    </div>
+
+  {/* </div> */}
+
       <Section header="Meal Options"/>
       <Lister types={mealType}/>
       <MatchLister/>

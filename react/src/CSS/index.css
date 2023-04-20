@@ -35,7 +35,7 @@ main{
         display: flex;
         flex-direction: column;
         align-content: start;
-        margin-left: 30%;
+        margin-left: 20%;
     }
     #filterList{
         display: flex;
@@ -51,19 +51,19 @@ main{
         flex-direction: column;
         align-content: center;
         justify-content: center;
-        width: fit-content;
+        width: 28%;
         height: fit-content;
-        position:fixed ;
+        position:fixed;
         left: 0;
-        top: 100px;
+        top: 303px;
     }
-    .CardSpace{
-        width: 100%;
-        /* position: relative; Ifall vi vill skjuta alla kort lite åt höger */
+    #CardSpace{
+        width: 66%;
+        position: relative;
         display: flex;
-        justify-content: center;
         flex-flow: row wrap;
-        left: 100px;
+        justify-content: center;
+        left: 10%;
     }
 }
 .recipe-container a{
@@ -112,7 +112,7 @@ main{
 .filter-list{
     display: flex;
     justify-content: center;
-    width: 350px;
+    width: 90%;
     min-height: 80px;
 
 }
@@ -125,7 +125,8 @@ main{
     background-color: #FFFF;
     margin: 10px;
     border-radius: 10px;
-    min-width: 230px;
+    /* min-width: 230px; */
+    width: 100%;
 
 }
 .filter-list li{

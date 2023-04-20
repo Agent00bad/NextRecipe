@@ -26,8 +26,22 @@ export default function Index() {
             ]}
             header={"Active Filter"}
           />
-          <div className="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
+          <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
 
+          <Card
+            title="Recipie"
+            description="Bla Bla Bla"
+            calories="5000"
+            type="dinner"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fheatherlikesfood.com%2Fwp-content%2Fuploads%2F2015%2F05%2FDSC03691_1.jpg&f=1&nofb=1&ipt=00921f274e58215cdaaa2ef2c7edc54c6403716a6e800ef332ed86d16be48ad5&ipo=images"
+          />
+          <Card
+            title="Recipie"
+            description="Bla Bla Bla"
+            calories="5000"
+            type="dinner"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fheatherlikesfood.com%2Fwp-content%2Fuploads%2F2015%2F05%2FDSC03691_1.jpg&f=1&nofb=1&ipt=00921f274e58215cdaaa2ef2c7edc54c6403716a6e800ef332ed86d16be48ad5&ipo=images"
+          />
           <Card
             title="Recipie"
             description="Bla Bla Bla"

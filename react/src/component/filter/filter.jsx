@@ -1,77 +1,146 @@
 import React, { Fragment } from "react";
 
-import '../../CSS/colorscheme.css';
-import '../../CSS/filter.css';
-import '../../CSS/button.css';
+import '../../css/colorscheme.css';
+import '../../css/filter.css';
+import '../../css/button.css';
+import arrowDown from '../../Images/arrow-down.png';
+import CheckMarkSquare from '../../images/pink-square.png'
+
 
 export default function Filter() {
-    return(
-        <div>
-          <div>
-            <div className="flex-container">
-              <h2>Meal Options</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
-            <hr />
-            <div className="flex-container">
-              <button>Breakfast</button>
-              <button>Lunch</button>
-              <button>Dinner</button>
-              <button>Match meal with time?</button>
-            </div>
-          </div>
-          <div>
-            <hr />
-            <div className="flex-container">
-              <h2>Allergies/Diet</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
-            <hr />
-            <div className="flex-container test">
-              <button>Gluten</button>
-              <button className="selected">Nuts</button>
-              <button>Milk</button>
-              <button>Lactose</button>
-              <button className="selected">Vegeterian</button>
-              <button>Vegan</button>
-            </div>
-          </div>
-          <div>
-            <hr />
-            <div className="flex-container test">
-              <h2>Drinks</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
-            <hr />
-            <div className="flex-container test2">
-              <button>Beer</button>
-              <button>Wine</button>
-              <button>Milk</button>
-              <button>Juice</button>
-              <button>Coffe</button>
-              <button>Tea</button>
-            </div>
-          </div>
-          <div>
-            <hr />
-            <div className="flex-container">
-              <h2>Match drinks with food</h2>
-              <img className="arrow" src="Images/arrow-down.png" alt="Arrow down" />
-            </div>
-            <hr />
-            <div className="flex-container test3">
-              <button>Breakfast</button>
-              <button>Lunch</button>
-              <button>Dinner</button>
-              <button>Match meal with time?</button>
-            </div>
-          </div>
-          <div>
-            <div className="flex-container apply-clear">
-              <button id="apply-button">Apply</button>
-              <button id="clear-button">Clear</button>
-            </div>
-          </div>
+  const mealType = ["Breakfast", "Lunch", "Dinner"]
+  const allergies = ["Gluten", "Nuts", "Milk", "Lactose", "Vegeterian", "Vegan"]
+  const drinks = ["Beer", "Wine", "Milk", "Juice", "Coffee", "Tea"]
+  const apply = ["Apply"]
+  const clear = ["Clear"]
+
+  //
+  // return(
+  //   <>
+  //     <Section header="Meal Options"/>
+  //     <Pills types={mealType}/>
+  //     <MatchPills/>
+  //     <hr />
+
+  //     <Section header="Meal Allergies/Diet"/>
+  //     <Pills types={allergies}/>
+  //     <hr />
+
+  //     <Section header="Drinks"/>
+  //     <Pills types={drinks}/>
+  //     <hr />
+
+  //     <Section header="Match drinks with food"/>
+  //     <Pills types={mealType}/>
+  //     <MatchPills/>
+  //     <hr />
+
+  //     <div className="flex-container apply-clear">
+  //       <ApplyClearPills types={apply} id="apply-button"/>
+  //       <ApplyClearPills types={clear} id="clear-button"/>
+  //     </div>
+  //   </>
+  // )
+  
+  return(
+    <>
+      <SectionDesktop header="Meal Options"/>
+      <DesktopCheckbox types={mealType}/>
+      <MatchCheckbox/>
+      <hr />
+
+      <SectionDesktop header="Meal Allergies/Diet"/>
+      <DesktopCheckbox types={allergies}/>
+      <hr />
+
+      <SectionDesktop header="Drinks"/>
+      <DesktopCheckbox types={drinks}/>
+      <hr />
+
+      <div className="flex-container apply-clear">
+        <ApplyClearPills types={apply} id="apply-button"/>
+        <ApplyClearPills types={clear} id="clear-button"/>
       </div>
-    )
+    </>
+  )
 }
+
+// -------    MOBILE    -------
+
+function Pills({types}){
+  return (
+    types.map((item, index) => (
+      <div key={index}>
+        <span>{item}</span>
+      </div>
+  )))
+}
+
+function MatchPills(){
+  return (
+    <>
+      <button onClick={() => setText("")}>Match meal with time?</button>
+    </>
+  );
+}
+
+function SectionMobile({header}){
+return(
+  <>
+    <div className="flex-container-horizontal">
+      <h2>{header}</h2>
+      {/* <button id="arrowButton"> */}
+        <img className="arrow" src={arrowDown} alt="Arrow down" />
+      {/* </button> */}
+    </div>
+    <hr />
+  </>
+)}
+
+// -------    BOTH    -------
+
+function ApplyClearPills({types, id}){
+  return (
+    <>
+      {types.map((data) =>
+        <button id={id} onClick={() => id={id}}>{data}</button>
+      )}
+    </>
+  );
+}
+
+// -------    DESKTOP    -------
+
+function DesktopCheckbox({types}){
+  return(
+    types.map((item, index) => (
+      <div key={index}>
+        <label className="container">{item}
+          <input type="checkbox"/>
+          <span className="checkmark"></span>
+        </label>
+      </div>
+  )))
+}
+
+function MatchCheckbox(){
+  return(
+    <label className="container">Match meal with time?
+      <input type="checkbox"/>
+      <span className="checkmark"></span>
+    </label>
+  )
+}
+
+function SectionDesktop({header}){
+  return(
+    <>
+      <div>
+        <h2>{header}</h2>
+        {/* <button id="arrowButton"> */}
+          <img className="arrow" src={arrowDown} alt="Arrow down" />
+        {/* </button> */}
+      </div>
+      <hr />
+    </>
+  )}

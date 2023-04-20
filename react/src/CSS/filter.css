@@ -20,17 +20,17 @@ h2{
     margin-bottom: 5px;
     font-size: 30px;
     
-}
+} 
 
 .flex-container-horizontal{
     display: flex;
-    
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .apply-clear button{
-    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #main-div{

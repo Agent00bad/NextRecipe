@@ -42,22 +42,17 @@ export default function Filter() {
 
   return(
     <>
-      <Section header="Meal Options"/>
-      <Lister types={mealType}/>
-      <MatchLister/>
+      <SectionDesktop header="Meal Options"/>
+      <Desktop types={mealType}/>
+      <MatchCheckbox/>
       <hr />
 
-      <Section header="Meal Allergies/Diet"/>
-      <Lister types={allergies}/>
+      <SectionDesktop header="Meal Allergies/Diet"/>
+      <Desktop types={allergies}/>
       <hr />
 
-      <Section header="Drinks"/>
-      <Lister types={drinks}/>
-      <hr />
-
-      <Section header="Match drinks with food"/>
-      <Lister types={mealType}/>
-      <MatchLister/>
+      <SectionDesktop header="Drinks"/>
+      <Desktop types={drinks}/>
       <hr />
 
       <div className="flex-container apply-clear">
@@ -68,44 +63,13 @@ export default function Filter() {
   )
 }
 
-
-function Lister({types}){
-  return (
-    <div>
-      <ul>
-        {types.map(data =>
-          {return(
-            <li>{data}</li>
-        )})}
-      </ul>
-    </div>
-  )
-}
-
-function MatchLister(){
-  return(
-    <ul><li>Match meal with time?</li></ul>
-  )
-}
-
 function Pills({types}){
   return (
-    <>
-      {types.map((data) =>
-        <button onClick={() => id={id}}>{data}</button>
-      )}
-    </>
-  );
-}
-
-function ApplyClearPills({types, id}){
-  return (
-    <>
-      {types.map((data) =>
-        <button id={id} onClick={() => id={id}}>{data}</button>
-      )}
-    </>
-  );
+    types.map((item, index) => (
+      <div key={index}>
+        <span>{item}</span>
+      </div>
+  )))
 }
 
 function MatchPills(){
@@ -116,7 +80,7 @@ function MatchPills(){
   );
 }
 
-function Section({header}){
+function SectionMobile({header}){
 return(
   <>
     <div className="flex-container-horizontal">
@@ -128,3 +92,54 @@ return(
     <hr />
   </>
 )}
+
+function ApplyClearPills({types, id}){
+  return (
+    <>
+      {types.map((data) =>
+        <button id={id} onClick={() => id={id}}>{data}</button>
+      )}
+    </>
+  );
+}
+
+function Desktop({types}){
+  return(
+    types.map((item, index) => (
+      <div key={index}>
+        <label><input type="checkbox"/>{item}</label>
+      </div>
+  )))
+}
+
+function MatchCheckbox(){
+  return(
+    <label><input type="checkbox" />Match meal with time?</label>
+  )
+}
+
+function SectionDesktop({header}){
+  return(
+    <>
+      <div>
+        <h2>{header}</h2>
+        {/* <button id="arrowButton"> */}
+          <img className="arrow" src={arrowDown} alt="Arrow down" />
+        {/* </button> */}
+      </div>
+      <hr />
+    </>
+  )}
+
+  // function Lister({types}){
+//   return (
+//     <div>
+//       <ul>
+//         {types.map(data =>
+//           {return(
+//             <li>{data}</li>
+//         )})}
+//       </ul>
+//     </div>
+//   )
+// }

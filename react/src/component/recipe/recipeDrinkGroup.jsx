@@ -2,22 +2,22 @@ import React from "react";
 
 import "../../CSS/colorscheme.css";
 import "../../CSS/recipe.css";
-import "../../CSS/flex-container.css";
 import "../../CSS/HeaderFooter.css";
 
 import RightArrow from "./recipeArrowRight";
 import LeftArrow from "./recipeArrowLeft";
 import Drink from "./recipeDrink";
-import RecDrinkImage from "../../Images/wine.jpg"
 
-export default  function DrinkGroup(){
+
+export default  function DrinkGroup({drinkImage,drinkDescription,drinkTitle}){
     return(
-        <div className="box flex-container">
+        <div className="drinkGroup">
             <LeftArrow/>
 
             <Drink
-            recipeDrinkImage = {RecDrinkImage}
-            description = "Description"
+            drinkImage = {drinkImage}
+            drinkDescription = {drinkDescription}
+            drinkTitle={drinkTitle}
             />
 
             <RightArrow/>

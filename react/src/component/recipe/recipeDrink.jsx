@@ -2,21 +2,20 @@ import React from "react";
 
 import "../../CSS/colorscheme.css";
 import "../../CSS/recipe.css";
-import "../../CSS/flex-container.css";
 import "../../CSS/HeaderFooter.css";
 
 import RecDrinkImage from "../../Images/wine.jpg"
-export default  function Drink({description, recipeDrinkImage}){
+export default  function Drink({drinkDescription, drinkImage, drinkTitle}){
     return(
-        <div className="boxB box-shadow" id="recommendedDrinkBox">
+        <div className="drinkBox" id="recommendedDrinkBox">
                 <h3>Recommended drink</h3>
-            <div className="RecDTwo img-responsive">
-                    <img src={recipeDrinkImage} alt="No Image"></img>
+                <h4>{drinkTitle}</h4>
+            <div className="drinkImage">
+                    <img src={drinkImage} alt="No Image"></img>
             </div>
-            <div className="boxB flex-container flex-wrap">
-                <div className="RecDOne">
-                    <p>{description}</p>
-                </div>
+            
+            <div className="drinkDescription">
+                    <p>{drinkDescription}</p>
             </div>
         </div>
         )

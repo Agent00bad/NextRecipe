@@ -80,7 +80,7 @@ function Pills({types, id}){
 function MatchPills(){
   return (
     <>
-      <button onClick={() => setText("")}>Match meal with time?</button>
+      <button className="filter-button" onClick={() => setText("")}>Match meal with time?</button>
     </>
   );
 }
@@ -104,7 +104,7 @@ function ApplyClearPills({types, id}){
   return (
     <>
       {types.map((data) =>
-        <button id={id} onClick={() => id={id}}>{data}</button>
+        <button className="filter-button" id={id} onClick={() => id={id}}>{data}</button>
       )}
     </>
   );

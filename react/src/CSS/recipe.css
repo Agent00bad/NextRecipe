@@ -1,13 +1,21 @@
+<!--General-->
+
 HTML {
     scroll-behavior: smooth;
 }
 
+.main {
+    max-width: 700px;
+    min-width: 300px;
+}
+
 body {
     background-color: var(--white);
-    width: 100vw; min-width: 390px; height: 100vh;
+    
     padding-bottom: 30px;
     overflow-x: hidden;
     align-content: center;
+    padding-bottom: 10px;
 }
 
 div {
@@ -15,95 +23,181 @@ div {
 }
 
 h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
     vertical-align: center;
 }
-
-#Responsive {
-
+h4{
+    
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        vertical-align: center;
+    
 }
 
-/* .flex-container {
-    display: flex;
-    flex-direction: row;
-} */
-
-.flex-container img {
-    margin: 10px;
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.arrow{
-    position:static;
+ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ol{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+<!--Elements-->
+
+
+
+#recommendedDrinkBox{
+    max-width: 520px;
+    
+    
+}
+
+
+.arrowRight{
+    width: fit-content; 
+    height: auto; 
+    
+    fill: "currentColor"; 
+    margin: auto;
+    position:static; 
     align-self: center;
-    max-width: 10%;
+    max-width: 7%;
+    cursor: pointer;
 }
 
-.headimg {
+.arrowLeft{
+    width: fit-content; 
+    height: auto; 
+    fill: "currentColor"; 
+    margin: auto;
+    position:static; 
+    align-self: center;
+    max-width: 7%;
+    cursor: pointer;
+    transform: rotateY(180deg);
+    
+}
+
+.headImage {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
+
+.headImage img{
+    width: 100%;
+}
+
 
 .boxParent{
     width: fit-content;
-    padding: 10px;
+    margin: 0px;
     margin-bottom: 20px;
     margin-top: 20px;
-    /* border-radius: 4%; */
     border-radius: 5px;
 }
 
-.boxA /* Previously known as "box1" */{
+.description{
     background-color: var(--pink-regular);
     align-content: center;
-    width: fit-content;
-    /* min-width: 350px; */
+    box-sizing: border-box;
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
-    /* border-radius: 4%; */
     border-radius: 5px;
-    /* margin-left: 10px;
-    margin-right: 10px; */
-}
-
-/* .minWidh350 {
-    min-width: 300px;
-} */
-
-/* .boxB /* Replaced with "BoxA" in conjunction with "minWidht350 */ /*{
-
-
-    /* background-color: var(--pink-regular);
-    width: fit-content;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-radius: 4%;
-} */
-
-.innerbox /*used in coonjunction wtih BoxA*/{
-    background-color: var(--white);
-    align-content: center;
-    margin: 8px;
-    /* width: fit-content; */
-    height: fit-content;
-    min-width: 320;
-    /* width: 390px; */
-    padding: 5px;
-    /* border-radius: 4%; */
-}
-
-.img-responsive {
-    width: auto;
-    height: fit-content;
-}
-.box-shadow{
     box-shadow : 0px 3px 5px gray;
 }
 
-/* .BoxAminwidth350IMG {
-    max-width: 75%;
-    max-height: 75%;
-    border-radius: 10%;
-} */
+.listCard{
+    background-color: var(--pink-regular);
+    align-content: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow : 0px 3px 5px gray;
+}
+
+.drinkBox {
+    background-color: var(--pink-regular);
+    align-content: center;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0px 15px;
+    box-shadow : 0px 3px 5px gray;
+    border-radius: 5px;   
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px){
+    #recommendedDrinkBox{
+        width: 80%;
+        
+    }
+    .arrowLeft{width: fit-content;}
+    .arrowRight{width: fit-content;}
+    
+}
+
+.listCard-innerbox {
+    background-color: var(--white);
+    align-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 4%;
+}
+
+
+.drinkImage img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.drinkGroup { 
+    display: flex;
+    flex-direction: row;
+}
+
+.Center {
+
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2%;
+}
+
+.CenterText {
+    text-align: center;
+    max-width: 50%;
+    margin-left: 0%;
+}
+
+.drinkDescription {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.drinkImage {
+    object-fit: contain;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-size: contain;
+}
+

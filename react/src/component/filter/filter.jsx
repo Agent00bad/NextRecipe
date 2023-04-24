@@ -14,47 +14,25 @@ export default function Filter() {
   const apply = ["Apply"]
   const clear = ["Clear"]
 
-  //
-  // return(
-  //   <>
-  //     <Section header="Meal Options"/>
-  //     <Pills types={mealType}/>
-  //     <MatchPills/>
-  //     <hr />
-
-  //     <Section header="Meal Allergies/Diet"/>
-  //     <Pills types={allergies}/>
-  //     <hr />
-
-  //     <Section header="Drinks"/>
-  //     <Pills types={drinks}/>
-  //     <hr />
-
-  //     <Section header="Match drinks with food"/>
-  //     <Pills types={mealType}/>
-  //     <MatchPills/>
-  //     <hr />
-
-  //     <div className="flex-container apply-clear">
-  //       <ApplyClearPills types={apply} id="apply-button"/>
-  //       <ApplyClearPills types={clear} id="clear-button"/>
-  //     </div>
-  //   </>
-  // )
   
   return(
     <>
-      <SectionDesktop header="Meal Options"/>
-      <DesktopCheckbox types={mealType}/>
-      <MatchCheckbox/>
+      <SectionMobile header="Meal Options"/>
+      <Pills types={mealType}/>
+      <MatchPills/>
       <hr />
 
-      <SectionDesktop header="Meal Allergies/Diet"/>
-      <DesktopCheckbox types={allergies}/>
+      <SectionMobile header="Meal Allergies/Diet"/>
+      <Pills types={allergies}/>
       <hr />
 
-      <SectionDesktop header="Drinks"/>
-      <DesktopCheckbox types={drinks}/>
+      <SectionMobile header="Drinks"/>
+      <Pills types={drinks}/>
+      <hr />
+
+      <SectionMobile header="Match drinks with food"/>
+      <Pills types={mealType}/>
+      <MatchPills/>
       <hr />
 
       <div className="flex-container apply-clear">
@@ -63,17 +41,40 @@ export default function Filter() {
       </div>
     </>
   )
+  
+  // return(
+  //   <>
+  //     <SectionDesktop header="Meal Options"/>
+  //     <DesktopCheckbox types={mealType}/>
+  //     <MatchCheckbox/>
+  //     <hr />
+
+  //     <SectionDesktop header="Meal Allergies/Diet"/>
+  //     <DesktopCheckbox types={allergies}/>
+  //     <hr />
+
+  //     <SectionDesktop header="Drinks"/>
+  //     <DesktopCheckbox types={drinks}/>
+  //     <hr />
+
+  //     <div className="flex-container apply-clear">
+  //       <ApplyClearPills types={apply} id="apply-button"/>
+  //       <ApplyClearPills types={clear} id="clear-button"/>
+  //     </div>
+  //   </>
+  // )
 }
 
 // -------    MOBILE    -------
 
-function Pills({types}){
+function Pills({types, id}){
   return (
-    types.map((item, index) => (
-      <div key={index}>
-        <span>{item}</span>
-      </div>
-  )))
+    <>
+      {types.map((types) =>
+        <button id={id} onClick={() => id={id}}>{types}</button>
+      )}
+    </>
+  );
 }
 
 function MatchPills(){

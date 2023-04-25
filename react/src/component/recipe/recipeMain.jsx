@@ -1,8 +1,11 @@
 import React from "react";
 
-import "../../CSS/colorscheme.css";
-import "../../CSS/recipe.css";
-import "../../CSS/HeaderFooter.css";
+// import "../../CSS/colorscheme.css";
+// import "../../CSS/recipe.css";
+// import "../../CSS/HeaderFooter.css";
+import "../../CSS/colorscheme.scss";
+import "../../CSS/recipe.scss";
+import "../../CSS/HeaderFooter.scss";
 import HeadImage from "./recipeHeadImage";
 import Description from "./recipeDescription";
 import DrinkGroup from "./recipeDrinkGroup";

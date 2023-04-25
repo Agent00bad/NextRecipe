@@ -1,8 +1,13 @@
 import React, { Fragment } from "react";
 
-import '../../css/colorscheme.css';
-import '../../css/filter.css';
-import '../../css/button.css';
+// import '../../css/colorscheme.css';
+// import '../../css/filter.css';
+// import '../../css/button.css';
+
+import '../../css/colorscheme.scss';
+import '../../css/filter.scss';
+import '../../css/button.scss';
+
 import arrowDown from '../../Images/arrow-down.png';
 import CheckMarkSquare from '../../images/pink-square.png'
 

@@ -4,9 +4,9 @@ import React from "react";
 // import "../../CSS/recipe.css";
 // import "../../CSS/HeaderFooter.css";
 
-import "../../CSS/colorscheme.scss";
-import "../../CSS/recipe.scss";
-import "../../CSS/HeaderFooter.scss";
+import "../../SCSS/colorscheme.scss";
+import "../../SCSS/recipe.scss";
+import "../../SCSS/HeaderFooter.scss";
 
 export default function RecipeListCard({isOrdered, Listitems = []}){
 

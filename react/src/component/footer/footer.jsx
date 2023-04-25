@@ -1,5 +1,5 @@
 // import "../../CSS/headerfooter.css"
-import "../../CSS/headerfooter.scss"
+import "../../SCSS/headerfooter.scss"
 
 export default function Footer(){
     return(

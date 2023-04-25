@@ -1,8 +1,8 @@
 // import "../../CSS/headerfooter.css"
 // import "../../CSS/search_bar.css"
 
-import "../../CSS/headerfooter.scss"
-import "../../CSS/search_bar.scss"
+import "../../SCSS/headerfooter.scss"
+import "../../SCSS/search_bar.scss"
 
 import menuicon from "../../Images/menu-icon.png"
 import logo from "../../Images/perfectpair_transparent.png"

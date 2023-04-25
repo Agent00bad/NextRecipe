@@ -1,4 +1,4 @@
-import "../../CSS/index.css";
+import "../../SCSS/index.scss";
 import { Card } from "./card";
 import { ActiveFilter } from "./activeFilter";
 import logo from "../../Images/logo.png";

@@ -1,6 +1,6 @@
 import logo from "../../Images/logo.png"
 // import "../../CSS/loading.css"
-import "../../CSS/loading.scss"
+import "../../SCSS/loading.scss"
 
 
 export default function Loading(){

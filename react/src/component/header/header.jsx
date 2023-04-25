@@ -1,6 +1,3 @@
-// import "../../CSS/headerfooter.css"
-// import "../../CSS/search_bar.css"
-
 import "../../SCSS/headerfooter.scss"
 import "../../SCSS/search_bar.scss"
 

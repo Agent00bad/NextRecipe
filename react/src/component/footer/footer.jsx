@@ -1,4 +1,3 @@
-// import "../../CSS/headerfooter.css"
 import "../../SCSS/headerfooter.scss"
 
 export default function Footer(){

@@ -1,5 +1,4 @@
 import logo from "../../Images/logo.png"
-// import "../../CSS/loading.css"
 import "../../SCSS/loading.scss"
 
 

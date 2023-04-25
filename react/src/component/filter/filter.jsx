@@ -1,9 +1,5 @@
 import React, { Fragment } from "react";
 
-// import '../../css/colorscheme.css';
-// import '../../css/filter.css';
-// import '../../css/button.css';
-
 import '../../scss/colorscheme.scss';
 import '../../scss/filter.scss';
 import '../../scss/button.scss';

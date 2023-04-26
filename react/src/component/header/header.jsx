@@ -1,5 +1,6 @@
-import "../../CSS/headerfooter.css"
-import "../../CSS/search_bar.css"
+import "../../SCSS/headerfooter.scss"
+import "../../SCSS/search_bar.scss"
+
 import menuicon from "../../Images/menu-icon.png"
 import logo from "../../Images/perfectpair_transparent.png"
 import userIcon from "../../Images/user-icon.png"
@@ -9,7 +10,7 @@ import {Link} from "react-router-dom"
 export default function Header()
 {
     return(
-        <>
+        <div className="headerfooter">
         <header> 
     <div className="header">
         <Link to="/filter" className="menu-link"><img src={menuicon}/></Link>
@@ -23,6 +24,6 @@ export default function Header()
         </div>
     </div>
 </header>
-        </>
+        </div>
     )
 }

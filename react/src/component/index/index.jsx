@@ -1,14 +1,14 @@
-import "../../CSS/index.css";
+import "../../SCSS/index.scss";
+// import "../../SCSS/HeaderFooter.scss";
 import { Card } from "./card";
 import { ActiveFilter } from "./activeFilter";
 import logo from "../../Images/logo.png";
-// import "../../CSS/HeaderFooter.css";
 import menuIcon from "../../Images/menu-icon.png";
 import perfectpair_transparent from "../../Images/perfectpair_transparent.png";
 import userIcon from "../../Images/user-icon.png";
 export default function Index() {
   return (
-    <>
+    <div className="index">
       <div className="logo">
         <img src={logo} alt="WelcomeImage" />
       </div>
@@ -61,6 +61,6 @@ export default function Index() {
         </div>
 
       </main>
-    </>
+    </div>
   );
 }

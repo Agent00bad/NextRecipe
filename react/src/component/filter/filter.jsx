@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 
-import '../../css/colorscheme.css';
-import '../../css/filter.css';
-import '../../css/button.css';
+import '../../scss/colorscheme.scss';
+import '../../scss/filter.scss';
+import '../../scss/button.scss';
+
 import arrowDown from '../../Images/arrow-down.png';
 import CheckMarkSquare from '../../images/pink-square.png'
 
@@ -43,7 +44,7 @@ export default function Filter() {
   // )
   
   return(
-    <>
+    <div className="filterandbutton">
       <SectionDesktop header="Meal Options"/>
       <DesktopCheckbox types={mealType}/>
       <MatchCheckbox/>
@@ -61,7 +62,7 @@ export default function Filter() {
         <ApplyClearPills types={apply} id="apply-button"/>
         <ApplyClearPills types={clear} id="clear-button"/>
       </div>
-    </>
+    </div>
   )
 }
 

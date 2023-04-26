@@ -10,7 +10,7 @@ import {Link} from "react-router-dom"
 export default function Header()
 {
     return(
-        <>
+        <div className="headerfooter">
         <header> 
     <div className="header">
         <Link to="/filter" className="menu-link"><img src={menuicon}/></Link>
@@ -24,6 +24,6 @@ export default function Header()
         </div>
     </div>
 </header>
-        </>
+        </div>
     )
 }

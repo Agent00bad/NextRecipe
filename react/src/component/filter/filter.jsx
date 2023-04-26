@@ -44,7 +44,7 @@ export default function Filter() {
   // )
   
   return(
-    <>
+    <div className="filterandbutton">
       <SectionDesktop header="Meal Options"/>
       <DesktopCheckbox types={mealType}/>
       <MatchCheckbox/>
@@ -62,7 +62,7 @@ export default function Filter() {
         <ApplyClearPills types={apply} id="apply-button"/>
         <ApplyClearPills types={clear} id="clear-button"/>
       </div>
-    </>
+    </div>
   )
 }
 

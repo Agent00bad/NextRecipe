@@ -8,7 +8,7 @@ import perfectpair_transparent from "../../Images/perfectpair_transparent.png";
 import userIcon from "../../Images/user-icon.png";
 export default function Index() {
   return (
-    <>
+    <div className="index">
       <div className="logo">
         <img src={logo} alt="WelcomeImage" />
       </div>
@@ -61,6 +61,6 @@ export default function Index() {
         </div>
 
       </main>
-    </>
+    </div>
   );
 }

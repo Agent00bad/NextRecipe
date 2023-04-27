@@ -1,8 +1,7 @@
 import axios from "axios";
-export async function fetchEdemamData(filters = []) {
+export async function fetchApiEdemam(filters = [], from = 0, to = 10) {
     let filterQuery;
     console.log(filters.toString())
-    //filters = ["Breakfast", "Lunch"]
     if(filters.length > 0)
     {
         filters.map((filter) => {
@@ -15,7 +14,9 @@ export async function fetchEdemamData(filters = []) {
       method: "GET",
       url: "https://edamam-recipe-search.p.rapidapi.com/search",
       params: {
-        q: filterQuery != undefined ? filterQuery : "recipe",
+        q : filterQuery != undefined ? filterQuery : "recipe",
+        from : from,
+        to : to,
       },
       headers: {
         "content-type": "application/octet-stream",
@@ -25,12 +26,13 @@ export async function fetchEdemamData(filters = []) {
     };
     try {
       const response = await axios.request(options);
-      console.log(response.toString);
-      return response.data;
+      console.log(response);
+      console.log(response.data);
+      return response.data.hits;
     } 
     catch (error) 
     {
-      console.log("Här är vi");
+      console.log(error);
         return error;
     }
 }

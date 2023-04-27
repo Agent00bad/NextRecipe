@@ -2,15 +2,14 @@ import { Outlet } from "react-router-dom"
 import Header from "./component/header/header"
 import Footer from "./component/footer/footer"
 import { useEffect, useState } from "react"
-//import { fetchEdemamData } from "./JS/fetchApiEdamam"
-import { fetchEdemamData } from "./JS/fetchTest"
+import { fetchApiEdemam } from "./JS/fetchApiEdamam"
 export default function Root()
 {
     const filterInput = ["Breakfast", "Lunch"]
     const [data, setData] = useState(null);
     useEffect(() => {
         const getData = async () =>{
-            const result = await fetchEdemamData(filterInput);
+            const result = await fetchApiEdemam(filterInput,);
             setData(result);
         }
         getData();

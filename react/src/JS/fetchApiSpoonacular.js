@@ -1,34 +1,24 @@
 import axios from "axios";
-export async function fetchSpoonacularData(filters = []) {
-    let filterQuery;
-    console.log(filters.toString())
-    //filters = ["Breakfast", "Lunch"]
-    if(filters.length > 0)
+
+export async function fetchApiSpoonacular(mainFoodType = "steak") {
+   try{
+    const wineListResponse = await fetch(`https://api.spoonacular.com/food/wine/pairing?food=${mainFoodType}`,
     {
-        filters.map((filter) => {
-            
-            filterQuery != undefined ? (filterQuery += ` ${filter}`) : (filterQuery = `${filter}`);
-        })
+      headers : {
+        "x-api-key" : import.meta.env.VITE_SPOON_KEY,
+      }
+    })
+    const result = await wineListResponse.json();
+    const wineObject = {
+      "title" : result.productMatches[0].title,
+      "pairingText" : result.pairingText,
+      "imageUrl" : result.productMatches[0].imageUrl,
     }
-    
-    const options = {
-      method: "GET",
-      url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch",
-      params: {
-        q: filterQuery != undefined ? filterQuery : "recipe",
-      },
-      headers: {
-        "content-type": "application/octet-stream",
-        "X-RapidAPI-Key": import.meta.env.VITE_RAPID_KEY,
-        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-      },
-    };
-    try {
-      const response = await axios.request(options);
-      return response.data;
-    } 
-    catch (error) 
-    {
-        return error;
-    }
+    return(wineObject); 
+   }
+   catch(error)
+   {
+    console.log("Erro occured")
+    return error
+   }
 }

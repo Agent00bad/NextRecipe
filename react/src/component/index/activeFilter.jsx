@@ -8,7 +8,7 @@ export function ActiveFilter({ filters = [], header }) {
   return (
     <>
         <div id="filterCard" className="card">
-          <a id="filtersTag" className="filter-tag" href="filter.html">
+          <a id="filtersTag" className="filter-tag" href="filter">
             <b>Filters</b>
           </a>
           <div className="filter-list">

@@ -8,6 +8,11 @@ export async function fetchApiSpoonacular(mainFoodType = "steak") {
         "x-api-key" : import.meta.env.VITE_SPOON_KEY,
       }
     })
+    
+    if(!wineListResponse.ok){
+      throw new Error(`ohh no the response got lost in the mail: ${wineListResponse.status}`)
+    }
+
     const result = await wineListResponse.json();
     const wineObject = {
       "title" : result.productMatches[0].title,
@@ -18,7 +23,7 @@ export async function fetchApiSpoonacular(mainFoodType = "steak") {
    }
    catch(error)
    {
-    console.log("Erro occured")
-    return error
+    console.log(error.message);
+    return null;
    }
 }

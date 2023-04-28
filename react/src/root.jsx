@@ -13,7 +13,7 @@ export default function Root()
         const getData = async () =>{
             const result = await fetchApiEdemam(filterInput);
             setData(result);
-            const wineResult = await fetchApiSpoonacular("salmon");
+            const wineResult = await fetchApiSpoonacular("chicken");
             setWines(wineResult);
         }
         getData();
@@ -27,6 +27,7 @@ export default function Root()
             <main>
                 { wines && 
                 <div>
+                    <Outlet/>
                     <h2>{wines.title}</h2>
                     <p>{wines.pairingText}</p>
                     <img src={wines.imageUrl} alt="" />

@@ -4,7 +4,7 @@ export async function fetchApiEdemam(filters = [], dataFrom = 0, dataTo = 10) {
     console.log(filters.toString())
     if(filters.length > 0)
     {
-        filters.map((filter) => {
+        filters.map((filter) => { 
             
             filterQuery != undefined ? (filterQuery += ` ${filter}`) : (filterQuery = `${filter}`);
         })
@@ -26,13 +26,14 @@ export async function fetchApiEdemam(filters = [], dataFrom = 0, dataTo = 10) {
     };
     try {
       const response = await axios.request(options);
-      console.log(response);
-      console.log(response.data);
+      if(!response.ok){
+        throw new Error(`ohh no the response got lost in the mail: ${response.status}`)
+      }
       return response.data.hits;
     } 
     catch (error) 
     {
-      console.log(error);
-        return error;
+        console.log(error.message)
+        return null;
     }
 }

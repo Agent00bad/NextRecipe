@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../../SCSS/button.scss"
 
 export function Pills({types, activeFilter = [], setTemp}){
@@ -8,17 +9,16 @@ export function Pills({types, activeFilter = [], setTemp}){
     
     // console.log("Items: " + ItemsArray)
     // console.log("Types: " + types)
-    
+    function clickHandler(type)
+    {
+      setTemp(type);
+    }
 
     return (
       <div className="filterandbutton">
       {types.map((type, id ) =>
-        // <button key={id} className={`${activeFilter.find(filter => filter === type) === undefined ? "filterButton" : "selected"}`}  
-        //   onClick={() => WriteSomething(type)}>{type}
-        //   </button>
-        
-        <button key={id} className={`filter-button ${activeFilter.find(filter => filter === type) === type ? "selected" : ""}`}  
-          onClick={() => setTemp(type)}>
+        <button key={id} className={`filter-button ${activeFilter.find(filter => filter === type) === type && "selected"}`}  
+          onClick={() => clickHandler(type)}>
           {type}
         </button>
       )}

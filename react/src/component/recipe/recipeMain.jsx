@@ -9,18 +9,20 @@ import DrinkGroup from "./recipeDrinkGroup";
 import RecipeImage from "../../Images/image.jpg";
 import RecipeListCard from "./recipeListCard";
 import RecDrinkImage from "../../Images/wine.jpg";
+import { Link, useLocation } from "react-router-dom";
 
 const ingredientsList = ["Carrots", "Potatoes", "Pasta", "Onion", "Rice"];
 const HowToList = ["Boil the potatoes", "Skin the carrots"];
+let {state} = useLocation();
 
 export default function Recipe() {
   return (
     <div className="main recipe">
       {/* Head Image */}
-      <HeadImage description="HeadDesciption" recipeImage={RecipeImage} />
+      <HeadImage description="HeadDesciption" recipeImage={state.recipe.image}/>
 
       {/* Description */}
-      <Description description="Description" title="Title" />
+      <Description description="Description" title={state.recipe.label} />
 
       {/* Recommended Drink */}
       <DrinkGroup

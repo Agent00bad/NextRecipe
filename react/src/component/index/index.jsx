@@ -5,17 +5,20 @@ import { Card } from "./card";
 import { ActiveFilter } from "./activeFilter";
 import { fetchApiEdemam } from "../../JS/fetchApiEdamam";
 import logo from "../../Images/logo.png";
+import { useOutletContext } from "react-router-dom";
 import menuIcon from "../../Images/menu-icon.png";
 import perfectpair_transparent from "../../Images/perfectpair_transparent.png";
 import userIcon from "../../Images/user-icon.png";
 
 export default function Index() {
+  
+const[activeFilter, setActiveFilters] = useOutletContext();
 
  const [data, setData] = useState([]);
 
   useEffect(() => {
     const getData = async () =>{
-      const result = await fetchApiEdemam();
+      const result = await fetchApiEdemam(activeFilter);
       setData(result);
     }
 
@@ -35,13 +38,7 @@ export default function Index() {
        {/* <div className="recipe-drink-flex"> */}
           {/* <!--Displays active filters--> */}
           <ActiveFilter
-            filters={[
-              "Dinner",
-              "Lactose Free",
-              "Gluten Free",
-              "Alcohol Free",
-              "High Protein",
-            ]}
+            filters={activeFilter}
             header={"Active Filter"}
           />
           <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
@@ -51,6 +48,7 @@ export default function Index() {
             return(
             <div className="inner-mapped-card">
              <Card 
+             prop={obj}
              title={obj.recipe.label}
              description={obj.recipe.healthLabels}
              type={obj.recipe.mealType[0]}

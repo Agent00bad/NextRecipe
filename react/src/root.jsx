@@ -1,3 +1,4 @@
+
 import { Outlet } from "react-router-dom"
 import Header from "./component/header/header"
 import Footer from "./component/footer/footer"
@@ -20,4 +21,21 @@ export default function Root()
         </div>
     )
 
+export default function Root() {
+  const [activeFilters, setActiveFilters] = useState([]);
+  return (
+    <div className="root">
+      <header>
+        <Header />
+      </header>
+      <main>
+        <div>
+          <Outlet context={[activeFilters, setActiveFilters]} />
+        </div>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
+  );
 }

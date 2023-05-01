@@ -24,32 +24,25 @@ export default function Filter() {
   const proteins = ["Steak", "Pork", "Seafood", "Chicken"];
   const apply = ["Apply"];
   const clear = ["Clear"];
-  let test = 1;
-
-  useEffect(() => {
-    console.log(activeFilters);
-    },[activeFilters])
     
-   function setTemp(filter) {
-      console.log(filter);
+   function setFilter(filter) {
       if (filter != activeFilters.find((f) => f === filter)) {
         setActiveFilters(oldFilters => [...oldFilters, filter]);
       } 
       else {
         setActiveFilters(filters => filters.filter(oldFilter => oldFilter != filter))
     }
-    console.log(activeFilters);
   }
   return (
     <>
       <SectionMobile header="Meal Options" />
-      <Pills types={mealType} activeFilter={activeFilters} setTemp={setTemp} />
+      <Pills types={mealType} activeFilter={activeFilters} setFilter={setFilter} />
       <hr />
       <SectionMobile header="Meal Allergies/Diet" />
-      <Pills types={allergies} activeFilter={activeFilters} setTemp={setTemp} />
+      <Pills types={allergies} activeFilter={activeFilters} setFilter={setFilter} />
       <hr />
       <SectionMobile header="Drinks" />
-      <Pills types={proteins} activeFilter={activeFilters} setTemp={setTemp}/>
+      <Pills types={proteins} activeFilter={activeFilters} setFilter={setFilter}/>
       <hr />
       <div className="flex-container apply-clear">
         <ApplyClearPills types={apply} id="apply-button" />

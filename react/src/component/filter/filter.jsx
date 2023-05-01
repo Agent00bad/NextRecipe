@@ -5,30 +5,24 @@ import "../../scss/filter.scss";
 import "../../scss/button.scss";
 import arrowDown from "../../Images/arrow-down.png";
 import CheckMarkSquare from "../../images/pink-square.png";
+import { useOutletContext } from "react-router-dom";
 
 export default function Filter() {
  
-  
-  const [activeFilters, setActiveFilters] = useState([]);
+  // const [filters, setFilters] = useOutletContext();
+  const [activeFilters, setActiveFilters] = useOutletContext();
   const mealType = ["Breakfast", "Lunch", "Dinner", "Snacks"];
-  const allergies = [
-    "Vegeterian",
-    "Vegan",
-    "Gluten free",
-    "Lactose free",
-    "Milk free",
-    "Nut free",
-  ];
+  const allergies = ["Vegeterian", "Vegan", "Gluten free", "Lactose free", "Milk free", "Nut free"];
   const proteins = ["Steak", "Pork", "Seafood", "Chicken"];
   const apply = ["Apply"];
   const clear = ["Clear"];
     
-   function setFilter(filter) {
-      if (filter != activeFilters.find((f) => f === filter)) {
-        setActiveFilters(oldFilters => [...oldFilters, filter]);
-      } 
-      else {
-        setActiveFilters(filters => filters.filter(oldFilter => oldFilter != filter))
+  function setFilter(filter) {
+    if (filter != activeFilters.find((f) => f === filter)) {
+      setActiveFilters(oldFilters => [...oldFilters, filter]);
+    }
+    else {
+      setActiveFilters(filters => filters.filter(oldFilter => oldFilter != filter))
     }
   }
   return (

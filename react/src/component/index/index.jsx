@@ -3,7 +3,6 @@ import {useState, useEffect} from "react"
 // import "../../SCSS/HeaderFooter.scss";
 import { Card } from "./card";
 import { ActiveFilter } from "./activeFilter";
-import ApiCall from "../../JS/printApiDataToCards";
 import { fetchApiEdemam } from "../../JS/fetchApiEdamam";
 import logo from "../../Images/logo.png";
 import menuIcon from "../../Images/menu-icon.png";
@@ -47,10 +46,10 @@ export default function Index() {
           />
           <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
           {data && data[0] != undefined ?
-          <div>
+          <div className="card-mapping">
           {data.map((obj) => {
             return(
-            <div>
+            <div className="inner-mapped-card">
              <Card 
              title={obj.recipe.label}
              description={obj.recipe.healthLabels}
@@ -76,9 +75,7 @@ export default function Index() {
           /> */}
         {/* </div> */}
         </div>
-        
-        {/* <button onClick={testApiOutPut}>TEST</button> */}
-        
+                
       </main>
     </div>
   );

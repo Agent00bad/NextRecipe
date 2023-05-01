@@ -12,7 +12,7 @@ import Drink from "./recipeDrink";
 export default  function DrinkGroup({drinkImage,drinkDescription,drinkTitle}){
     return(
         <div className="drinkGroup">
-            <LeftArrow/>
+            {/* <LeftArrow/> */}
 
             <Drink
             drinkImage = {drinkImage}
@@ -20,7 +20,7 @@ export default  function DrinkGroup({drinkImage,drinkDescription,drinkTitle}){
             drinkTitle={drinkTitle}
             />
 
-            <RightArrow/>
+            {/* <RightArrow/> */}
         </div>
 
         )

@@ -35,7 +35,7 @@ export function Card({prop, title, type, description = [], calories, image }) {
       </div>
       <article className="specifics">
         <p>calories/portion:</p>
-        <p>{calories} kcal</p>
+        <p>{Math.floor(calories)} kcal</p>
       </article>
     </Link>
   </div>

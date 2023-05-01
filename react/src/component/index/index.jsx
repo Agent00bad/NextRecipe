@@ -9,7 +9,7 @@ import { useOutletContext } from "react-router-dom";
 import menuIcon from "../../Images/menu-icon.png";
 import perfectpair_transparent from "../../Images/perfectpair_transparent.png";
 import userIcon from "../../Images/user-icon.png";
-
+import Loading from "../loading/loading"
 export default function Index() {
   
 const[activeFilter, setActiveFilters] = useOutletContext();
@@ -60,7 +60,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
           })}
           </div>
         :
-        <h2>loading...</h2>  
+        <Loading/>
         }
 
           {/*<!--Shows overview drink details and works as a selection-->*/}

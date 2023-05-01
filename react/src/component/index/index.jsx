@@ -53,7 +53,7 @@ export default function Index() {
             <div>
              <Card 
              title={obj.recipe.label}
-             description={obj.recipe.ingredientLines}
+             description={obj.recipe.healthLabels}
              type={obj.recipe.mealType[0]}
              calories={obj.recipe.calories}
              image={obj.recipe.image}

@@ -15,10 +15,12 @@ export function Card({ title, type, description = [], calories, image }) {
         <div className="info">
           <article className="description">
             <ul>
-              {description.map((ingredient,id) => {
+              {description.map((info,id) => {
+                return(
                 <li key={id}>
-                  {ingredient}
+                  {info}
                 </li>
+                )
               })}
             </ul>
           </article>

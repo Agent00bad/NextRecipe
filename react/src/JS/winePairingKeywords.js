@@ -5,7 +5,7 @@ export function winePairingKeywords(){
         "salmon",
         "steak",
         "salad",
-        "beaf",
+        "beef",
         "pork",
         "fish",
         "tuna",

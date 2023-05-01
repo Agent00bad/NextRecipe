@@ -1,0 +1,9 @@
+Part task check-list;
+
+1) Print arrays (in console) on Index page
+2) ID´s which are hard coded with data on cards
+3) Loop data with foorloop (map in Javascript) in to cards
+4) Create a maximum on cards per page, and if the number of cards exceeds they are printed on multible pages. 
+5) Refreshed automatically when new data comes in and is fetched.
+6) Make sure that thus data is fetched automatically (on page refresh)
+7) 

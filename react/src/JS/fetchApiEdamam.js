@@ -9,26 +9,25 @@ export async function fetchApiEdemam(filters = [], dataFrom = 0, dataTo = 10) {
             filterQuery != undefined ? (filterQuery += ` ${filter}`) : (filterQuery = `${filter}`);
         })
     }
-    
+   
     const options = {
       method: "GET",
       url: "https://edamam-recipe-search.p.rapidapi.com/search",
       params: {
         q : filterQuery != undefined ? filterQuery : "recipe",
-        from : dataFrom,
-        to : dataTo,
       },
       headers: {
-        "content-type": "application/octet-stream",
+        // "content-type": "application/octet-stream",
         "X-RapidAPI-Key": import.meta.env.VITE_RAPID_KEY,
         "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com"
       },
     };
     try {
       const response = await axios.request(options);
-      if(!response.ok){
-        throw new Error(`ohh no the response got lost in the mail: ${response.status}`)
-      }
+      console.log(response);
+      // if(!response.ok){
+      //   throw new Error(`ohh no the response got lost in the mail: ${response.status}`)
+      // }
       return response.data.hits;
     } 
     catch (error) 

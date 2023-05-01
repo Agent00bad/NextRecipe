@@ -18,18 +18,16 @@ export async function fetchApiEdemam(filters = [], dataFrom = 0, dataTo = 10) {
         from : dataFrom,
         to : dataTo,
       },
+
       headers: {
-        "content-type": "application/octet-stream",
-        "X-RapidAPI-Key": import.meta.env.VITE_RAPID_KEY,
-        "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com"
+        // "content-type": "application/octet-stream",
+        "X-RapidAPI-Key": 'df8a80b1a6msha38ff4bdfa0adc0p18c309jsn16a0454d60dc', 
+        "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com",
       },
     };
     try {
       const response = await axios.request(options);
-      if(!response.ok){
-        throw new Error(`ohh no the response got lost in the mail: ${response.status}`)
-      }
-      return response.data.hits;
+      return response.data.hits;  
     } 
     catch (error) 
     {

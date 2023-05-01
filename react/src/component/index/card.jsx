@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-export function Card({ title, type, description, calories, image }) {
+export function Card({ title, type, description = [], calories, image }) {
   
   return(
   <div className="recipe-container card">
@@ -14,7 +14,15 @@ export function Card({ title, type, description, calories, image }) {
       <div className="inner-container">
         <div className="info">
           <article className="description">
-            <h4>{description}</h4>
+            <ul>
+              {description.map((info,id) => {
+                return(
+                <li key={id}>
+                  {info}
+                </li>
+                )
+              })}
+            </ul>
           </article>
         </div>
         {/* <!--Image--> */}

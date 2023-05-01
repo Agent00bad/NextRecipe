@@ -12,21 +12,22 @@
   main {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-flow: row wrap;
   }
   /*
-    @media screen and (width > 391px) {
+  @media screen and (width > 391px) {
         main {
-            display: flex;
+          display: flex;
             justify-content: start;
             flex-direction: row wrap;
         }
         .card{
-            max-width: 390px;
+          max-width: 390px;
             max-height: 300px;
     }
     .recipe-drink-flex{
-        background-color: violet;
+      background-color: violet;
     }
 }
 */
@@ -69,6 +70,16 @@
   .recipe-container a {
     text-decoration: none;
     color: #000;
+  }
+  .card-mapping{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .inner-mapped-card{
+    display: flex;
+    justify-content: center;
   }
   .recipe-container.card li {
     list-style-type: none;

@@ -8,8 +8,6 @@ import CheckMarkSquare from "../../images/pink-square.png";
 
 export default function Filter() {
  
-  let x = [];
-  const y = [];
   
   const [activeFilters, setActiveFilters] = useState([]);
   const mealType = ["Breakfast", "Lunch", "Dinner", "Snacks"];
@@ -44,91 +42,17 @@ export default function Filter() {
       <SectionMobile header="Drinks" />
       <Pills types={proteins} activeFilter={activeFilters} setFilter={setFilter}/>
       <hr />
-      <div className="flex-container apply-clear">
+      {/* <div className="flex-container apply-clear">
         <ApplyClearPills types={apply} id="apply-button" />
         <ApplyClearPills types={clear} id="clear-button" />
-      </div>
+      </div> */}
     </>
   );
 
-  function UpdatePressedValues(name) {
-    let fromRegex = RegexCheck(name);
-    let buttonPressed = fromRegex + "Pressed";
-    return buttonPressed;
-  }
-
-  function UpdateSetValues(name) {
-    let fromRegex = RegexCheck(name);
-    let setPressed = "set" + fromRegex;
-    return setPressed;
-  }
-
-  function RegexCheck(input) {
-    let newValue;
-
-    let value1 = input.includes("/");
-    let value2 = input.includes("-");
-    if (value1) {
-      newValue = input.replace("/", "");
-    } else if (value2) {
-      newValue = input.replace("-", "");
-    } else {
-      newValue = input;
-    }
-    return newValue;
-  }
-
-  function WriteSomething(name) {
-    console.log(name);
-  }
-
-  function TransformToArray(types) {
-    let useType = types.type;
-    let useId = types.id;
-
-    let pressedArray = [];
-    let setArray = [];
-    for (let index = 0; index < types.length; index++) {
-      const element = types[index];
-
-      let pressedValue = UpdatePressedValues(element);
-      pressedArray.push(pressedValue);
-    }
-    return pressedArray;
-  }
 
   // -------    MOBILE    -------
 
-  // function Pills({types, activeFilter = []}){
-  //   let ItemsArray = TransformToArray(types)
-
-  //   // {ItemsArray.map((ItemsArray[0].types,ItemsArray[1].pressedArray) =>
-  //   // <p>{ItemsArray[0].types</p>
-  //   // )}
-
-  //   console.log("Items: " + ItemsArray)
-  //   // console.log("Types: " + types)
-
-  //   return (
-  //     <>
-  //     {types.map((type, id ) =>
-  //       // <button key={id} className={`${activeFilter.find(filter => filter === type) === undefined ? "filterButton" : "selected"}`}
-  //       //   onClick={() => WriteSomething(type)}>{type}
-  //       //   </button>
-
-  //       <button key={id} className={`${activeFilter.find(filter => filter === type) === undefined ? "filterButton" : "selected"}`}
-  //         onClick={() => setTemp(type)}>
-  //         {type}
-  //       </button>
-  //     )}
-  //     </>
-  //   );
-  // }
-
-  // onClick={() => UpdatePressedValues(type, id)}
-  // onClick={() =>{ id={id}}}
-  // onClick={changeState(isPressed,setValue)}
-  //
+  
 
   function MatchPills() {
     return (

@@ -7,24 +7,10 @@ import { fetchApiSpoonacular } from "./JS/fetchApiSpoonacular";
 
 export default function Root() {
   const [activeFilters, setActiveFilters] = useState([]);
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const getData = async () => {
-      const result = await fetchApiEdemam();
-      setData(result);
-    };
-    getData();
-    console.log(data)
-  }, [activeFilters]);
   return (
     <div className="root">
       <header>
         <Header />
-        {data && 
-        <div>
-            <p>Datan är laddad</p>
-        </div>}
       </header>
       <main>
         <div>

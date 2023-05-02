@@ -1,6 +1,6 @@
 //vegan implementation is needed since spoonacular don't support it,
 
-export function winePairingKeywords(){
+export function winePairingKeywords(input){
     const pairings = [ 
         "salmon",
         "steak",
@@ -41,4 +41,9 @@ export function winePairingKeywords(){
         "grapes",
         "fruit",
     ]
+    if(pairings.filter(pair => pair === input).length > 0)
+    {
+        return true; 
+    }
+    return false;
 }

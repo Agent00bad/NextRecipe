@@ -1,10 +1,10 @@
 import {Link} from "react-router-dom";
 
-export function Card({ title, type, description = [], calories, image }) {
+export function Card({prop, title, type, description = [], calories, image }) {
   
   return(
   <div className="recipe-container card">
-    <Link to="/recipe" class="select-card">
+    <Link to="/recipe" state={prop} class="select-card">
       <header>
         <h4>{title}</h4>
         <p>
@@ -35,7 +35,7 @@ export function Card({ title, type, description = [], calories, image }) {
       </div>
       <article className="specifics">
         <p>calories/portion:</p>
-        <p>{calories} kcal</p>
+        <p>{Math.floor(calories)} kcal</p>
       </article>
     </Link>
   </div>

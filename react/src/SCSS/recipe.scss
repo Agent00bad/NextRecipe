@@ -98,7 +98,6 @@
     margin-top: 20px;
     border-radius: 5px;
   }
-
   .description {
     background-color: var(--pink-regular);
     align-content: center;
@@ -165,7 +164,8 @@
   .drinkGroup {
     display: flex;
     flex-direction: row;
-  }
+    justify-content: center;  
+}
 
   .Center {
     align-items: center;

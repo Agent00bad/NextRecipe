@@ -18,7 +18,7 @@ const router = createBrowserRouter(
           element: <Index/>
         },
         {
-          path: "filter",
+          path: "/filter",
           element: <Filter/>
         },
         {

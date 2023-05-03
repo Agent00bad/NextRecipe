@@ -33,7 +33,7 @@ export default function Filter() {
       <SectionMobile header="Meal Allergies/Diet" />
       <Pills types={allergies} activeFilter={activeFilters} setFilter={setFilter} />
       <hr />
-      <SectionMobile header="Drinks" />
+      <SectionMobile header="Type of food" />
       <Pills types={proteins} activeFilter={activeFilters} setFilter={setFilter}/>
       <hr />
       {/* <div className="flex-container apply-clear">

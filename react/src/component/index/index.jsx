@@ -37,11 +37,11 @@ const[activeFilter, setActiveFilters] = useOutletContext();
         {/* <!--Shows overview recipe details and works as a selection--> */}
        {/* <div className="recipe-drink-flex"> */}
           {/* <!--Displays active filters--> */}
+          <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
           <ActiveFilter
             filters={activeFilter}
             header={"Active Filter"}
           />
-          <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
           {data && data[0] != undefined ?
           <div className="card-mapping">
           {data.map((obj) => {
@@ -50,7 +50,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
              <Card 
              prop={obj}
              title={obj.recipe.label}
-             description={obj.recipe.healthLabels}
+             description={obj.recipe.ingredients}
              type={obj.recipe.mealType[0]}
              calories={obj.recipe.calories}
              image={obj.recipe.image}

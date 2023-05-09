@@ -11,7 +11,7 @@
 
   main {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-flow: row wrap;
   }
@@ -31,12 +31,11 @@
     }
 }
 */
-  @media screen and (width > 815px) {
+  @media screen and (width > 1178px) {
     #filtersTag {
       display: flex;
       flex-direction: column;
-      align-content: start;
-      margin-left: 20%;
+      align-content: center;
     }
     #filterList {
       display: flex;
@@ -48,23 +47,19 @@
       min-height: 100px;
     }
     #filterCard {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
-      width: 28%;
+      width: 320px;
       height: fit-content;
       position: fixed;
-      left: 0;
       top: 303px;
+      left: 0px;
     }
     #CardSpace {
-      width: 66%;
+      width: 70%;
       position: relative;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      left: 10%;
+      left: 20%;
     }
   }
   .recipe-container a {
@@ -75,7 +70,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-flow: row wrap;
   }
   .inner-mapped-card{
     display: flex;
@@ -192,9 +187,9 @@
   }
   .recipe-image {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     margin: 0px 10px 10px 5px;
-    width: 40%;
+    width: 90%;
     height: 50%;
     border: 2px solid #ffff;
     border-radius: 5px;
@@ -228,10 +223,13 @@
   }
   .specifics {
     display: flex;
-    flex-direction: row;
-    margin: 0px 10px 10px 10px;
+    flex-flow: column wrap;
+    margin: 5px;
     border-radius: 10px;
     background-color: #ffff;
     padding: 2px;
+  }
+  .specifics  p{
+    margin: 2px 0px 0px 5px;
   }
 }

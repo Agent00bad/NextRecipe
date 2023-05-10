@@ -1,16 +1,24 @@
 .headerfooter{
     .header{
-        justify-self: auto;
+        position: fixed;
         display: flex;
+        width: 99%;
+        top: 0;
+        left: 0;
+        justify-self: auto;
         justify-content: center;
+        margin-top: 0.2px;
 
-        background-color: #FFFFFF;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between;
+
 
         border: 2px solid #FE91C6;
         border-radius: 5px;
         box-shadow: 5px 5px 0px grey;
 
-        padding: 10px 0px;
+        padding: 5px 5px 5px 5px;
         margin-bottom: 10px;
     
         background: linear-gradient(-45deg, #b00e3e, #fe91c6, #FECEC7, #e73c7e);
@@ -39,25 +47,32 @@
             background-position: 0% 50%;
         }
     }
+    .logo{
+        width: 100%;
+    }
+    .logoBox{
+        width: 70%;
+        min-width: 150px;
+        margin: 10px;
+    }
 
-
-    .menu-link{
-        margin-left: 15px;
-    }
-    .login-link{
-        margin-right: 15px;
-    }
-    .header{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
 
     .header > a > img{   
         max-height: auto;
         max-width: 40px;
         cursor: pointer;
+    }
+
+    .filterBox{
+        display: flex;
+        align-items: center;
+        width: 20%;
+        min-width: 40px;
+        height: 50px;
+
+    }
+    .filterBox >img{
+        width: 100%;
     }
 
     .footer {

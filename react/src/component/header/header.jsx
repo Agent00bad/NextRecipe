@@ -15,14 +15,13 @@ export default function Header()
     <div className="header">
         <Link to="/filter" className="menu-link"><img src={menuicon}/></Link>
         <Link to="/" className="logo-link"><img src={logo}/></Link>
-        <Link to="loading" className="login-link"><img src={userIcon}/></Link>
-    </div> 
-    <div className="topnav">
+        {/* <Link to="loading" className="login-link"><img src={userIcon}/></Link> */}
         <div className="search-container">
             <input type="text" placeholder="Search.."/>
            <button type="submit"><img className="search-button" src={searchImage}/></button>
         </div>
-    </div>
+    </div> 
+
 </header>
         </div>
     )

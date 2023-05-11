@@ -7,8 +7,6 @@ import { fetchApiEdemam } from "./JS/fetchApiEdamam"
 import { fetchApiSpoonacular } from "./JS/fetchApiSpoonacular"
 
 export default function Root() {
-  
-
   const [activeFilters, setActiveFilters] = useState([]);
   return (
     <div className="root">

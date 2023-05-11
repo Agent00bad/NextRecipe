@@ -1,6 +1,5 @@
 import "../../SCSS/headerfooter.scss"
 import "../../SCSS/search_bar.scss"
-
 import menuicon from "../../Images/menu-icon.png"
 import crossicon from "../../Images/cross-icon.png"
 import logo from "../../Images/perfectpair_transparent.png"
@@ -9,14 +8,11 @@ import searchImage from "../../Images/Search_Button.png"
 import {Link, useLocation} from "react-router-dom"
 import { useEffect, useState } from "react";
 
-
-
 export default function Header()
 {
     let tempLocation;
     const [onFilterPage,setOnFilterPage] = useState(false)
     
-
     useEffect( () => {
         tempLocation = location.pathname
         if(tempLocation == "/filter"){
@@ -32,7 +28,6 @@ export default function Header()
     function saveLocation(){
         tempLocation = useLocation().pathname
     }
-
 
     return(
         <div className="headerfooter">

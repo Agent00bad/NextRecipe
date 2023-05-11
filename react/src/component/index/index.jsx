@@ -10,22 +10,27 @@ import menuIcon from "../../Images/menu-icon.png";
 import perfectpair_transparent from "../../Images/perfectpair_transparent.png";
 import userIcon from "../../Images/user-icon.png";
 import Loading from "../loading/loading"
+import "../../SCSS/button.scss";
+
 export default function Index() {
   
 const[activeFilter, setActiveFilters] = useOutletContext();
 
  const [data, setData] = useState([]);
+  // const[loadMore, setLoadMore] = useState(100);
+  const[to, setTo] = useState(15);
 
   useEffect(() => {
     const getData = async () =>{
-      const result = await fetchApiEdemam(activeFilter);
+      const result = await fetchApiEdemam(activeFilter,0, to);
       setData(result);
     }
 
     getData();
 
     console.log(data);
-  },[])
+  },[to])
+
 
   return (
     
@@ -58,6 +63,9 @@ const[activeFilter, setActiveFilters] = useOutletContext();
             </div>
             )
           })}
+          <div className="filterandbutton">
+            <button className="load-more" onClick={() => setTo(to + 15)}>Load more</button>
+          </div>
           </div>
         :
         <Loading/>

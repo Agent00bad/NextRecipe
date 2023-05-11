@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom" 
+
 /********************************
   Tog ur den här
   <div className="filter-flex">
@@ -8,9 +10,9 @@ export function ActiveFilter({ filters = [], header }) {
   return (
     <>
         <div id="filterCard" className="card">
-          <a className="filtersTag filter-tag" href="/filter">
+          <Link to="/filter"className="filtersTag filter-tag">
             <b>Filters</b>
-          </a>
+          </Link>
           <div className="filter-list">
             <ul id="filterList">
                 {filters.map(filter => (

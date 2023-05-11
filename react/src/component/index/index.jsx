@@ -29,7 +29,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
     getData();
 
     console.log(data);
-  },[to])
+  },[to, activeFilter])
 
 
   return (
@@ -70,16 +70,6 @@ const[activeFilter, setActiveFilters] = useOutletContext();
         :
         <Loading/>
         }
-
-          {/*<!--Shows overview drink details and works as a selection-->*/}
-          {/* <Card
-            title="Drink"
-            description="Best drink ever!"
-            calories="1000"
-            type="dinner"
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.VVKcNyqJMGbMrW-u2lKStAHaEo%26pid%3DApi&f=1&ipt=40124abb2e8e4f5e0bac3b38ef1e02a42fd14524aeeab3b88ae5a23d3a50f9d1&ipo=images"
-          /> */}
-        {/* </div> */}
         </div>
                 
       </main>

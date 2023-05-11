@@ -2,7 +2,6 @@
     .header{
         position: fixed;
         display: flex;
-        width: 99%;
         top: 0;
         left: 0;
         justify-self: auto;
@@ -25,6 +24,19 @@
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
     }
+
+    @media screen and (max-width: 932px) {
+        .header {
+          width: auto;
+        }
+      }
+      @media screen and (min-width: 933px) {
+        .header {
+          width: 99%;
+        }
+      }
+  
+
     @keyframes gradient {
         0% {
             background-position: 0% 50%;

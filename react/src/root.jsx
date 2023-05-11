@@ -6,34 +6,14 @@ import { useEffect, useState } from "react"
 import { fetchApiEdemam } from "./JS/fetchApiEdamam"
 import { fetchApiSpoonacular } from "./JS/fetchApiSpoonacular"
 
-
-
-
 export default function Root() {
-  const [onFilterPage,setOnFilterPage] = useState(false)
-  const location = useLocation();
-
-  useEffect(
-
-  ()=>{
-    function setBool(){
-      
-    }
-    let boolValue;
-    if(location.pathname == "/filter"){
-      boolValue = true
-    }
-    else{boolValue = false}
-    setOnFilterPage(boolValue)
-    console.log(onFilterPage)
-    },[location.pathname])
+  
 
   const [activeFilters, setActiveFilters] = useState([]);
   return (
     <div className="root">
       <header>
-        <p>{onFilterPage}</p>
-        <Header onFilterPage = {onFilterPage}/>
+        <Header/>
       </header>
       <main>
         <div>

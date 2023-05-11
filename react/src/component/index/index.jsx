@@ -24,7 +24,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
 
     getData();
 
-    console.log(data);
+    // console.log(data);
   },[])
 
   return (

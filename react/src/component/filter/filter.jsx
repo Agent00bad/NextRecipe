@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Component, Fragment, useEffect, useState } from "react";
 import { Pills } from "./pills";
 import "../../scss/colorscheme.scss";
 import "../../scss/filter.scss";
@@ -7,15 +7,27 @@ import arrowDown from "../../Images/arrow-down.png";
 import CheckMarkSquare from "../../images/pink-square.png";
 import { useOutletContext } from "react-router-dom";
 
+
+
+
 export default function Filter() {
- 
+
+  
+
+  
+  
   // const [filters, setFilters] = useOutletContext();
   const [activeFilters, setActiveFilters] = useOutletContext();
+
   const mealType = ["Breakfast", "Lunch", "Dinner", "Snacks"];
   const allergies = ["Vegeterian", "Vegan", "Gluten free", "Lactose free", "Milk free", "Nut free"];
   const proteins = ["Steak", "Pork", "Seafood", "Chicken"];
   const apply = ["Apply"];
   const clear = ["Clear"];
+
+  
+
+
     
   function setFilter(filter) {
     if (filter != activeFilters.find((f) => f === filter)) {

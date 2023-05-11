@@ -6,9 +6,24 @@ import logo from "../../Images/perfectpair_transparent.png"
 import userIcon from "../../Images/user-icon.png"
 import searchImage from "../../Images/Search_Button.png"
 import {Link} from "react-router-dom"
+import { useState  } from "react"
 
-export default function Header()
+export default function Header({setSearch})
 {
+
+    const [input, setInput] = useState("");
+    const [oldInput, setOldInput] = useState("");
+    
+    function inputHandler(event)
+    {
+        setInput(event.target.value)
+    }
+    function submitHandler(event)
+    {
+        event.preventDefault();
+        setSearch(input,oldInput);
+        setOldInput(input);
+    }
     return(
         <div className="headerfooter">
         <header> 
@@ -19,8 +34,10 @@ export default function Header()
     </div> 
     <div className="topnav">
         <div className="search-container">
-            <input type="text" placeholder="Search.."/>
+            <form onSubmit={(e) => submitHandler(e)}>
+            <input type="text" placeholder="Search.." onChange={(e) => inputHandler(e)}/>
            <button type="submit"><img className="search-button" src={searchImage}/></button>
+            </form>
         </div>
     </div>
 </header>

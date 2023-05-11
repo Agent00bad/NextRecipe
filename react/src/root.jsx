@@ -8,10 +8,18 @@ import { fetchApiSpoonacular } from "./JS/fetchApiSpoonacular"
 
 export default function Root() {
   const [activeFilters, setActiveFilters] = useState([]);
+  
+  function setSearch(input, oldState)
+  {
+    setActiveFilters(filters => filters.filter(oldFilter => oldFilter != oldState))
+    if(input){
+      setActiveFilters(oldfilters => [...oldfilters, input]);
+    }
+  } 
   return (
     <div className="root">
       <header>
-        <Header />
+        <Header setSearch={setSearch}/>
       </header>
       <main>
         <div>

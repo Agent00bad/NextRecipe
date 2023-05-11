@@ -32,6 +32,22 @@
         background-color: #FE91C6;
     }
 
+    .load-more{
+        border-color: #FEAFC7;
+        border-width: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+        background-color: #ffffff;
+        font-size: 18px;
+        padding: 10px 12px;
+        border-radius: 15px;
+        font-weight: 550;
+        color:  #FEAFC7;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
 
     .arrow{
         max-width: 45px;

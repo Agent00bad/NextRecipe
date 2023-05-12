@@ -8,11 +8,25 @@ import searchImage from "../../Images/Search_Button.png"
 import {Link, useLocation} from "react-router-dom"
 import { useEffect, useState } from "react";
 
-export default function Header()
+export default function Header({setSearch})
 {
+
+    const [input, setInput] = useState("");
+    const [oldInput, setOldInput] = useState("");
     let tempLocation;
     const [onFilterPage,setOnFilterPage] = useState(false)
     
+    function inputHandler(event)
+    {
+        setInput(event.target.value)
+    }
+    function submitHandler(event)
+    {
+        
+        event.preventDefault();
+        setSearch(input,oldInput);
+        setOldInput(input);
+    }
     useEffect( () => {
         tempLocation = location.pathname
         if(tempLocation == "/filter"){
@@ -24,11 +38,9 @@ export default function Header()
     },
     [useLocation().pathname]
     )
-
     function saveLocation(){
         tempLocation = useLocation().pathname
     }
-
     return(
         <div className="headerfooter">
         <header> 
@@ -42,8 +54,10 @@ export default function Header()
     </div> 
     <div className="topnav">
         <div className="search-container">
-            <input type="text" placeholder="Search.."/>
+            <form onSubmit={(e) => submitHandler(e)}>
+            <input type="text" placeholder="Search.." onChange={(e) => inputHandler(e)}/>
            <button type="submit"><img className="search-button" src={searchImage}/></button>
+            </form>
         </div>
     </div>
 </header>

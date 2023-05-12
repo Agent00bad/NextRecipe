@@ -19,7 +19,7 @@ export default function Filter() {
   function setFilter(filter) {
     if (filter != activeFilters.find((f) => f === filter)) {
       setActiveFilters(oldFilters => [...oldFilters, filter]);
-    }
+    } 
     else {
       setActiveFilters(filters => filters.filter(oldFilter => oldFilter != filter))
     }

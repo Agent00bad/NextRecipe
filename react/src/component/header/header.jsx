@@ -1,18 +1,20 @@
 import "../../SCSS/headerfooter.scss"
 import "../../SCSS/search_bar.scss"
-
 import menuicon from "../../Images/menu-icon.png"
+import crossicon from "../../Images/cross-icon.png"
 import logo from "../../Images/perfectpair_transparent.png"
 import userIcon from "../../Images/user-icon.png"
 import searchImage from "../../Images/Search_Button.png"
-import {Link} from "react-router-dom"
-import { useState  } from "react"
+import {Link, useLocation} from "react-router-dom"
+import { useEffect, useState } from "react";
 
 export default function Header({setSearch})
 {
 
     const [input, setInput] = useState("");
     const [oldInput, setOldInput] = useState("");
+    let tempLocation;
+    const [onFilterPage,setOnFilterPage] = useState(false)
     
     function inputHandler(event)
     {
@@ -20,15 +22,33 @@ export default function Header({setSearch})
     }
     function submitHandler(event)
     {
+        
         event.preventDefault();
         setSearch(input,oldInput);
         setOldInput(input);
+    }
+    useEffect( () => {
+        tempLocation = location.pathname
+        if(tempLocation == "/filter"){
+            setOnFilterPage(true)
+        }
+        else{
+            setOnFilterPage(false)
+        }
+    },
+    [useLocation().pathname]
+    )
+    function saveLocation(){
+        tempLocation = useLocation().pathname
     }
     return(
         <div className="headerfooter">
         <header> 
     <div className="header">
-        <Link to="/filter" className="menu-link"><img src={menuicon}/></Link>
+    {
+        onFilterPage == true ? <Link to="/" className="menu-link"><img src={crossicon}/></Link> : <Link to="/filter" className="menu-link"><img src={menuicon}/></Link>
+    }
+
         <Link to="/" className="logo-link"><img src={logo}/></Link>
         <Link to="loading" className="login-link"><img src={userIcon}/></Link>
     </div> 

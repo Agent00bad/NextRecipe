@@ -6,9 +6,10 @@ import "../../SCSS/HeaderFooter.scss";
 
 export default function HeadImage({description, recipeImage}){
     return(
+        <div className="recipeBox">
         <div className="headImage">
             <img src={recipeImage} alt={description}/>
         </div>
-
+        </div>
         )
     }

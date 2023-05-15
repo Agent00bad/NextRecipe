@@ -53,7 +53,7 @@
   // <!--Elements-->
 
   #recommendedDrinkBox {
-    max-width: 520px;
+    
   }
 
   .arrowRight {
@@ -84,11 +84,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 5px;
   }
 
   .headImage img {
-    width: 100%;
+    width: 400px;
+    border-radius: 5px;
+    margin: 10px 0;
   }
 
   .boxParent {
@@ -104,7 +106,9 @@
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 80px;
+    margin-left:15px;
+    margin-right:15px;
     border-radius: 5px;
     box-shadow: 0px 3px 5px gray;
   }
@@ -114,25 +118,28 @@
     align-content: center;
     box-sizing: border-box;
     padding: 10px;
+    margin-left:15px;
+    margin-right:15px;
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0px 3px 5px gray;
   }
 
-  .drinkBox {
+  .recipeBox {
     background-color: var(--pink-regular);
     align-content: center;
     box-sizing: border-box;
     padding-left: 5px;
     padding-right: 5px;
+    max-width: 520px;
     margin: 0px 15px;
     box-shadow: 0px 3px 5px gray;
     border-radius: 5px;
   }
 
   @media only screen and (max-width: 600px) and (min-width: 300px) {
-    #recommendedDrinkBox {
+    .DrinkBox {
       width: 80%;
     }
     .arrowLeft {
@@ -140,6 +147,13 @@
     }
     .arrowRight {
       width: fit-content;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .drinkImage {
+      width: 400px;
+      height: auto;
     }
   }
 
@@ -157,7 +171,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    width: 100%;
+    
     border-radius: 5px;
   }
 

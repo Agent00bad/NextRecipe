@@ -65,17 +65,15 @@ export default function Recipe() {
         title={state.recipe.label}
       />
 
+      <div className="static-flex">
+
       {/* Head Image */}
       <HeadImage
         description="HeadDesciption"
         recipeImage={state.recipe.image}
       />
 
-      {/* Ingredients */}
-      <RecipeListCard
-        isOrdered={false}
-        Listitems={state.recipe.ingredientLines}
-      />
+      
 
       {/* How to */}
       {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
@@ -90,6 +88,15 @@ export default function Recipe() {
           />
         </div>
       )}
+
+      </div>
+
+
+      {/* Ingredients */}
+      <RecipeListCard
+        isOrdered={false}
+        Listitems={state.recipe.ingredientLines}
+      />
     </div>
   );
 }

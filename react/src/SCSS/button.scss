@@ -60,13 +60,29 @@
     }
 
     #apply-button{
-        background-color: rgb(56, 179, 56);
-        
+        background-color: #FE91C6;
+        color: white;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+    #apply-button:hover{
+        background-color: #FEAFC7;
+    }
+    #apply-button:active{
+        background-color: #fdc5d6;
     }
 
     #clear-button{
-        background-color: rgb(255, 70, 70);
-        
+        background-color: #FE91C6;
+        color: white;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+    #clear-button:hover{
+        background-color: #FEAFC7;
+    }
+    #clear-button:active{
+        background-color: #fdc5d6;
     }
 
     /*

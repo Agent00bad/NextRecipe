@@ -6,6 +6,10 @@ import "../../scss/button.scss";
 import arrowDown from "../../Images/arrow-down.png";
 import CheckMarkSquare from "../../images/pink-square.png";
 import { useOutletContext } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import {Routes, Route, useNavigate} from 'react-router-dom';
+
+
 
 export default function Filter() {
 
@@ -15,6 +19,13 @@ export default function Filter() {
   const proteins = ["Steak", "Pork", "Seafood", "Chicken"];
   const apply = ["Apply"];
   const clear = ["Clear"];
+  const [onFilterPage, setOnFilterPage] = useState(false);
+
+  const navigate = useNavigate();
+  const navigateToIndex = () => {
+    navigate('/')
+  }
+
 
   function setFilter(filter) {
     if (filter != activeFilters.find((f) => f === filter)) {
@@ -24,7 +35,15 @@ export default function Filter() {
       setActiveFilters(filters => filters.filter(oldFilter => oldFilter != filter))
     }
   }
-  
+  //Robbans lösning
+  const handleDelete = () =>{
+    setActiveFilters(activeFilters.filter(filter => null))
+  }
+  // Jonathans lösning
+  const removeFilterChoices = () =>{
+    setActiveFilters((current) => current.filter(x => null))
+  }
+
   return (
     <>
       <SectionMobile header="Meal Options" />
@@ -36,12 +55,27 @@ export default function Filter() {
       <SectionMobile header="Type of food" />
       <Pills types={proteins} activeFilter={activeFilters} setFilter={setFilter}/>
       <hr />
-      {/* <div className="flex-container apply-clear">
-        <ApplyClearPills types={apply} id="apply-button" />
+      <div className="filterandbutton">
+       <div className="flex-container-horizontal apply-clear">
+        <ApplyClearPills  types={apply} id="apply-button" />
         <ApplyClearPills types={clear} id="clear-button" />
-      </div> */}
+      </div>
+      </div>
     </>
   );
+
+/*          {onFilterPage == true ? (
+            <Link to="/" className="menu-link">
+              <img src={crossicon} />
+            </Link>
+          ) : (
+            <Link to="/filter" className="menu-link">
+              <div className="filterBox">
+                <img src={menuicon} />
+              </div>
+            </Link>
+          )} 
+          */
 
 
   // -------    MOBILE    -------
@@ -82,18 +116,21 @@ export default function Filter() {
   function ApplyClearPills({ types, id }) {
     return (
       <>
+      <div className="filterandbutton">
+
         {types.map((data) => (
           <button
             className="filter-button"
             id={id}
-            onClick={() => (id = { id })}
-          >
+            onClick={id == "apply-button" ? navigateToIndex : removeFilterChoices} >
             {data}
           </button>
         ))}
+        </div>
       </>
     );
   }
+
 
   // -------    DESKTOP    -------
 

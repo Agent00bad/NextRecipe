@@ -59,13 +59,14 @@ export default function Recipe() {
 
   return (
     <div className="main recipe">
+      
       {/* Description */}
       <Description
         description={`Cuisine type: ${state.recipe.cuisineType}`}
         title={state.recipe.label}
       />
-
-      <div className="static-flex">
+      <div className="flex-rows">
+      <div className="static-flex-column">
 
       {/* Head Image */}
       <HeadImage
@@ -73,13 +74,24 @@ export default function Recipe() {
         recipeImage={state.recipe.image}
       />
 
-      
+      {/* Ingredients */}
+      <RecipeListCard
+        isOrdered={false}
+        Listitems={state.recipe.ingredientLines}
+        
+      />
 
       {/* How to */}
       {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
 
-      {/* Recommended Drink */}
-      {wineData && (
+      
+
+      </div>
+      <div className="dynamic-flex-column">
+
+
+{/* Recommended Drink */}
+{wineData && (
         <div className="loaded-drink">
           <DrinkGroup
             drinkImage={wineData.image}
@@ -88,15 +100,19 @@ export default function Recipe() {
           />
         </div>
       )}
+      
+<div className="drinkGroup">
+      <div className="placeholder">
+        <p>
+        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.”
 
+        </p>
+      </div>
       </div>
 
 
-      {/* Ingredients */}
-      <RecipeListCard
-        isOrdered={false}
-        Listitems={state.recipe.ingredientLines}
-      />
+    </div>
+    </div>
     </div>
   );
 }

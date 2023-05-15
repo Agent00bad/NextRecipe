@@ -7,7 +7,7 @@ import "../../SCSS/HeaderFooter.scss";
 import RecDrinkImage from "../../Images/wine.jpg"
 export default  function Drink({drinkDescription, drinkImage, drinkTitle}){
     return(
-        <div className="recipeBox" id="recommendedDrinkBox">
+        <div className="drinkBox" id="recommendedDrinkBox">
                 <h3>Recommended drink</h3>
                 <h4>{drinkTitle}</h4>
             <div className="drinkImage">

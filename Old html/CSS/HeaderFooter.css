@@ -1,0 +1,100 @@
+.header{
+    justify-self: auto;
+    display: flex;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+
+    border: 2px solid #FE91C6;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px grey;
+
+    padding: 10px 0px;
+    margin-bottom: 10px;
+<<<<<<< HEAD
+    background: linear-gradient(-45deg, #b00e3e, #fe91c6, #FECEC7, #e73c7e);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+=======
+    
+    background: linear-gradient(-45deg, #b00e3e, #fe91c6, #FECEC7, #e73c7e);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+>>>>>>> 9bd26d64d0a6c13d10a6f205adbcefc64fa532d3
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.menu-link{
+    margin-left: 15px;
+}
+.logo-link{
+}
+.login-link{
+    margin-right: 15px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header > a > img{   
+    max-height: auto;
+    max-width: 40px;
+    cursor: pointer;
+}
+
+.footer {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+
+    border: 2px solid #FE91C6;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px grey;
+
+    padding: 10px 30px;
+    margin-top: 10px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9bd26d64d0a6c13d10a6f205adbcefc64fa532d3
+    background: linear-gradient(-45deg, #b00e3e, #fe91c6, #FECEC7, #e73c7e);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+.footer > t{
+    margin-left: 20%;
+    margin-right: 20%;
+    cursor: pointer;
+}
+
+.footer > t > a{
+    color: #FFFFFF;
+    text-decoration: none;
+}

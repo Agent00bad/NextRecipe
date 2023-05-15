@@ -1,0 +1,76 @@
+.filterandbutton{
+    .filter-button{
+        
+        outline: 0;
+        border: none;
+        cursor: pointer;
+        
+        padding: 15px 20px;
+        border-radius: 100px;
+        background-color: #e6e1e1;
+        color: #000000;
+        
+        margin-right: 15px;
+        margin-left: 15px;
+        box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease 0s;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    /*
+    display: inline-block;
+        
+        min-height: 40px;
+        font-size: 46px;
+        font-weight: 500;
+    */
+
+    .selected{
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+        background-color: #FE91C6;
+    }
+
+    .load-more{
+        border-color: #FEAFC7;
+        border-width: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+        background-color: #ffffff;
+        font-size: 18px;
+        padding: 10px 12px;
+        border-radius: 15px;
+        font-weight: 550;
+        color:  #FEAFC7;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+
+    .arrow{
+        max-width: 45px;
+        max-height: 30px;
+        margin-right: 10px;
+        
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #apply-button{
+        background-color: rgb(56, 179, 56);
+        
+    }
+
+    #clear-button{
+        background-color: rgb(255, 70, 70);
+        
+    }
+
+    /*
+    padding-bottom: 40px;
+    padding-bottom: 40px;
+    */
+}

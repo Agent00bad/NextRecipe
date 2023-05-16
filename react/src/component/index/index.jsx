@@ -33,7 +33,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
 
 
   return (
-    
+    <>
     <div className="index">
       <main>
         {/* <!--Shows overview recipe details and works as a selection--> */}
@@ -50,7 +50,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
           <div className="card-mapping">
           {data.map((obj) => {
             return(
-            <div className="inner-mapped-card">
+              <div className="inner-mapped-card">
              <Card 
              prop={obj}
              title={obj.recipe.label}
@@ -68,11 +68,12 @@ const[activeFilter, setActiveFilters] = useOutletContext();
           </div>
         :
         <Loading/>
-        }
+      }
         </div>
                 
       </main>
     </div>
+    </>
   );
 }
 

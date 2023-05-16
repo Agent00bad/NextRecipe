@@ -11,7 +11,7 @@
 
   main {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-flow: row wrap;
   }
@@ -31,6 +31,7 @@
     }
 }
 */
+  /*Ändra till 1025px - Få funka responsivt*/
   @media screen and (width > 1178px) {
     #filtersTag {
       display: flex;
@@ -49,18 +50,33 @@
     #filterCard {
       width: 320px;
       height: fit-content;
-      position: fixed;
-      top: 303px;
-      left: 0px;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0px;
+      bottom: 400px;
     }
     #CardSpace {
       width: 70%;
-      position: relative;
+      position: static;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
       left: 20%;
     }
+    /*Ändra Sticky Space för Desktop*/
+    #stickySpace{
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      bottom: 450px;
+    }
+  }
+  .stickySpace{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 370px;
+
   }
   .recipe-container a {
     text-decoration: none;
@@ -85,9 +101,7 @@
     justify-content: center;
   }
   .logo img {
-    width: 80%;
-    height: auto;
-    max-width: 500px;
+    width: 50%;
   }
   /*Base card*/
   .card {

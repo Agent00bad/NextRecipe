@@ -37,11 +37,13 @@ const[activeFilter, setActiveFilters] = useOutletContext();
         {/* <!--Shows overview recipe details and works as a selection--> */}
        {/* <div className="recipe-drink-flex"> */}
           {/* <!--Displays active filters--> */}
+            <div className="stickySpace" id="stickySpace">
+              <ActiveFilter
+                filters={activeFilter}
+                header={"Active Filter"}
+              />
+            </div>
           <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
-          <ActiveFilter
-            filters={activeFilter}
-            header={"Active Filter"}
-          />
           {data && data[0] != undefined ?
           <div className="card-mapping">
           {data.map((obj) => {

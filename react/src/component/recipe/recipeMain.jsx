@@ -11,6 +11,8 @@ import RecDrinkImage from "../../Images/wine.jpg";
 import { useLocation } from "react-router-dom";
 import { winePairingKeywords } from "../../JS/winePairingKeywords";
 import { fetchApiSpoonacular } from "../../JS/fetchApiSpoonacular";
+import Portion from "./recipePortions";
+import Nutrition from "./recipeNutrition";
 
 export default function Recipe() {
   let { state } = useLocation();
@@ -64,32 +66,59 @@ export default function Recipe() {
         description={`Cuisine type: ${state.recipe.cuisineType}`}
         title={state.recipe.label}
       />
-      <div className="flex-rows">
+
+      <div className=" flex-rows">
+        {/* Flex container - Left */}
         <div className="static-flex-column">
-          {/* Head Image */}
-          <HeadImage
-            description="HeadDesciption"
-            recipeImage={state.recipe.image}
-          />
+          <div className="fixedMargin">
+            {/* Head Image */}
+            <HeadImage
+              description="HeadDesciption"
+              recipeImage={state.recipe.image}
+            />
+          </div>
 
-          {/* Ingredients */}
-          <RecipeListCard
-            isOrdered={false}
-            Listitems={state.recipe.ingredientLines}
-          />
-
+          <div className="fixedMargin listCard">
+            {/* Portion */}
+            <Portion
+              nutrient={state.recipe.totalNutrients}
+              portions={state.recipe.yield}
+              weight={state.recipe.totalWeight}
+            />
+          </div>
           {/* How to */}
           {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
         </div>
+        {/* Flex container - Left */}
 
-       <div className="iAmNotInUseYet">
-          <p>Hello World</p>
-       </div>
+        {/* Flex container - Center */}
+        <div className="dynamic-flex-column">
+          <div className="fixedMargin">
+            {/* Ingredients */}
+            <RecipeListCard
+              
+              isOrdered={false}
+              Listitems={state.recipe.ingredientLines}
+            />
+          </div>
 
+          <div className="fixedMargin listCard">
+          <Nutrition
+          nutrient = {state.recipe.totalNutrients}
+          weight={state.recipe.totalWeight}
+          
+          />
+
+          </div>
+
+
+          {/* Flex container - Center */}
+        </div>
+        {/* Flex container Right */}
         <div className="dynamic-flex-column">
           {/* Recommended Drink */}
           {wineData && (
-            <div className="loaded-drink">
+            <div className="loaded-drink fixedMargin">
               <DrinkGroup
                 drinkImage={wineData.image}
                 drinkDescription={wineData.description}
@@ -97,9 +126,10 @@ export default function Recipe() {
               />
             </div>
           )}
+          {/* Flex container Right */}
 
-          <div className="drinkGroup">
-            <div className="placeholder">
+          {/* <div className="drinkGroup fixedMargin">
+            <div className="placeholder ">
               <p>
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                 hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus
@@ -112,8 +142,9 @@ export default function Recipe() {
                 tellus, in suscipit massa vehicula eu.”
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
+        {/* Flex container Right */}
       </div>
     </div>
   );

@@ -1,30 +1,8 @@
-// <!--General-->
+//
 .recipe {
-  * {
-    box-sizing: border-box;
-  }
-
+  //General
   HTML {
     scroll-behavior: smooth;
-  }
-
-  .main {
-    max-width: 700px;
-    min-width: 300px;
-    display: flex;
-  }
-
-  // .body div div main div div div div {
-  //   justify-content: flex-start flex-end space-evenly;
-  // }
-
-  body {
-    background-color: var(--white);
-
-    padding-bottom: 30px;
-    overflow-x: hidden;
-    align-content: center;
-    padding-bottom: 10px;
   }
 
   h3 {
@@ -50,6 +28,12 @@
     text-align: center;
   }
 
+  b{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
   ul {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -60,49 +44,81 @@
     margin-bottom: 5px;
   }
 
+  //Mobile
+  @media only screen and (max-width: 1024px) {
+    .headImage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 210px;
+    }
+
+    .headImage img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      height: 100%;
+      border-radius: 5px;
+      margin: 10px;
+    }
+  }
+  //Desktop
+  @media only screen and (min-width: 1025px) {
+    .headImage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 360px;
+    }
+
+    .headImage img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 350px;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .flex-rows {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+
+  
+
+  // * {
+  //   box-sizing: border-box;
+  // }
+
+  // .main {
+  //   max-width: 700px;
+  //   min-width: 300px;
+  //   display: flex;
+  // }
+
+  // .body div div main div div div div {
+  //   justify-content: flex-start flex-end space-evenly;
+  // }
+
+  // body {
+  //   background-color: var(--white);
+
+  //   padding-bottom: 30px;
+  //   overflow-x: hidden;
+  //   align-content: center;
+  //   padding-bottom: 10px;
+  // }
+
   // <!--Elements-->
 
-  .arrowRight {
-    width: fit-content;
-    height: auto;
-
-    fill: "currentColor";
-    margin: auto;
-    position: static;
-    align-self: center;
-    max-width: 7%;
-    cursor: pointer;
-  }
-
-  .arrowLeft {
-    width: fit-content;
-    height: auto;
-    fill: "currentColor";
-    margin: auto;
-    position: static;
-    align-self: center;
-    max-width: 7%;
-    cursor: pointer;
-    transform: rotateY(180deg);
-  }
-
-  .headImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    width: 410px;
-  }
-
-  .headImage img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 400px;
-    border-radius: 5px;
-    margin: 10px;
-  }
+  
 
   .boxParent {
     width: fit-content;
@@ -155,8 +171,8 @@
     box-sizing: border-box;
     padding-left: 5px;
     padding-right: 5px;
-    max-width: 520px;
-    margin: 10px 15px;
+    max-width: 400px;
+    margin: 10px auto;
     box-shadow: 0px 3px 5px gray;
     border-radius: 5px;
   }
@@ -199,12 +215,10 @@
   .CenterText {
     text-align: center;
     max-width: 50%;
-    margin-left: 0%;
   }
 
-  .drinkDescription {
-    padding-left: 5px;
-    padding-right: 5px;
+  .drinkDescription{
+    padding: 5px;
   }
 
   .drinkImage {
@@ -219,23 +233,11 @@
     justify-content: start;
   }
 
-  .dynamic-flex-column {
-    // flex: auto;
-    justify-content: center;
-  }
-
-  // .iAmNotInUseYet {
-  // }
+  
 
   .drinkGroup {
     flex-direction: row;
     justify-content: center;
-  }
-
-  .flex-rows {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
   }
 
   .placeholder {
@@ -243,19 +245,18 @@
     align-content: center;
     box-sizing: border-box;
     padding: 10px;
-    max-width: 520px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    margin-top: 10px;
+    max-width: 400px;
+
+    margin: 15px auto;
     display: flex;
     border-radius: 5px;
     box-shadow: 0px 3px 5px gray;
   }
 
-  @media only screen and (max-width: 1350px) {
-    .headImage {
-      object-fit: contain;
-    }
+ 
+
+  .fixedMargin {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }

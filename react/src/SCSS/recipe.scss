@@ -1,7 +1,6 @@
 // <!--General-->
 .recipe {
-
-  *{
+  * {
     box-sizing: border-box;
   }
 
@@ -15,6 +14,10 @@
     display: flex;
   }
 
+  // .body div div main div div div div {
+  //   justify-content: flex-start flex-end space-evenly;
+  // }
+
   body {
     background-color: var(--white);
 
@@ -23,8 +26,6 @@
     align-content: center;
     padding-bottom: 10px;
   }
-
-  
 
   h3 {
     margin-top: 5px;
@@ -39,7 +40,7 @@
     vertical-align: center;
   }
 
-  li{
+  li {
     text-align: center;
   }
 
@@ -60,8 +61,6 @@
   }
 
   // <!--Elements-->
-
- 
 
   .arrowRight {
     width: fit-content;
@@ -119,8 +118,8 @@
     padding: 10px;
     margin-bottom: 10px;
     margin-top: 80px;
-    margin-left:15px;
-    margin-right:15px;
+    margin-left: 15px;
+    margin-right: 15px;
     border-radius: 5px;
     box-shadow: 0px 3px 5px gray;
   }
@@ -142,13 +141,12 @@
     background-color: var(--pink-regular);
     align-content: center;
     box-sizing: border-box;
-    
+
     margin: 0 auto;
     max-width: 520px;
-    
+
     box-shadow: 0px 3px 5px gray;
     border-radius: 5px;
-    
   }
 
   .drinkBox {
@@ -164,7 +162,6 @@
   }
 
   @media only screen and (max-width: 600px) and (min-width: 300px) {
-    
     .arrowLeft {
       width: fit-content;
     }
@@ -173,19 +170,15 @@
     }
   }
 
- 
-
   .listCard-innerbox {
     background-color: var(--white);
     align-content: center;
     width: fit-content;
     height: fit-content;
     padding: 5px;
-    
+
     border-radius: 4%;
   }
-
-  
 
   .drinkImage img {
     display: flex;
@@ -195,12 +188,6 @@
     width: 325px;
     border-radius: 5px;
   }
-
-  .drinkGroup {
-    
-    flex-direction: row;
-    justify-content: center;  
-}
 
   .Center {
     align-items: center;
@@ -227,27 +214,38 @@
     background-size: contain;
   }
 
-  .static-flex-column{
-    flex: auto;
+  .static-flex-column {
+    // flex: auto;
+    justify-content: start;
   }
 
-  .dynamic-flex-column{
-    flex: auto;
+  .dynamic-flex-column {
+    // flex: auto;
+    justify-content: center;
   }
 
-  .flex-rows{
+  // .iAmNotInUseYet {
+  // }
+
+  .drinkGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .flex-rows {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
-  .placeholder{
+  .placeholder {
     background-color: var(--pink-regular);
     align-content: center;
     box-sizing: border-box;
     padding: 10px;
     max-width: 520px;
-    margin-left:15px;
-    margin-right:15px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 15px;
     margin-top: 10px;
     display: flex;
@@ -255,11 +253,9 @@
     box-shadow: 0px 3px 5px gray;
   }
 
-  @media only screen and (max-width: 1350px){
+  @media only screen and (max-width: 1350px) {
     .headImage {
-    object-fit: contain;
+      object-fit: contain;
     }
   }
-  
-
 }

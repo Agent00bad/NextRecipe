@@ -9,7 +9,7 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
-
+  
   main {
     display: flex;
     justify-content: center;
@@ -33,6 +33,9 @@
 }
 */
   @media screen and (width > 1025px) {
+    main{
+      justify-content: end;
+    }
     #filtersTag {
       display: flex;
       flex-direction: column;
@@ -65,9 +68,11 @@
     }
     /*Ändra Sticky Space för Desktop*/
     #stickySpace{
-      position: sticky;
-      position: -webkit-sticky;
-      bottom: 80%;
+      position: fixed;
+      // position: -webkit-sticky;
+      left: 2%;
+      top: 15%;
+      // bottom: 60%;
     }
   }
   .stickySpace{

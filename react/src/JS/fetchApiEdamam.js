@@ -1,5 +1,5 @@
 import axios from "axios";
-export async function fetchApiEdemam(filters = [], dataFrom = 0, dataTo = 10) {
+export async function fetchApiEdemam(filters = [], dataFrom, dataTo) {
     let filterQuery;
     console.log(filters.toString())
     if(filters.length > 0)
@@ -15,11 +15,14 @@ export async function fetchApiEdemam(filters = [], dataFrom = 0, dataTo = 10) {
       url: "https://edamam-recipe-search.p.rapidapi.com/search",
       params: {
         q : filterQuery != undefined ? filterQuery : "recipe",
+        from : dataFrom,
+        to : dataTo,
       },
 
       headers: {
         // "content-type": "application/octet-stream",
         "X-RapidAPI-Key": '6964f31706msh388e7503292ec84p17abf2jsn0e139674afbd', 
+
         "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com",
 
       },

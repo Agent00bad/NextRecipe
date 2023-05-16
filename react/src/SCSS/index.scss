@@ -75,7 +75,9 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: 370px;
+  align-content: center;
+  width: 300px;
+  background-color: aquamarine;
 
   }
   .recipe-container a {

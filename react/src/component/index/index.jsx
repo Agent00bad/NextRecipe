@@ -30,9 +30,6 @@ const[activeFilter, setActiveFilters] = useOutletContext();
   return (
     
     <div className="index">
-      <div className="logo">
-        <img src={logo} alt="WelcomeImage" />
-      </div>
       <main>
         {/* <!--Shows overview recipe details and works as a selection--> */}
        {/* <div className="recipe-drink-flex"> */}

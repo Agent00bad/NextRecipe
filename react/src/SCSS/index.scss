@@ -31,8 +31,7 @@
     }
 }
 */
-  /*Ändra till 1025px - Få funka responsivt*/
-  @media screen and (width > 1178px) {
+  @media screen and (width > 1025px) {
     #filtersTag {
       display: flex;
       flex-direction: column;
@@ -67,8 +66,7 @@
     #stickySpace{
       position: sticky;
       position: -webkit-sticky;
-      top: 0;
-      bottom: 450px;
+      bottom: 80%;
     }
   }
   .stickySpace{
@@ -77,8 +75,6 @@
   justify-content: center;
   align-content: center;
   width: 300px;
-  background-color: aquamarine;
-
   }
   .recipe-container a {
     text-decoration: none;

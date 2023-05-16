@@ -1,12 +1,7 @@
 .filterandbutton{
-  body{
-    background-color: var(--white);
-    
-  }
-  
+
   body{
       background-color: var(--white);
-      
       display: block;
       margin: 8px;
     }
@@ -19,13 +14,15 @@
       margin-top: 5px;
       margin-bottom: 5px;
       font-size: 30px;
-      
     } 
     
     .flex-container-horizontal{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+    }
+    .flex-container-horizontal button{
+      max-width: 30px;
     }
     
     .apply-clear button{

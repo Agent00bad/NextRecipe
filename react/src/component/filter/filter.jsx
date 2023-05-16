@@ -19,13 +19,15 @@ export default function Filter() {
   const proteins = ["Steak", "Pork", "Seafood", "Chicken"];
   const apply = ["Apply"];
   const clear = ["Clear"];
-  const [onFilterPage, setOnFilterPage] = useState(false);
+  const[toggle1, setToggle1] = useState(true);
+  const[toggle2, setToggle2] = useState(true);
+  const[toggle3, setToggle3] = useState(true);
+
 
   const navigate = useNavigate();
   const navigateToIndex = () => {
     navigate('/')
   }
-
 
   function setFilter(filter) {
     if (filter != activeFilters.find((f) => f === filter)) {
@@ -35,6 +37,7 @@ export default function Filter() {
       setActiveFilters(filters => filters.filter(oldFilter => oldFilter != filter))
     }
   }
+
   //Robbans lösning
   const handleDelete = () =>{
     setActiveFilters(activeFilters.filter(filter => null))
@@ -46,37 +49,26 @@ export default function Filter() {
 
   return (
     <>
-      <SectionMobile header="Meal Options" />
-      <Pills types={mealType} activeFilter={activeFilters} setFilter={setFilter} />
-      <hr />
-      <SectionMobile header="Meal Allergies/Diet" />
-      <Pills types={allergies} activeFilter={activeFilters} setFilter={setFilter} />
-      <hr />
-      <SectionMobile header="Type of food" />
-      <Pills types={proteins} activeFilter={activeFilters} setFilter={setFilter}/>
-      <hr />
-      <div className="filterandbutton">
-       <div className="flex-container-horizontal apply-clear">
-        <ApplyClearPills  types={apply} id="apply-button" />
-        <ApplyClearPills types={clear} id="clear-button" />
-      </div>
-      </div>
+        <div className="filterandbutton">
+            <main>
+              <SectionMobile header="Meal Options" id="1"/>
+              <Pills types={mealType} activeFilter={activeFilters} setFilter={setFilter} toggle={toggle1} />
+              <hr />
+              <SectionMobile header="Meal Allergies/Diet" id="2"/>
+              <Pills types={allergies} activeFilter={activeFilters} setFilter={setFilter} toggle={toggle2}/>
+              <hr />
+              <SectionMobile header="Type of food" id="3"/>
+              <Pills types={proteins} activeFilter={activeFilters} setFilter={setFilter} toggle={toggle3}/>
+              <hr />
+              <div className="flex-container-horizontal apply-clear">
+                <ApplyClearPills  types={apply} id="apply-button" />
+                <ApplyClearPills types={clear} id="clear-button" />
+              </div>
+        </main>
+     </div>
+
     </>
   );
-
-/*          {onFilterPage == true ? (
-            <Link to="/" className="menu-link">
-              <img src={crossicon} />
-            </Link>
-          ) : (
-            <Link to="/filter" className="menu-link">
-              <div className="filterBox">
-                <img src={menuicon} />
-              </div>
-            </Link>
-          )} 
-          */
-
 
   // -------    MOBILE    -------
 
@@ -92,24 +84,52 @@ export default function Filter() {
     );
   }
 
-  function SectionMobile({ header }) {
+  function SectionMobile({ header, id}) {
+    const handleClick = ()=>{
+      if(id === "1"){
+        //toggle1
+        setToggle1(!toggle1);
+      }
+      if(id === "2"){
+        //toggle2
+        setToggle2(!toggle2);
+      }
+      if(id === "3"){
+        //toggle3
+        setToggle3(!toggle3);
+      }
+
+    }
+
     return (
-      <>
+      <div className="filterandbutton">
         <div className="flex-container-horizontal">
           <h2>{header}</h2>
           {/* <button id="arrowButton"> */}
-          <img
-            className="arrow"
-            src={arrowDown}
+          <button
+            onClick={handleClick}
+            className="arrow arrowdown"
             alt="Arrow down"
-            style={{ maxWidth: "30px" }}
-          />
+          ></button>
           {/* </button> */}
         </div>
         <hr />
-      </>
+      </div>
+
     );
+
+    function show(header, id){
+      //setToggle(!toggle);
+      const element = document.getElementById(id);
+      // {<div className="filterandbutton">
+      //   <SectionMobile header={header} id={id} style={{display: toggle ? 'block' : 'none'}}></SectionMobile>
+      //   </div>};
+      
+      console.log(toggle)  
+      console.log(id);
+    }
   }
+
 
   // -------    BOTH    -------
 

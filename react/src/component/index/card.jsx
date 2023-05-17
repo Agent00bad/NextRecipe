@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import { truncate } from "../../JS/truncate";
 
 export function Card({prop, title, type, description = [], calories, image }) {
   
@@ -6,26 +7,11 @@ export function Card({prop, title, type, description = [], calories, image }) {
   <div className="recipe-container card">
     <Link to="/recipe" state={prop} class="select-card">
       <header>
-        <h4>{title}</h4>
         <p>
           <b>{type}</b>
         </p>
       </header>
       <div className="inner-container">
-        <div className="info">
-          <article className="description">
-            <ul>
-              {description.map((info,id) => {
-                return(
-                <li key={id}>
-                  {info}
-                </li>
-                )
-              })}
-            </ul>
-          </article>
-        </div>
-        {/* <!--Image--> */}
         <div className="recipe-image">
           <img
             src={image}
@@ -34,8 +20,8 @@ export function Card({prop, title, type, description = [], calories, image }) {
         </div>
       </div>
       <article className="specifics">
-        <p>calories/portion:</p>
-        <p>{Math.floor(calories)} kcal</p>
+      <p>{truncate(title, 30)}</p>
+      <p>calories/portion: {Math.floor(calories)} kcal</p>
       </article>
     </Link>
   </div>

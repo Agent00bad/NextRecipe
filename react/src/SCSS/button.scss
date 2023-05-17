@@ -1,4 +1,7 @@
 .filterandbutton{
+    main{
+        margin-top: 80px;
+      }
     .filter-button{
         
         outline: 0;
@@ -48,25 +51,62 @@
         margin-top: 10px;
     }
 
-
     .arrow{
-        max-width: 45px;
-        max-height: 30px;
+        width: 30px;
+        height: 30px;
         margin-right: 10px;
-        
+        background-color: #ffffff;
         cursor: pointer;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    // .arrow:hover{
+    //     transition: rotate(225deg);
+    //     -webkit-transform: rotate(225deg);
+    // }
+
+    .arrowdown{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transition: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .arrowup{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transition: rotate(225deg);
+        -webkit-transform: rotate(225deg);
+
+    }
 
     #apply-button{
-        background-color: rgb(56, 179, 56);
-        
+        background-color: #FE91C6;
+        color: white;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+    #apply-button:hover{
+        background-color: #FEAFC7;
+    }
+    #apply-button:active{
+        background-color: #fdc5d6;
     }
 
     #clear-button{
-        background-color: rgb(255, 70, 70);
-        
+        background-color: #FE91C6;
+        color: white;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+    #clear-button:hover{
+        background-color: #FEAFC7;
+    }
+    #clear-button:active{
+        background-color: #fdc5d6;
     }
 
     /*

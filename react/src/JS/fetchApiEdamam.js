@@ -21,7 +21,8 @@ export async function fetchApiEdemam(filters = [], dataFrom, dataTo) {
 
       headers: {
         // "content-type": "application/octet-stream",
-        "X-RapidAPI-Key": '38db0b2abamsh4f4f2b264175e81p13afc6jsn286352dcdf5e', 
+
+        "X-RapidAPI-Key": '6964f31706msh388e7503292ec84p17abf2jsn0e139674afbd', 
         "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com",
 
       },

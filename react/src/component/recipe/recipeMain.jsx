@@ -8,6 +8,9 @@ import DrinkGroup from "./recipeDrinkGroup";
 import RecipeImage from "../../Images/image.jpg";
 import RecipeListCard from "./recipeListCard";
 import RecDrinkImage from "../../Images/wine.jpg";
+
+// import CarbonFont from "../../Images/CarbonFont.jpg"
+
 import { useLocation } from "react-router-dom";
 import { winePairingKeywords } from "../../JS/winePairingKeywords";
 import { fetchApiSpoonacular } from "../../JS/fetchApiSpoonacular";
@@ -60,14 +63,20 @@ export default function Recipe() {
   }, []);
 
   return (
-    <div className="main recipe">
+    <div className="main recipe" >
+      {/* style={{backgroundImage:CarbonFont}} */}
       {/* Description */}
       <Description
         description={`Cuisine type: ${state.recipe.cuisineType}`}
         title={state.recipe.label}
       />
+      <image src = ""></image>
 
-      <div className=" flex-rows">
+      {/* <div className="CarbonFont flex-rows" style={{backgroundColor: "red"}}> */}
+      {/* <div className="CarbonFont flex-rows" > */}
+      <div className=" flex-rows" >
+      {/* CarbonFont
+        <img CarbonFont /> */}
         {/* Flex container - Left */}
         <div className="static-flex-column">
           <div className="fixedMargin">

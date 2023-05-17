@@ -108,6 +108,23 @@
     width: 50%;
   }
   /*Base card*/
+  .filterDesktopCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+    max-width: 390px;
+    max-height: fit-content;
+    margin: 10px;
+  }
+  .filterDesktopCard h2{
+    font-size: 25px;
+  }
+  .filterDesktopCard button{
+    max-width: 25px;
+  }
   .card {
     display: flex;
     flex-direction: row;

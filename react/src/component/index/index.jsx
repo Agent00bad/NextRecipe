@@ -3,6 +3,7 @@ import {useState, useEffect} from "react"
 // import "../../SCSS/HeaderFooter.scss";
 import { Card } from "./card";
 import { ActiveFilter } from "./activeFilter";
+import { FilterDesktop } from "./filterDesktop.jsx";
 import { fetchApiEdemam } from "../../JS/fetchApiEdamam";
 import logo from "../../Images/logo.png";
 import { useOutletContext } from "react-router-dom";
@@ -44,8 +45,12 @@ const[activeFilter, setActiveFilters] = useOutletContext();
                 filters={activeFilter}
                 header={"Active Filter"}
               />
+                <FilterDesktop 
+                filters={activeFilter} />
+
             </div>
           <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
+
           {data && data[0] != undefined ?
           <div className="card-mapping">
           {data.map((obj) => {

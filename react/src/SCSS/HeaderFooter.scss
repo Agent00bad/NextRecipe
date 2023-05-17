@@ -91,9 +91,12 @@
         justify-self: center;
         display: flex;
         justify-content: center;
-
+        position: sticky;
         background-color: #FFFFFF;
-
+        bottom: 0;
+        right: 0;
+        left: 0;
+    
         border: 2px solid #FE91C6;
         border-radius: 5px;
         box-shadow: 5px 5px 0px grey;

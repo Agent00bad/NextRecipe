@@ -45,13 +45,13 @@
   }
 
   //Mobile
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1350px) {
     .headImage {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: auto;
-      width: 210px;
+      
     }
 
     .headImage img {
@@ -59,13 +59,13 @@
       align-items: center;
       justify-content: center;
       margin: auto;
-      height: 100%;
+      width: 100%;
       border-radius: 5px;
       margin: 10px;
     }
   }
   //Desktop
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 1350px) {
     .headImage {
       display: flex;
       align-items: center;

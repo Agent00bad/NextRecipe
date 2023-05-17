@@ -1,7 +1,7 @@
 import "../../SCSS/headerfooter.scss";
 import "../../SCSS/search_bar.scss";
-import menuicon from "../../Images/menu-icon.png";
-import crossicon from "../../Images/cross-icon.png";
+import menuicon from "../../Images/menuIcon.png";
+import crossicon from "../../Images/cross.png";
 import logo from "../../Images/perfectpair_transparent.png";
 import userIcon from "../../Images/user-icon.png";
 import searchImage from "../../Images/Search.png";

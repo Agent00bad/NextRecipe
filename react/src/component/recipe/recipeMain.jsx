@@ -8,9 +8,14 @@ import DrinkGroup from "./recipeDrinkGroup";
 import RecipeImage from "../../Images/image.jpg";
 import RecipeListCard from "./recipeListCard";
 import RecDrinkImage from "../../Images/wine.jpg";
+
+// import CarbonFont from "../../Images/CarbonFont.jpg"
+
 import { useLocation } from "react-router-dom";
 import { winePairingKeywords } from "../../JS/winePairingKeywords";
 import { fetchApiSpoonacular } from "../../JS/fetchApiSpoonacular";
+import Portion from "./recipePortions";
+import Nutrition from "./recipeNutrition";
 
 export default function Recipe() {
   let { state } = useLocation();
@@ -58,38 +63,94 @@ export default function Recipe() {
   }, []);
 
   return (
-    <div className="main recipe">
+    <div className="main recipe" >
+      {/* style={{backgroundImage:CarbonFont}} */}
       {/* Description */}
       <Description
         description={`Cuisine type: ${state.recipe.cuisineType}`}
         title={state.recipe.label}
       />
+      <image src = ""></image>
 
-      {/* Head Image */}
-      <HeadImage
-        description="HeadDesciption"
-        recipeImage={state.recipe.image}
-      />
+      {/* <div className="CarbonFont flex-rows" style={{backgroundColor: "red"}}> */}
+      {/* <div className="CarbonFont flex-rows" > */}
+      <div className=" flex-rows" >
+      {/* CarbonFont
+        <img CarbonFont /> */}
+        {/* Flex container - Left */}
+        <div className="static-flex-column">
+          <div className="fixedMargin">
+            {/* Head Image */}
+            <HeadImage
+              description="HeadDesciption"
+              recipeImage={state.recipe.image}
+            />
+          </div>
 
-      {/* Ingredients */}
-      <RecipeListCard
-        isOrdered={false}
-        Listitems={state.recipe.ingredientLines}
-      />
-
-      {/* How to */}
-      {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
-
-      {/* Recommended Drink */}
-      {wineData && (
-        <div className="loaded-drink">
-          <DrinkGroup
-            drinkImage={wineData.image}
-            drinkDescription={wineData.description}
-            drinkTitle={wineData.title}
-          />
+          <div className="fixedMargin listCard">
+            {/* Portion */}
+            <Portion
+              nutrient={state.recipe.totalNutrients}
+              portions={state.recipe.yield}
+              weight={state.recipe.totalWeight}
+            />
+          </div>
+          {/* How to */}
+          {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
         </div>
-      )}
+        {/* Flex container - Left */}
+
+        {/* Flex container - Center */}
+        <div className="dynamic-flex-column">
+          <div className="fixedMargin">
+            {/* Ingredients */}
+            <RecipeListCard
+              
+              isOrdered={false}
+              Listitems={state.recipe.ingredientLines}
+            />
+          </div>
+
+          <div className="fixedMargin listCard">
+          <Nutrition
+          nutrient = {state.recipe.totalNutrients}
+          weight={state.recipe.totalWeight}
+          
+          />
+
+          </div>
+
+
+          {/* Flex container - Center */}
+        </div>
+        {/* Flex container Right */}
+        {wineIsNull(wineData)}
+        {/* Flex container Right */}
+      </div>
     </div>
   );
+}
+
+
+function wineIsNull(wineData){
+if(wineData != null){
+  return(
+<div    className="dynamic-flex-column">
+          {/* Recommended Drink */}
+          {wineData && (
+            <div className="loaded-drink fixedMargin">
+              <DrinkGroup
+                drinkImage={wineData.image}
+                drinkDescription={wineData.description}
+                drinkTitle={wineData.title}
+              />
+            </div>
+          )}
+          {/* Flex container Right */}
+
+          
+        </div>
+
+  )
+}
 }

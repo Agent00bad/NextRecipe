@@ -8,7 +8,7 @@ export default function Description({description, title}){
     return(
             <div className="description">
                 <h3>{title}</h3>  
-                <p>{description}</p>
+                <p><b>{description}</b></p>
             </div>
         )
     }

@@ -8,9 +8,9 @@ export default function Contact() {
     <div className="contact">
       <div className="headerPushback"></div>
       <h1 className="ContactUs">Contact Us</h1>
-      <hr></hr>
-      <h1 className="Team">Project Team</h1>
-      <hr></hr>
+      <hr className="hr1"></hr>
+      <h2 className="Team">Project Team</h2>
+      <hr className="hr2"></hr>
       
       
       <div className="rows">
@@ -30,8 +30,8 @@ export default function Contact() {
       linkedinLink={'https://www.linkedin.com/in/andréa-olofsson-12b81a1a6/'}
       />
       </div>
-      <h1 className="Team">Development Team</h1>
-      <hr></hr>
+      <h2 className="Team">Development Team</h2>
+      <hr className="hr2"></hr>
       <div className="rows">
       <ContactCard
       image = {Image}

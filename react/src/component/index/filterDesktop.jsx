@@ -3,9 +3,11 @@ import "../../scss/colorscheme.scss";
 import "../../scss/filter.scss";
 import "../../scss/button.scss";
 import { useOutletContext } from "react-router-dom";
-import { ApplyClearPills } from "../filter/applyClearPills.jsx";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
-export function FilterDesktop(filters= []){
+// import { ApplyClearPills } from "../filter/applyClearPills.jsx";
+
+export function FilterDesktop(){
     const [activeFilters, setActiveFilters] = useOutletContext();
     const mealType = ["Breakfast", "Lunch", "Dinner", "Snacks"];
     const allergies = [
@@ -37,10 +39,17 @@ export function FilterDesktop(filters= []){
     const removeFilterChoices = () => {
       setActiveFilters(activeFilters.filter((filter) => null));
     };
+
+    const navigate = useNavigate();
+  const navigateToIndex = () => {
+    navigate("/");
+    console.log("Hoppsan!")
+  };
   
     return (
       <>
-        <div className="filterDesktopCard">
+        {/* <div className="filterDesktopCard"> */}
+        <div className="filterandbutton">
           <main>
             <SectionDesktopMeals header="Meal Options"/>
             <DesktopCheckbox
@@ -50,7 +59,7 @@ export function FilterDesktop(filters= []){
               toggle={toggleMeals}
             />
             <SectionDesktopAllergies header="Meal Allergies/Diet"/>
-            <DesktopCheckbox
+            <DesktopCheckbox   
               types={allergies}
               activeFilter={activeFilters}
               setFilter={setFilter}
@@ -73,16 +82,18 @@ export function FilterDesktop(filters= []){
     );
 
 
-  function DesktopCheckbox({ types }) {
+  function DesktopCheckbox({ types, toggle}) {
     return types.map((item, index) => (
-      <div className="flex-row" key={index}>
-        {" "}
-        <label className="container">
-          {item}
-          <input type="checkbox" />{" "}
-          <span className="checkmark"></span>{" "}
-        </label>
-        {" "}
+      <div className="filterandbutton" style={{display: toggle ? 'none' : 'block'}}>
+        <div key={index}>
+          {" "}
+          <label id="container">
+            {item}
+            <input type="checkbox" />{" "}
+            <span className="checkmark"></span>{" "}
+          </label>
+          {" "}
+        </div>
       </div>
     ));
   }
@@ -143,7 +154,6 @@ export function FilterDesktop(filters= []){
     };
     return (
       <div className="filterandbutton" onClick={handleClick}>
-        {!toggleProteins ? <hr /> : ""}
         <div className="flex-container-horizontal">
           <h2>{header}</h2>
           <button
@@ -155,5 +165,23 @@ export function FilterDesktop(filters= []){
       </div>
     );
   }
+  function  ApplyClearPills({types = [], id}){
+    return (
+      <>
+        <div className="filterandbutton">
+          {types.map((data) => (
+            <button
+              className="filter-button"
+              id={id}
+              onClick={
+                id == "apply-button" ? navigateToIndex : removeFilterChoices
+              }
+            >
+              {data}
+            </button>
+          ))}
+        </div>
+      </>
+)};
 
 }

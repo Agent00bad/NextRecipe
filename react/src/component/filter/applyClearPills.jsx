@@ -6,6 +6,7 @@ import "../../scss/button.scss";
 import { useOutletContext } from "react-router-dom";
 import { Link, useLocation } from "react-router-dom";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import {Filter} from "./filter.jsx"
 
 export function  ApplyClearPills({types = [], id}){
 

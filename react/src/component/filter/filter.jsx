@@ -7,9 +7,9 @@ import arrowDown from "../../Images/arrow-down.png";
 import { useOutletContext } from "react-router-dom";
 import { Link, useLocation } from "react-router-dom";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import {ApplyClearPills} from "./applyClearPills";
+// import {ApplyClearPills} from "./applyClearPills";
 
-export default function Filter(filter = []) {
+export default function Filter() {
   const [activeFilters, setActiveFilters] = useOutletContext();
   const mealType = ["Breakfast", "Lunch", "Dinner", "Snacks"];
   const allergies = [
@@ -27,6 +27,10 @@ export default function Filter(filter = []) {
   const [toggleAllergies, setToggleAllergies] = useState(true);
   const [toggleProteins, setToggleProteins] = useState(true);
 
+  const navigate = useNavigate();
+  const navigateToIndex = () => {
+    navigate("/");
+  };
 
 
   function setFilter(filter) {
@@ -39,7 +43,9 @@ export default function Filter(filter = []) {
     }
   }
 
-  
+  const removeFilterChoices = () => {
+    setActiveFilters(activeFilters.filter((filter) => null));
+  };
 
   return (
     <>
@@ -132,5 +138,24 @@ export default function Filter(filter = []) {
       </div>
     );
   }
+
+  function  ApplyClearPills({types = [], id}){
+        return (
+          <>
+            <div className="filterandbutton">
+              {types.map((data) => (
+                <button
+                  className="filter-button"
+                  id={id}
+                  onClick={
+                    id == "apply-button" ? navigateToIndex : removeFilterChoices
+                  }
+                >
+                  {data}
+                </button>
+              ))}
+            </div>
+          </>
+)};
 }
 

@@ -9,13 +9,14 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
+
   main {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
   }
+
   /*
   @media screen and (width > 391px) {
         main {
@@ -32,10 +33,19 @@
     }
 }
 */
-  @media screen and (width > 1025px) {
-    main{
-      justify-content: end;
-    }
+#alignLeft{
+  align-items: flex-start;
+}
+@media screen and (width > 1025px) {
+  main{
+    // justify-content: end;
+    flex-flow: column wrap;
+    align-content: center;
+  }
+  div{
+    align-items: center;
+  }
+
     #filtersTag {
       display: flex;
       flex-direction: column;
@@ -68,6 +78,7 @@
     }
     /*Ändra Sticky Space för Desktop*/
     #stickySpace{
+      display: flex;
       position: fixed;
       // position: -webkit-sticky;
       left: 2%;
@@ -75,6 +86,7 @@
       // bottom: 60%;
     }
   }
+
   .stickySpace{
   display: flex;
   flex-flow: column wrap;
@@ -108,23 +120,7 @@
     width: 50%;
   }
   /*Base card*/
-  .filterDesktopCard{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: white;
-    width: 100%;
-    max-width: 390px;
-    max-height: fit-content;
-    margin: 10px;
-  }
-  .filterDesktopCard h2{
-    font-size: 25px;
-  }
-  .filterDesktopCard button{
-    max-width: 25px;
-  }
+
   .card {
     display: flex;
     flex-direction: row;

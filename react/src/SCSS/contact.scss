@@ -1,7 +1,18 @@
 .contact{   
 
     @media only screen and (min-width: 1025px){
-        .rows{
+        .row1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+          }
+
+        .row1 .contactCard{
+            margin: 0 100px;
+        }
+        
+        .row2{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -44,7 +55,7 @@
     
 
     .contactCard img{
-        height: 250px;
+        height: 270px;
         width: auto;
         margin: 15px 15px 8px 15px;
         border-radius: 15px;

@@ -39,7 +39,9 @@ export default function Header({ setSearch }) {
         <div className="header">
           {onFilterPage == true ? (
             <Link to="/" className="menu-link">
-              <img src={crossicon} />
+              <div className="filterBox">
+                <img src={crossicon} id="cross"/>
+              </div>
             </Link>
           ) : (
             <Link to="/filter" className="menu-link">
@@ -55,7 +57,7 @@ export default function Header({ setSearch }) {
             </div>
           </Link>
           {/* <Link to="loading" className="login-link"><img src={userIcon}/></Link> */}
-          <form onSubmit={(e) => submitHandler(e)}>
+          <form onSubmit={(e) => submitHandler(e)} className="pop">
             <div className="search-container">
               <input
                 type="text"

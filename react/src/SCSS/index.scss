@@ -11,10 +11,14 @@
   }
   
   main {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+  }
+  @media screen and (width < 1025px){
+    main{
+      display: flex;
+    }
   }
   /*
   @media screen and (width > 391px) {
@@ -32,7 +36,7 @@
     }
 }
 */
-  @media screen and (width > 1025px) {
+  @media screen and (width > 1024px) {
     main{
       justify-content: end;
     }
@@ -64,16 +68,25 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      left: 20%;
+      // left: 20%;
+      margin-left: 350px;
     }
     /*Ändra Sticky Space för Desktop*/
     #stickySpace{
       position: fixed;
       // position: -webkit-sticky;
       left: 2%;
-      top: 15%;
+      top: 12%;
       // bottom: 60%;
     }
+  }
+
+  .filterDesktop{
+    border: solid 8px #feafc7;
+    border-radius: 15px;
+    padding: 50px 0px 0px 0px;
+    box-shadow: 0px 3px 5px gray;
+    padding: 12px;
   }
   .stickySpace{
   display: flex;

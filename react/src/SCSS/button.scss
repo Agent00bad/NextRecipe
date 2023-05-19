@@ -1,34 +1,23 @@
 .filterandbutton{
-    main{
-        margin-top: 80px;
-      }
     .filter-button{
         
         outline: 0;
         border: none;
         cursor: pointer;
         
-        padding: 15px 20px;
+        padding: 10px 15px;
         border-radius: 100px;
         background-color: #e6e1e1;
         color: #000000;
         
-        margin-right: 15px;
-        margin-left: 15px;
+        margin-right: 8px;
+        margin-left: 8px;
         box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease 0s;
         margin-bottom: 10px;
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 19px;
     }
-
-    /*
-    display: inline-block;
-        
-        min-height: 40px;
-        font-size: 46px;
-        font-weight: 500;
-    */
 
     .selected{
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
@@ -101,6 +90,7 @@
         color: white;
         font-weight: 600;
         transition: 0.5s;
+        margin-right: 50px;
     }
     #clear-button:hover{
         background-color: #FEAFC7;

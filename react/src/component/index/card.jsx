@@ -1,15 +1,11 @@
 import {Link} from "react-router-dom";
 import { truncate } from "../../JS/truncate";
-import sound from "../../Sounds/golfswing.mp3";
 
 export function Card({prop, title, type, description = [], calories, image }) {
-  
+
   return(
     <div className="recipe-container card">
-    <Link to="/recipe" state={prop} class="select-card">
-    <audio id="golfSwing" preload="auto">
-      <source src={sound}/>
-    </audio>
+    <Link to="/recipe" state={prop} className="select-card">
       <header>
         <p>
           <b>{type}</b>

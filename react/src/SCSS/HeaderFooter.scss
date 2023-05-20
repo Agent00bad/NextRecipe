@@ -11,11 +11,12 @@
         flex-direction: row;
         align-items: center;
         justify-content:space-between;
+        z-index: 2;
 
-
-        border: 2px solid #FE91C6;
-        border-radius: 5px;
-        box-shadow: 5px 5px 0px grey;
+        border: 3px solid #FE91C6;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 5px 5px 0px rgb(143, 142, 142);
 
         padding: 5px;
         margin-bottom: 10px;
@@ -34,7 +35,7 @@
     }
     @media screen and (max-width: 932px) {
         .header {
-          width: auto;
+          width: 98%;
         }
     }
     @media screen and (min-width: 933px) {

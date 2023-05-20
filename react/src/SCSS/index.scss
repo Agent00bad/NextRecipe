@@ -82,6 +82,26 @@
   align-content: center;
   width: 300px;
   }
+  .recipe-container:hover{
+    scale: 1.06;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 0px rgb(255, 25, 167);
+    background: linear-gradient(-45deg, #ff49a1,#ffb7cc, #ffb7cc, #ff49a1);
+    background-size: 300% 300%;
+    animation: gradient 5s infinite;
+  }
+  @keyframes gradient {
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
+
   .recipe-container a {
     text-decoration: none;
     color: #000;
@@ -113,10 +133,14 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #feafc7;
+    // background-color: #feafc7;
+    background: linear-gradient(-45deg, #f94fa1, #fe8cc3, #fcacc4, #fcb7cc);
+    background-size: 150% 150%;
+    
     width: 82%;
+    border: 3px solid #fe91c6;
     border-radius: 15px;
-    box-shadow: 0px 3px 5px gray;
+    box-shadow: 0px 3px 5px rgb(143, 142, 142);
     max-width: 390px;
     max-height: fit-content;
     margin: 10px;
@@ -167,6 +191,15 @@
     border-radius: 15px;
     box-shadow: 2px 3px 5px #c14983;
     color: #fe91c6;
+    transition: 0.5s;
+  }
+  .filter-tag:hover{
+    background-color:rgb(255, 215, 235);
+    color: #ff6db4;
+  }
+  .filter-tag:active{
+    background-color:rgb(252, 156, 204);
+    color: #fd4aa1;
   }
 
   /*Recipe And Drink Card*/
@@ -206,10 +239,9 @@
   .recipe-image {
     display: flex;
     justify-content: center;
-    margin: 0px 10px 10px 5px;
     width: 90%;
     height: 50%;
-    border: 2px solid #ffff;
+    border: 3px solid #ffff;
     border-radius: 5px;
     background-color: #ffff;
   }
@@ -220,8 +252,7 @@
   }
   .inner-container {
     display: flex;
-    flex-direction: row;
-    margin-left: 6px;
+    justify-content: center;
   }
   .info {
     display: flex;
@@ -243,8 +274,9 @@
     display: flex;
     flex-flow: column wrap;
     margin: 5px;
-    border-radius: 10px;
-    background-color: #ffff;
+    border-radius: 5px;
+    border: solid 2px #e9e9e9; 
+    background-color: #ffffff;
     padding: 2px;
   }
   .specifics  p{

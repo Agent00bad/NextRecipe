@@ -20,7 +20,7 @@ export function Card({prop, title, type, description = [], calories, image }) {
         </div>
       </div>
       <article className="specifics">
-      <p>{truncate(title, 30)}</p>
+      <p><b>{truncate(title, 30)}</b></p>
       <p>calories/portion: {Math.floor(calories)} kcal</p>
       </article>
     </Link>

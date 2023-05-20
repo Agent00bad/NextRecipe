@@ -194,15 +194,19 @@
     border-radius: 15px;
     box-shadow: 2px 3px 5px #c14983;
     color: #fe91c6;
-    transition: 0.5s;
+    transition: 0.3s;
   }
   .filter-tag:hover{
-    background-color:rgb(255, 215, 235);
-    color: #ff6db4;
+    background-color: #fbfbfb;
+    color:  #ff719c;
+    box-shadow: 2px 3px 5px #c14983;
+    transform: translateY(1px);    
   }
   .filter-tag:active{
-    background-color:rgb(252, 156, 204);
-    color: #fd4aa1;
+    background-color: #f2f2f2;
+    color:  #ff3b76;
+    transform: translateY(3px);
+    box-shadow: none;
   }
 
   /*Recipe And Drink Card*/

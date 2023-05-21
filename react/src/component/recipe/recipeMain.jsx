@@ -87,7 +87,7 @@ export default function Recipe() {
             />
           </div>
 
-          <div className="fixedMargin listCard">
+          <div className="fixedMargin listCard" id="card">
             {/* Portion */}
             <Portion
               nutrient={state.recipe.totalNutrients}
@@ -111,7 +111,7 @@ export default function Recipe() {
             />
           </div>
 
-          <div className="fixedMargin listCard">
+          <div className="fixedMargin listCard" id="card">
           <Nutrition
           nutrient = {state.recipe.totalNutrients}
           weight={state.recipe.totalWeight}

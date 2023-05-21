@@ -6,7 +6,7 @@ import "../../SCSS/HeaderFooter.scss";
 
 export default function Description({description, title}){
     return(
-            <div className="description">
+            <div className="description" id="card">
                 <h3>{title}</h3>  
                 <p><b>{description}</b></p>
             </div>

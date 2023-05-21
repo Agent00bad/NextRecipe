@@ -8,7 +8,7 @@ export default function Nutrition({nutrient = [],weight}){
     
     return(
         
-            <div >
+            <div>
                  <p><b>Per 100 g:</b></p>
                 {nutritionExists(nutrient.ENERC_KCAL.label,nutrient.ENERC_KCAL.quantity,nutrient.ENERC_KCAL.unit,                     weight)}
                 {nutritionExists(nutrient.FAT.label,nutrient.FAT.quantity,nutrient.FAT.unit,                     weight)}

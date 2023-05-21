@@ -29,7 +29,7 @@ export default function RecipeListCard({isOrdered, Listitems = []}){
     
     else if(isOrdered === false);{
         return(
-            <div className="listCard">
+            <div className="listCard" id="card">
                 <h3>Ingredients:</h3>
                 <div className="listCard-innerBox">
                         <ul>

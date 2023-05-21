@@ -1,0 +1,108 @@
+.contact{   
+
+    @media only screen and (min-width: 1025px){
+        .row1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+          }
+
+        .row1 .contactCard{
+            margin: 0 100px;
+        }
+        
+        .row2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+          }
+
+          .contactCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
+            background-color: #feafc7;
+            width: 225px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 5px gray;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            }
+    }
+
+    @media only screen and (max-width: 1024px){
+        .contactCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 15px auto;
+            background-color: #feafc7;
+            width: 225px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 5px gray;
+            
+            }
+    }
+
+    .headerPushback{
+        margin-top: 80px;
+    }
+
+    
+
+    
+
+    .contactCard img{
+        height: 270px;
+        width: auto;
+        margin: 15px 15px 8px 15px;
+        border-radius: 15px;
+    } 
+
+    .contactTextBox{
+        background-color: white;
+        width: auto;
+        height: auto;
+        margin: 7px 15px 15px 15px;
+        
+        border-radius: 15px;
+        text-align: center;
+        }
+
+    a{
+        text-decoration: none;
+        margin: 5px;
+        
+    }
+    p{
+        margin:5px;
+    }
+
+    .ContactUs{
+        color: #FE91C6;
+
+    }
+
+    .Team{
+        color: #FE91C6;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .hr1{
+        width: 40%;
+       
+    }
+
+    .hr2{
+        width: 60%;
+    }
+}

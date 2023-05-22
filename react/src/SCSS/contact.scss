@@ -30,6 +30,16 @@
             box-shadow: 0px 3px 5px rgb(143, 142, 142);
             margin-top: 15px;
             margin-bottom: 15px;
+            transition: 0.5s;
+            }
+
+            .contactCard:hover{
+            scale: 1.06;
+            z-index: 1;
+            box-shadow: 0px 0px 10px 0px rgb(255, 25, 167);
+            background: linear-gradient(-45deg, #ff49a1,#ffb7cc, #fd9cb6, #ff49a1);
+            background-size: 300% 300%;
+            animation: gradient 5s infinite;
             }
     }
 
@@ -44,7 +54,15 @@
             width: 225px;
             border-radius: 15px;
             box-shadow: 0px 3px 5px rgb(143, 142, 142);
-            
+            transition: 0.5s;
+            }
+            .contactCard:hover{
+            scale: 1.06;
+            z-index: 1;
+            box-shadow: 0px 0px 10px 0px rgb(255, 25, 167);
+            background: linear-gradient(-45deg, #ff49a1,#ffb7cc, #fd9cb6, #ff49a1);
+            background-size: 300% 300%;
+            animation: gradient 5s infinite;
             }
     }
 

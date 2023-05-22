@@ -31,7 +31,6 @@ const[activeFilter, setActiveFilters] = useOutletContext();
     // console.log(data);
   },[to, activeFilter])
 
-
   return (
     <>
     <div className="index">
@@ -62,15 +61,14 @@ const[activeFilter, setActiveFilters] = useOutletContext();
             </div>
             )
           })}
-          <div className="filterandbutton">
-            <button className="load-more" onClick={() => setTo(to + 15)}>Load more</button>
-          </div>
           </div>
         :
         <Loading/>
       }
-        </div>
-                
+          <div className="filterandbutton">
+            <button className="load-more" onClick={() => setTo(to + 15)}>Load more</button>
+          </div>
+        </div>  
       </main>
     </div>
     </>

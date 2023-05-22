@@ -1,0 +1,35 @@
+.about{
+
+    @media only screen and (max-width: 1024px){
+        .textBox{
+            margin: 100px auto;
+            width: 80%;
+
+        }
+    }
+
+    @media only screen and (min-width: 1025px){
+        .textBox{
+            margin: 150px 30% ;
+        }
+    }
+
+
+    .title{
+        color: #FE91C6;
+    }
+    .headerPushback{
+        margin-top: 80px;
+    }
+    
+
+    
+    
+    .text{
+        font-size: larger;
+    }
+
+    .textHeader{
+        text-align: center;
+    }
+}

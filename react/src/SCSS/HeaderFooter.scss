@@ -19,11 +19,11 @@ main{
         flex-direction: row;
         align-items: center;
         justify-content:space-between;
+        z-index: 2;
 
 
-        border: 2px solid #FE91C6;
-        
-        box-shadow: 5px 5px 0px grey;
+        border: 3px solid #FE91C6;
+        box-shadow: 5px 5px 0px rgb(143, 142, 142);
 
         padding: 5px;
         margin-bottom: 10px;
@@ -149,14 +149,22 @@ main{
         // background-size: 400% 400%;
         // animation: gradient 15s ease infinite;
     }
-    .footer > t{
-        margin-left: 20%;
-        margin-right: 20%;
-        cursor: pointer;
+     
+    .about{
+        margin-right: 15%;
     }
 
-    .footer > t > a{
+    .contact{
+        margin-left: 15%;
+    }
+
+    b{
         color: #FFFFFF;
+        
+    }
+
+    a{
         text-decoration: none;
     }
+    
 }

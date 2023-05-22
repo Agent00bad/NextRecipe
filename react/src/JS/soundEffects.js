@@ -22,4 +22,15 @@ export default class playsound{
        }
       return soundPlay; 
     }
+    special(src){
+      var soundPlay = () => {
+        const sound = new Howl({
+          src : src,
+          html5: true
+        })
+        sound.play();
+          
+    }
+    return soundPlay;
   }
+}

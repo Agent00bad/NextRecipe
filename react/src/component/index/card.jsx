@@ -1,11 +1,13 @@
 import {Link} from "react-router-dom";
 import { truncate } from "../../JS/truncate";
+import playsound from "../../JS/soundEffects";
 
 export function Card({prop, title, type, description = [], calories, image }) {
-  
+  var sound = new playsound();
+
   return(
-  <div className="recipe-container card">
-    <Link to="/recipe" state={prop} class="select-card">
+    <div className="recipe-container card" onMouseEnter={sound.sayHello()}>
+    <Link to="/recipe" state={prop} className="select-card">
       <header>
         <p>
           <b>{type}</b>
@@ -20,10 +22,12 @@ export function Card({prop, title, type, description = [], calories, image }) {
         </div>
       </div>
       <article className="specifics">
-      <p>{truncate(title, 30)}</p>
+      <p><b>{truncate(title, 30)}</b></p>
       <p>calories/portion: {Math.floor(calories)} kcal</p>
       </article>
     </Link>
   </div>
   )
+
+ 
 }

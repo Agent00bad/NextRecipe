@@ -7,8 +7,8 @@ import "../../SCSS/HeaderFooter.scss";
 export default function Nutrition({nutrient = [],weight}){
     
     return(
-        
-            <div>
+        <div id="card">
+            <div className="specifics">
                  <p><b>Per 100 g:</b></p>
                 {nutritionExists(nutrient.ENERC_KCAL.label,nutrient.ENERC_KCAL.quantity,nutrient.ENERC_KCAL.unit,                     weight)}
                 {nutritionExists(nutrient.FAT.label,nutrient.FAT.quantity,nutrient.FAT.unit,                     weight)}
@@ -36,7 +36,7 @@ export default function Nutrition({nutrient = [],weight}){
                 {nutritionExists(nutrient.TOCPHA.label,nutrient.TOCPHA.quantity,nutrient.TOCPHA.unit,                     weight)}
                 {nutritionExists(nutrient.VITK1.label,nutrient.VITK1.quantity,nutrient.VITK1.unit,                     weight)}
             </div>
-            
+        </div>
         )
     }
 

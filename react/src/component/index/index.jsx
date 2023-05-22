@@ -1,14 +1,9 @@
 import "../../SCSS/index.scss";
 import {useState, useEffect} from "react"
-// import "../../SCSS/HeaderFooter.scss";
 import { Card } from "./card";
 import { ActiveFilter } from "./activeFilter";
 import { fetchApiEdemam } from "../../JS/fetchApiEdamam";
-import logo from "../../Images/logo.png";
 import { useOutletContext } from "react-router-dom";
-import menuIcon from "../../Images/menu-icon.png";
-import perfectpair_transparent from "../../Images/perfectpair_transparent.png";
-import userIcon from "../../Images/user-icon.png";
 import Loading from "../loading/loading"
 import "../../SCSS/button.scss";
 
@@ -44,7 +39,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
                 header={"Active Filter"}
               />
             </div>
-          <div className="CardSpace" id="CardSpace">  {/*Ifall vi vill flytta alla kort*/}
+          <div className="CardSpace" id="CardSpace">
           {data && data[0] != undefined ?
           <div className="card-mapping">
           {data.map((obj) => {

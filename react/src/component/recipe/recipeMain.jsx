@@ -129,7 +129,7 @@ export default function Recipe() {
           {/* Flex container - Center */}
         </div>
         {/* Flex container Right */}
-        <div className="visible-1301">
+        <div className={(wineData != null) ? "visible-1301" : "disabled"}>
         {wineIsNull(wineData)}
         </div>
         {/* Flex container Right */}
@@ -142,7 +142,7 @@ export default function Recipe() {
 function wineIsNull(wineData){
 if(wineData != null){
   return(
-<div    className="dynamic-flex-column">
+  <div className="dynamic-flex-column">
           {/* Recommended Drink */}
           {wineData && (
             <div className="loaded-drink fixedMargin">
@@ -157,7 +157,6 @@ if(wineData != null){
 
           
         </div>
-
   )
 }
 }

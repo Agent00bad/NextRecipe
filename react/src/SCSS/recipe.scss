@@ -132,35 +132,9 @@
     }
   }
 
-
-  
-
-  // * {
-  //   box-sizing: border-box;
-  // }
-
-  // .main {
-  //   max-width: 700px;
-  //   min-width: 300px;
-  //   display: flex;
-  // }
-
-  // .body div div main div div div div {
-  //   justify-content: flex-start flex-end space-evenly;
-  // }
-
-  // body {
-  //   background-color: var(--white);
-
-  //   padding-bottom: 30px;
-  //   overflow-x: hidden;
-  //   align-content: center;
-  //   padding-bottom: 10px;
-  // }
-
-  // <!--Elements-->
-
-  
+.disabled{
+  display: none;
+}
 
   .boxParent {
     width: fit-content;

@@ -16,7 +16,7 @@ export default function RecipeListCard({isOrdered, Listitems = []}){
                     {Listitems.map(Listitem => 
                         (
                         <li key={Listitem}>
-                            <b>{Listitem}</b>
+                            <p>{Listitem}</p>
                         </li>
                         )
                         )}
@@ -36,7 +36,7 @@ export default function RecipeListCard({isOrdered, Listitems = []}){
                         {Listitems.map(Listitem => 
                             (
                             <li key={Listitem}>
-                                <b>{Listitem}</b>
+                                <p>{Listitem}</p>
                             </li>
                             )
                             )}

@@ -74,7 +74,8 @@ export default function Recipe() {
 
       {/* <div className="CarbonFont flex-rows" style={{backgroundColor: "red"}}> */}
       {/* <div className="CarbonFont flex-rows" > */}
-      <div className=" flex-rows" >
+      <div className=" row_1" >
+        
       {/* CarbonFont
         <img CarbonFont /> */}
         {/* Flex container - Left */}
@@ -94,6 +95,10 @@ export default function Recipe() {
               portions={state.recipe.yield}
               weight={state.recipe.totalWeight}
             />
+          </div>
+
+          <div className="visible-1024-1300">
+          {wineIsNull(wineData)}
           </div>
           {/* How to */}
           {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
@@ -118,13 +123,15 @@ export default function Recipe() {
           
           />
 
+          
+
           </div>
-
-
           {/* Flex container - Center */}
         </div>
         {/* Flex container Right */}
+        <div className="visible-1301">
         {wineIsNull(wineData)}
+        </div>
         {/* Flex container Right */}
       </div>
     </div>

@@ -1,6 +1,8 @@
 import "../../SCSS/contact.scss";
 import { ContactCard } from "./contactCard";
 import Image from "../../Images/profil.png";
+import oof from "../../Sounds/oof.mp3";
+
 // import LinneaWillebrandVinnberg from "../../Images/Team/LinneaWillebrandVinnberg.INSERTFORMAT"
 // import AndreaOlofsson from "../../Images/Team/AndreaOlofsson.INSERTFORMAT"
 import ImirNorlin from "../../Images/Team/ImorNorlin.jpg"
@@ -8,7 +10,7 @@ import GustavAlbert from "../../Images/Team/GustavAlbert.jpg"
 // import DanielAlden from "../../Images/Team/DanielAlden.INSERTFORMAT"
 // import JessicaSjosten from "../../Images/Team/JessicaSjosten.INSERTFORMAT"
 // import JonathanPerlow from "../../Images/Team/JonathanPerlow.INSERTFORMAT"
-// import RobertGrimsborn from "../../Images/Team/RobertGrimsborn.INSERTFORMAT"
+import RobertGrimsborn from "../../Images/Team/jag4.jpg"
 // import AdamTollin from "../../Images/Team/AdamTollin.INSERTFORMAT"
 
 export default function Contact() {
@@ -88,13 +90,14 @@ export default function Contact() {
             linkedinLink={"https://www.linkedin.com/in/jonathan-perlow/"}
           />
           <ContactCard
-            image={Image}
+            image={RobertGrimsborn}
             fullName={"Robert Grimsborn"}
             occupation={".Net Developer"}
             availableAtLinkedIn={true}
             linkedinLink={
               "https://www.linkedin.com/in/robert-grimsborn-615531252/"
             }
+            soundEffect={oof}
           />
           <ContactCard
             image={Image}

@@ -7,7 +7,7 @@ import arrowDown from "../../Images/arrow-down.png";
 import { useOutletContext } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-export default function Filter() {
+export default function Filter({onMobile = true}) {
   const [activeFilters, setActiveFilters] = useOutletContext();
   const mealType = ["Breakfast", "Lunch", "Dinner", "Snacks"];
   const allergies = [
@@ -47,7 +47,7 @@ export default function Filter() {
   return (
     <>
       <div className="filterandbutton">
-        <main>
+        <main className={onMobile ? "onMobile" : ""}>
           <SectionMobileMeals header="Meal Options" id="1" />
           <Pills
             types={mealType}
@@ -70,7 +70,7 @@ export default function Filter() {
             toggle={toggleProteins}
           />
           <div className="flex-container-horizontal apply-clear">
-            <ApplyClearPills types={apply} id="apply-button" />
+            {onMobile && <ApplyClearPills types={apply} id="apply-button"/>}
             <ApplyClearPills types={clear} id="clear-button" />
           </div>
         </main>

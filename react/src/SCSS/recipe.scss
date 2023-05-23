@@ -63,6 +63,10 @@
       margin: auto;
     }
 
+    .visible-1024-1300{
+      display: none;
+    }
+
     .headImage img {
       width: 100%;
       border-radius: 5px;
@@ -70,7 +74,7 @@
     }
   }
   //Desktop
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 1024px) {
     .headImage {
       display: flex;
       width: 400px;
@@ -88,10 +92,22 @@
       margin: 8px;
     }
 
-    .flex-rows {
+    
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1300px){
+    .row_1 {
       display: flex;
       flex-wrap: wrap;
-    }
+    } 
+      .visible-1024-1300{
+        display: none;
+      }
+  
+      .visible-1301{
+        visibility: visible;
+      }
+    
   }
 
   .drinkBox {

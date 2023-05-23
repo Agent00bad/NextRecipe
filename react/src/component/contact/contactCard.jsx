@@ -1,9 +1,13 @@
+import playsound from "../../JS/soundEffects";
+
 export function ContactCard({
   image,
   fullName,
   occupation,
   availableAtLinkedIn,
-  linkedinLink,}) {
+  linkedinLink,
+  soundEffect}) {
+    var sound = new playsound();
   return (
     <>
       <div className="contactCard">
@@ -12,7 +16,7 @@ export function ContactCard({
           <p>{fullName}</p>
           <p>Role: {occupation}</p>
           { availableAtLinkedIn === true ? (
-            <p><a href={linkedinLink} className="lastEntry">LinkedIn</a></p>
+            <p><a href={linkedinLink} className="lastEntry" onClick={sound.special(soundEffect)}>LinkedIn</a></p>
           ) : (
             <p className="lastEntry">No LinkedIn available</p>
           )}

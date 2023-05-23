@@ -29,8 +29,7 @@ export default function Recipe() {
             result.title
         );
         setWineData(result);
-      } 
-      else {
+      } else {
         for (let i = 0; i < state.recipe.ingredients.length; i++) {
           if (winePairingKeywords(state.recipe.ingredients[i].foodCategory)) {
             result = await fetchApiSpoonacular(
@@ -48,52 +47,49 @@ export default function Recipe() {
 
   return (
     <div className="recipe">
-            <Title
-              cuisine={`Cuisine type: ${state.recipe.cuisineType}`}
-              title={state.recipe.label}
-              />
-            <div className="horizontal-wrap">
-              <div>
-                    <HeadImage
-                      alt={`Image of:  ${state.recipe.label}`}
-                      recipeImage={state.recipe.image}
-                    />
-                    <Portion
-                      nutrient={state.recipe.totalNutrients}
-                      portions={state.recipe.yield}
-                      weight={state.recipe.totalWeight}
-                    />
-                </div>
-                <div>
-                    <RecipeListCard
-                      ingredients={state.recipe.ingredientLines}
-                    />
-                      <Nutrition
-                      nutrient = {state.recipe.totalNutrients}
-                      weight={state.recipe.totalWeight}
-                      />
-                  </div>
-                  <div>
-                    {fetchedWine(wineData)}
-                  </div>
-            </div>
+      <div>
+        <Title
+          cuisine={`Cuisine type: ${state.recipe.cuisineType}`}
+          title={state.recipe.label}
+        />
+        <div className="horizontal-wrap">
+          <div>
+            <HeadImage
+              alt={`Image of:  ${state.recipe.label}`}
+              recipeImage={state.recipe.image}
+            />
+            <Portion
+              nutrient={state.recipe.totalNutrients}
+              portions={state.recipe.yield}
+              weight={state.recipe.totalWeight}
+            />
+          </div>
+          <div>
+            <RecipeListCard ingredients={state.recipe.ingredientLines} />
+            <Nutrition
+              nutrient={state.recipe.totalNutrients}
+              weight={state.recipe.totalWeight}
+            />
+          </div>
+          <div>{fetchedWine(wineData)}</div>
+        </div>
       </div>
+    </div>
   );
 }
 
-
-function fetchedWine(wineData){
-if(wineData != null){
-  return(
-<>
-          {wineData && (
-              <DrinkGroup
-                drinkImage={wineData.image}
-                drinkDescription={wineData.description}
-                drinkTitle={wineData.title}
-              />
-          )}
-        </>
-  )
-}
+function fetchedWine(wineData) {
+  if (wineData != null) {
+    return (
+      <>
+        {wineData && (
+          <DrinkGroup
+            drinkImage={wineData.image}
+            drinkDescription={wineData.description}
+            drinkTitle={wineData.title}
+          />
+        )}
+      </>
+    );
+  }
 }

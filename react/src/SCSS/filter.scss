@@ -13,8 +13,11 @@
       margin: auto;
       margin-top: 5px;
       margin-bottom: 5px;
-      font-size: 30px;
+      font-size: 170%;
     } 
+    .onMobile{
+      margin-top: 80px;
+    }
     
     .flex-container-horizontal{
       display: flex;

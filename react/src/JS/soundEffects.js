@@ -6,7 +6,8 @@ export default class playsound{
           var soundPlay = () => {
            const sound = new Howl({
              src : enter,
-             html5: true
+             html5: true,
+             volume: 0.03
            })
            sound.play();
          }
@@ -22,4 +23,16 @@ export default class playsound{
        }
       return soundPlay; 
     }
+    special(src){
+      var soundPlay = () => {
+        const sound = new Howl({
+          src : src,
+          html5: true,
+          volume: 0.3
+        })
+        sound.play();
+          
+    }
+    return soundPlay;
   }
+}

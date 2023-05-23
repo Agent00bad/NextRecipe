@@ -3,14 +3,6 @@ import "../../SCSS/button.scss"
 
 export function Pills({types, activeFilter = [], setFilter, toggle}){
 
-    // {ItemsArray.map((ItemsArray[0].types,ItemsArray[1].pressedArray) =>
-    // <p>{ItemsArray[0].types</p>
-    // )}
-    
-    // console.log("Items: " + ItemsArray)
-    // console.log("Types: " + types)
-   
-
     return (
       <>
       <div className="filterandbutton"  style={{display: toggle ? 'none' : 'block'}}>

@@ -6,7 +6,7 @@ export function Card({prop, title, type, description = [], calories, image }) {
   var sound = new playsound();
 
   return(
-    <div className="recipe-container card" /*onMouseEnter={sound.sayHello()}*/>
+    <div className="recipe-container card" onMouseEnter={sound.sayHello()}>
     <Link to="/recipe" state={prop} className="select-card">
       <header>
         <p>

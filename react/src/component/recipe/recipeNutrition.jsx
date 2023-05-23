@@ -16,7 +16,7 @@ export default function Nutrition({nutrient = [],weight}){
                 {nutritionExists(nutrient.FIBTG.label,nutrient.FIBTG.quantity,nutrient.FIBTG.unit,                     weight)}
                 {nutritionExists("Sugar",nutrient.SUGAR.quantity,nutrient.SUGAR.unit,                     weight)}
                 {nutritionExists(nutrient.PROCNT.label,nutrient.PROCNT.quantity,nutrient.PROCNT.unit,                     weight)}
-                <p><br></br></p>
+                {/* <p><br></br></p>
                 {nutritionExists(nutrient.NA.label,nutrient.NA.quantity,nutrient.NA.unit,                     weight)}
                 {nutritionExists(nutrient.CA.label,nutrient.CA.quantity,nutrient.CA.unit,                     weight)}
                 {nutritionExists(nutrient.MG.label,nutrient.MG.quantity,nutrient.MG.unit,                     weight)}
@@ -35,7 +35,7 @@ export default function Nutrition({nutrient = [],weight}){
                 {nutritionExists(nutrient.VITD.label,nutrient.VITD.quantity,nutrient.VITD.unit,                     weight)}
                 {nutritionExists(nutrient.TOCPHA.label,nutrient.TOCPHA.quantity,nutrient.TOCPHA.unit,                     weight)}
                 {nutritionExists(nutrient.VITK1.label,nutrient.VITK1.quantity,nutrient.VITK1.unit,                     weight)}
-            </div>
+             */}</div>
         </div>
         )
     }

@@ -5,7 +5,7 @@ export async function fetchApiSpoonacular(mainFoodType) {
     const wineListResponse = await fetch(`https://api.spoonacular.com/food/wine/pairing?food=${mainFoodType}`,
     {
       headers : {
-        "x-api-key" : "e31f3359bbd544e58009231dfbd6086d",
+        "x-api-key" : "c3173fb9e93d40ed8c075531ea5dab88",
       }
     })
     if(!wineListResponse.ok){

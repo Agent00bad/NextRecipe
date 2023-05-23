@@ -9,12 +9,16 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
-
+  
   main {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+  }
+  @media screen and (width < 1025px){
+    main{
+      display: flex;
+    }
   }
   /*
   @media screen and (width > 391px) {
@@ -32,12 +36,14 @@
     }
 }
 */
-  @media screen and (width > 815px) {
+  @media screen and (width > 1024px) {
+    main{
+      justify-content: end;
+    }
     #filtersTag {
       display: flex;
       flex-direction: column;
-      align-content: start;
-      margin-left: 20%;
+      align-content: center;
     }
     #filterList {
       display: flex;
@@ -49,25 +55,77 @@
       min-height: 100px;
     }
     #filterCard {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
-      width: 28%;
+      width: 320px;
       height: fit-content;
-      position: fixed;
-      left: 0;
-      top: 303px;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0px;
+      bottom: 400px;
     }
     #CardSpace {
-      width: 66%;
-      position: relative;
+      width: 70%;
+      position: static;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      left: 10%;
+      // left: 20%;
+      margin-left: 350px;
+    }
+    /*Ändra Sticky Space för Desktop*/
+    #stickySpace{
+      position: fixed;
+      // position: -webkit-sticky;
+      left: 2%;
+      top: 12%;
+      // bottom: 60%;
     }
   }
+
+  .filterDesktop{
+    border: solid 8px #feafc7;
+    border-radius: 15px;
+    padding: 50px 0px 0px 0px;
+    box-shadow: 0px 3px 5px gray;
+    padding: 12px;
+  }
+  .stickySpace{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  width: 300px;
+  }
+  .recipe-container{
+    transition: 0.5s;
+  }
+  .recipe-container:hover{
+    scale: 1.06;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 0px rgb(255, 25, 167);
+    background: linear-gradient(-45deg, #ff49a1,#ffb7cc, #fd9cb6, #ff49a1);
+    background-size: 300% 300%;
+    animation: gradient 5s infinite;
+  }
+
+  .recipe-container:active{
+    scale: 0.94;
+    box-shadow: 0px 0px 30px 0px rgb(255, 25, 167);
+    background: linear-gradient(-45deg, #ff49a1,#ffb7cc, #fd9cb6, #ff49a1);
+    background-size: 300% 300%;
+    animation: gradient 5s infinite;
+  }
+  @keyframes gradient {
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
+
   .recipe-container a {
     text-decoration: none;
     color: #000;
@@ -76,7 +134,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-flow: row wrap;
   }
   .inner-mapped-card{
     display: flex;
@@ -91,9 +149,7 @@
     justify-content: center;
   }
   .logo img {
-    width: 80%;
-    height: auto;
-    max-width: 500px;
+    width: 50%;
   }
   /*Base card*/
   .card {
@@ -101,10 +157,12 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #feafc7;
+    background: linear-gradient(-45deg, #f94fa1, #fe8cc3, #fcacc4, #fcb7cc);
+    background-size: 150% 150%;
     width: 82%;
+    border: 3px solid #fe91c6;
     border-radius: 15px;
-    box-shadow: 0px 3px 5px gray;
+    box-shadow: 0px 3px 5px rgb(143, 142, 142);
     max-width: 390px;
     max-height: fit-content;
     margin: 10px;
@@ -155,6 +213,19 @@
     border-radius: 15px;
     box-shadow: 2px 3px 5px #c14983;
     color: #fe91c6;
+    transition: 0.3s;
+  }
+  .filter-tag:hover{
+    background-color: #fbfbfb;
+    color:  #ff719c;
+    box-shadow: 2px 3px 5px #c14983;
+    transform: translateY(1px);    
+  }
+  .filter-tag:active{
+    background-color: #f2f2f2;
+    color:  #ff3b76;
+    transform: translateY(3px);
+    box-shadow: none;
   }
 
   /*Recipe And Drink Card*/
@@ -193,11 +264,10 @@
   }
   .recipe-image {
     display: flex;
-    justify-content: end;
-    margin: 0px 10px 10px 5px;
-    width: 40%;
+    justify-content: center;
+    width: 90%;
     height: 50%;
-    border: 2px solid #ffff;
+    border: 3px solid #ffff;
     border-radius: 5px;
     background-color: #ffff;
   }
@@ -208,8 +278,7 @@
   }
   .inner-container {
     display: flex;
-    flex-direction: row;
-    margin-left: 6px;
+    justify-content: center;
   }
   .info {
     display: flex;
@@ -229,10 +298,14 @@
   }
   .specifics {
     display: flex;
-    flex-direction: row;
-    margin: 0px 10px 10px 10px;
-    border-radius: 10px;
-    background-color: #ffff;
+    flex-flow: column wrap;
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 2px #e9e9e9; 
+    background-color: #ffffff;
     padding: 2px;
+  }
+  .specifics  p{
+    margin: 2px 0px 0px 5px;
   }
 }

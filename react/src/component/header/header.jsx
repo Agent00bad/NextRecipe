@@ -1,7 +1,7 @@
 import "../../SCSS/headerfooter.scss";
 import "../../SCSS/search_bar.scss";
-import menuicon from "../../Images/menu-icon.png";
-import crossicon from "../../Images/cross-icon.png";
+import menuicon from "../../Images/menuIcon.png";
+import crossicon from "../../Images/cross.png";
 import logo from "../../Images/perfectpair_transparent.png";
 import userIcon from "../../Images/user-icon.png";
 import searchImage from "../../Images/Search.png";
@@ -39,7 +39,9 @@ export default function Header({ setSearch }) {
         <div className="header">
           {onFilterPage == true ? (
             <Link to="/" className="menu-link">
-              <img src={crossicon} />
+              <div className="filterBox">
+                <img src={crossicon} id="cross"/>
+              </div>
             </Link>
           ) : (
             <Link to="/filter" className="menu-link">
@@ -55,7 +57,7 @@ export default function Header({ setSearch }) {
             </div>
           </Link>
           {/* <Link to="loading" className="login-link"><img src={userIcon}/></Link> */}
-          <form onSubmit={(e) => submitHandler(e)}>
+          <form onSubmit={(e) => submitHandler(e)} className="pop">
             <div className="search-container">
               <input
                 type="text"

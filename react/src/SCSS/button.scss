@@ -5,27 +5,19 @@
         border: none;
         cursor: pointer;
         
-        padding: 15px 20px;
+        padding: 10px 15px;
         border-radius: 100px;
         background-color: #e6e1e1;
         color: #000000;
         
-        margin-right: 15px;
-        margin-left: 15px;
+        margin-right: 8px;
+        margin-left: 8px;
         box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease 0s;
         margin-bottom: 10px;
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 19px;
     }
-
-    /*
-    display: inline-block;
-        
-        min-height: 40px;
-        font-size: 46px;
-        font-weight: 500;
-    */
 
     .selected{
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
@@ -47,30 +39,70 @@
         margin-bottom: 10px;
         margin-top: 10px;
     }
-
-
+    .load-more:hover{
+        transform: translateY(1px);
+        background-color: #fbfbfb;
+        color:  #ff719c;
+    }
+    .load-more:active{
+        transform: translateY(3px);
+        background-color: #f2f2f2;
+        color:  #ff3b76;
+        box-shadow: none;
+    }
     .arrow{
-        max-width: 45px;
-        max-height: 30px;
+        width: 30px;
+        height: 30px;
         margin-right: 10px;
-        
+        background-color: #ffffff;
         cursor: pointer;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
+    .arrowdown{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transition: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .arrowup{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transition: rotate(225deg);
+        -webkit-transform: rotate(225deg);
+
+    }
+
     #apply-button{
-        background-color: rgb(56, 179, 56);
-        
+        background-color: #FE91C6;
+        color: white;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+    #apply-button:hover{
+        background-color: #FEAFC7;
+    }
+    #apply-button:active{
+        background-color: #fdc5d6;
     }
 
     #clear-button{
-        background-color: rgb(255, 70, 70);
-        
+        background-color: #FE91C6;
+        color: white;
+        font-weight: 600;
+        transition: 0.5s;
+        margin-right: 50px;
+    }
+    #clear-button:hover{
+        background-color: #FEAFC7;
+    }
+    #clear-button:active{
+        background-color: #fdc5d6;
     }
 
-    /*
-    padding-bottom: 40px;
-    padding-bottom: 40px;
-    */
 }

@@ -1,11 +1,20 @@
 import "../../SCSS/headerfooter.scss"
+import { Link } from "react-router-dom"
 
 export default function Footer(){
     return(
         <div className="headerfooter">
         <footer className="footer">
-            <t><a href="">Contact</a></t>
-            <t><a href="">About</a></t>
+            <div className="contact">
+        <Link to="/contact" >
+              <b>Contact</b>
+            </Link>
+            </div>
+            <div className="about">
+            <Link to="/about">
+            <b>About</b>
+            </Link>
+            </div>
         </footer>
         </div>
     )

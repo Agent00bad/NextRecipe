@@ -1,194 +1,142 @@
-// <!--General-->
-.recipe {
-  HTML {
-    scroll-behavior: smooth;
-  }
 
-  .main {
-    max-width: 700px;
-    min-width: 300px;
-  }
-
-  body {
-    background-color: var(--white);
-
-    padding-bottom: 30px;
-    overflow-x: hidden;
-    align-content: center;
-    padding-bottom: 10px;
-  }
-
-  div {
-    margin: auto;
-  }
-
-  h3 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: center;
-    vertical-align: center;
-  }
-  h4 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: center;
-    vertical-align: center;
-  }
-
-  p {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  ul {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  ol {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  // <!--Elements-->
-
-  #recommendedDrinkBox {
-    max-width: 520px;
-  }
-
-  .arrowRight {
-    width: fit-content;
-    height: auto;
-
-    fill: "currentColor";
-    margin: auto;
-    position: static;
-    align-self: center;
-    max-width: 7%;
-    cursor: pointer;
-  }
-
-  .arrowLeft {
-    width: fit-content;
-    height: auto;
-    fill: "currentColor";
-    margin: auto;
-    position: static;
-    align-self: center;
-    max-width: 7%;
-    cursor: pointer;
-    transform: rotateY(180deg);
-  }
-
-  .headImage {
+  .recipe {
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    flex-flow: column wrap;
+
+    HTML {
+      scroll-behavior: smooth;
+    }
+
+    h3 {
+      margin: 10px;
+      text-align: center;
+      vertical-align: center;
+      color: white;
+    }
+    
+    h4 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+      vertical-align: center;
+      color: white;
+    }
+  
+    li {
+      text-align: left;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  
+    strong{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    img{
+      border: solid 5px #ffff; 
+    }
+  /*Skriver över skit*/
+  #card{
+    background: linear-gradient(-45deg, #f94fa1, #fe8cc3, #fcacc4, #fcb7cc);
+    background-size: 150% 150%;
+    box-shadow: 0px 3px 5px rgb(143, 142, 142);
+    border: 3px solid #fe91c6;
+    border-radius: 15px;
+    margin: 20px;
   }
 
-  .headImage img {
-    width: 100%;
+  //Mobile
+  @media only screen and (max-width: 1024px) {
+    .headImage {
+      display: flex;
+      margin: auto;
+    }
+
+    .visible-1024-1300{
+      display: none;
+    }
+
+    .headImage img {
+      width: 100%;
+      border-radius: 5px;
+      margin: 10px;
+    }
+  }
+  //Desktop
+  @media only screen and (min-width: 1024px) {
+    .headImage {
+      display: flex;
+      width: 400px;
+    }
+
+    .horizontal-wrap{
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .headImage img {
+      display: flex;
+      width: 380px;
+      border-radius: 5px;
+      margin: 8px;
+    }
+
+    
   }
 
-  .boxParent {
-    width: fit-content;
-    margin: 0px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-  .description {
-    background-color: var(--pink-regular);
-    align-content: center;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 3px 5px gray;
-  }
-
-  .listCard {
-    background-color: var(--pink-regular);
-    align-content: center;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 3px 5px gray;
+  @media only screen and (min-width: 1024px) and (max-width: 1300px){
+    .row_1 {
+      display: flex;
+      flex-wrap: wrap;
+    } 
+      .visible-1024-1300{
+        display: none;
+      }
+  
+      .visible-1301{
+        visibility: visible;
+      }
+    
   }
 
   .drinkBox {
-    background-color: var(--pink-regular);
     align-content: center;
-    box-sizing: border-box;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 0px 15px;
-    box-shadow: 0px 3px 5px gray;
-    border-radius: 5px;
-  }
-
-  @media only screen and (max-width: 600px) and (min-width: 300px) {
-    #recommendedDrinkBox {
-      width: 80%;
-    }
-    .arrowLeft {
-      width: fit-content;
-    }
-    .arrowRight {
-      width: fit-content;
-    }
-  }
-
-  .listCard-innerbox {
-    background-color: var(--white);
-    align-content: center;
-    width: fit-content;
-    height: fit-content;
-    padding: 5px;
-    border-radius: 4%;
+    max-width: 250px;
   }
 
   .drinkImage img {
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin: auto;
-    width: 100%;
+    width: 220px;
+    border: 3px solid #ffffff;
     border-radius: 5px;
   }
 
-  .drinkGroup {
+  .drinkDescription{
+    padding: 15px;
+  }
+
+  .specifics {
     display: flex;
-    flex-direction: row;
-    justify-content: center;  
-}
-
-  .Center {
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 2%;
+    flex-flow: column wrap;
+    margin: 8px;
+    border-radius: 5px;
+    border: solid 2px #e9e9e9; 
+    background-color: #ffffff;
+    padding: 2px;
   }
-
-  .CenterText {
-    text-align: center;
-    max-width: 50%;
-    margin-left: 0%;
-  }
-
-  .drinkDescription {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .drinkImage {
-    object-fit: contain;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-size: contain;
+  .specifics  p{
+    margin: 2px 0px 0px 5px;
   }
 }

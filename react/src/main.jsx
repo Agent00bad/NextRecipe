@@ -5,6 +5,8 @@ import Root from "./root"
 import Index from "./component/index"
 import Filter from "./component/filter/filter"
 import Recipe from "./component/recipe/recipeMain"
+import About from './component/about/about'
+import Contact from './component/contact/contact'
 import Loading from "./component/loading/loading"
 
 const router = createBrowserRouter(
@@ -24,6 +26,16 @@ const router = createBrowserRouter(
         {
           path: "recipe/",
           element: <Recipe/>
+        }
+        ,
+        {
+          path: "/about",
+          element: <About/>
+        }
+        ,
+        {
+          path: "/contact",
+          element: <Contact/>
         }
       ]
     },

@@ -3,25 +3,18 @@ import "../../SCSS/colorscheme.scss";
 import "../../SCSS/recipe.scss";
 import "../../SCSS/HeaderFooter.scss";
 import HeadImage from "./recipeHeadImage";
-import Description from "./recipeDescription";
+import Title from "./recipeTitle";
 import DrinkGroup from "./recipeDrinkGroup";
-import RecipeImage from "../../Images/image.jpg";
 import RecipeListCard from "./recipeListCard";
-import RecDrinkImage from "../../Images/wine.jpg";
 import { useLocation } from "react-router-dom";
 import { winePairingKeywords } from "../../JS/winePairingKeywords";
 import { fetchApiSpoonacular } from "../../JS/fetchApiSpoonacular";
+import Portion from "./recipePortions";
+import Nutrition from "./recipeNutrition";
 
 export default function Recipe() {
   let { state } = useLocation();
   const [wineData, setWineData] = useState(null);
-  const defaultWine = {
-    description:
-      "As with any wine tasting experience, it begins with the aromas rising from the glass. For Riesling wine, the aromas can be intense even when the wine is ice cold. The initial aromas of a Riesling wine are orchard fruits like nectarine, honey-crisp apple, pear, and apricot. Plus, you might also note softer, more soothing scents like jasmine, honeycomb, or lime zest.",
-    image:
-      "https://latahcreek.com/assets/uploads/post/What-Does-Riesling-Taste-Like.jpg",
-    title: "Riesling ",
-  };
 
   useEffect(() => {
     const getWine = async () => {
@@ -50,46 +43,53 @@ export default function Recipe() {
       }
     };
     getWine();
-    console.log(wineData);
-    // if(!wineData){
-    //   console.log("setting default")
-    //   setWineData(defaultWine)
-    // }
   }, []);
 
   return (
-    <div className="main recipe">
-      {/* Description */}
-      <Description
-        description={`Cuisine type: ${state.recipe.cuisineType}`}
-        title={state.recipe.label}
-      />
+    <div className="recipe">
+      <div>
+        <Title
+          cuisine={`Cuisine type: ${state.recipe.cuisineType}`}
+          title={state.recipe.label}
+        />
+        <div className="horizontal-wrap">
+          <div>
+            <HeadImage
+              alt={`Image of:  ${state.recipe.label}`}
+              recipeImage={state.recipe.image}
+            />
+            <Portion
+              nutrient={state.recipe.totalNutrients}
+              portions={state.recipe.yield}
+              weight={state.recipe.totalWeight}
+            />
+          </div>
+          <div>
+            <RecipeListCard ingredients={state.recipe.ingredientLines} />
+            <Nutrition
+              nutrient={state.recipe.totalNutrients}
+              weight={state.recipe.totalWeight}
+            />
+          </div>
+          <div>{fetchedWine(wineData)}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-      {/* Head Image */}
-      <HeadImage
-        description="HeadDesciption"
-        recipeImage={state.recipe.image}
-      />
-
-      {/* Ingredients */}
-      <RecipeListCard
-        isOrdered={false}
-        Listitems={state.recipe.ingredientLines}
-      />
-
-      {/* How to */}
-      {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
-
-      {/* Recommended Drink */}
-      {wineData && (
-        <div className="loaded-drink">
+function fetchedWine(wineData) {
+  if (wineData != null) {
+    return (
+      <>
+        {wineData && (
           <DrinkGroup
             drinkImage={wineData.image}
             drinkDescription={wineData.description}
             drinkTitle={wineData.title}
           />
-        </div>
-      )}
-    </div>
-  );
+        )}
+      </>
+    );
+  }
 }

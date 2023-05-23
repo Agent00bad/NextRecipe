@@ -4,11 +4,7 @@ import {useState, useEffect, useRef} from "react"
 import { Card } from "./card";
 import { ActiveFilter } from "./activeFilter";
 import { fetchApiEdemam } from "../../JS/fetchApiEdamam";
-import logo from "../../Images/logo.png";
 import { useOutletContext } from "react-router-dom";
-import menuIcon from "../../Images/menu-icon.png";
-import perfectpair_transparent from "../../Images/perfectpair_transparent.png";
-import userIcon from "../../Images/user-icon.png";
 import Loading from "../loading/loading"
 import Filter from "../filter/filter.jsx";
 import "../../SCSS/button.scss";

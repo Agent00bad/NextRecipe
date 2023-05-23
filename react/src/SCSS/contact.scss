@@ -25,9 +25,12 @@
            
             background: linear-gradient(-45deg, #f94fa1, #fe8cc3, #fcacc4, #fcb7cc);
             background-size: 150% 150%;
-            width: 225px;
+            border: 3px solid #fe91c6;
             border-radius: 15px;
             box-shadow: 0px 3px 5px rgb(143, 142, 142);
+
+            width: 225px;
+
             margin-top: 15px;
             margin-bottom: 15px;
             transition: 0.5s;
@@ -52,6 +55,7 @@
             background: linear-gradient(-45deg, #f94fa1, #fe8cc3, #fcacc4, #fcb7cc);
             background-size: 150% 150%;
             width: 225px;
+            border: 3px solid #fe91c6;
             border-radius: 15px;
             box-shadow: 0px 3px 5px rgb(143, 142, 142);
             transition: 0.5s;

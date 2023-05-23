@@ -47,11 +47,11 @@ export default function Recipe() {
 
   return (
     <div className="recipe">
-      <div>
         <Title
           cuisine={`Cuisine type: ${state.recipe.cuisineType}`}
           title={state.recipe.label}
         />
+      <div>
         <div className="horizontal-wrap">
           <div>
             <HeadImage
@@ -71,7 +71,7 @@ export default function Recipe() {
               weight={state.recipe.totalWeight}
             />
           </div>
-          <div>{fetchedWine(wineData)}</div>
+          <div className="wineContainer">{fetchedWine(wineData)}</div>
         </div>
       </div>
     </div>

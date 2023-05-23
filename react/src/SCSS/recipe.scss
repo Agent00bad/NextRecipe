@@ -83,6 +83,8 @@
     .horizontal-wrap{
       display: flex;
       flex-flow: row wrap;
+      align-content: center;
+      justify-content: center;
     }
 
     .headImage img {
@@ -138,5 +140,9 @@
   }
   .specifics  p{
     margin: 2px 0px 0px 5px;
+  }
+  .wineContainer{
+    display: flex;
+    justify-content: center;
   }
 }

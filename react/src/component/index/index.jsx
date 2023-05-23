@@ -50,7 +50,7 @@ const[activeFilter, setActiveFilters] = useOutletContext();
         {/* <!--Shows overview recipe details and works as a selection--> */}
        {/* <div className="recipe-drink-flex"> */}
           {/* <!--Displays active filters--> */}
-            <div className="stickySpace" id="stickySpace" style={{display: (width > 1024) ? 'none' : 'block'}}>
+            <div className="stickySpace" id="stickySpace" style={{display: (width > 1024) ? 'none' : 'block' && 'flex', justifyContent: 'center'}}>
             <ActiveFilter
                 filters={activeFilter}
                 header={"Active Filter"}

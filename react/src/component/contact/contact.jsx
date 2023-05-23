@@ -3,8 +3,8 @@ import { ContactCard } from "./contactCard";
 import Image from "../../Images/profil.png";
 import oof from "../../Sounds/oof.mp3";
 
-// import LinneaWillebrandVinnberg from "../../Images/Team/LinneaWillebrandVinnberg.INSERTFORMAT"
-// import AndreaOlofsson from "../../Images/Team/AndreaOlofsson.INSERTFORMAT"
+import LinneaWillebrandVinnberg from "../../Images/Team/LinneaWillebrandVinnberg.png"
+import AndreaOlofsson from "../../Images/Team/AndreaOlofsson.png"
 import ImirNorlin from "../../Images/Team/ImorNorlin.jpg"
 import GustavAlbert from "../../Images/Team/GustavAlbert.jpg"
 // import DanielAlden from "../../Images/Team/DanielAlden.INSERTFORMAT"
@@ -25,7 +25,7 @@ export default function Contact() {
 
         <div className="row1">
           <ContactCard
-            image={Image}
+            image={LinneaWillebrandVinnberg}
             fullName={"Linnea Willebrand Vinnberg"}
             occupation={"Project Leader"}
             availableAtLinkedIn={true}
@@ -35,7 +35,7 @@ export default function Contact() {
           />
 
           <ContactCard
-            image={Image}
+            image={AndreaOlofsson}
             fullName={"Andrea Olofsson"}
             occupation={"Project Leader"}
             availableAtLinkedIn={true}

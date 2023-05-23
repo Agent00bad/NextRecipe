@@ -9,7 +9,7 @@ import ImirNorlin from "../../Images/Team/ImorNorlin.jpg"
 import GustavAlbert from "../../Images/Team/GustavAlbert.jpg"
 // import DanielAlden from "../../Images/Team/DanielAlden.INSERTFORMAT"
 // import JessicaSjosten from "../../Images/Team/JessicaSjosten.INSERTFORMAT"
-// import JonathanPerlow from "../../Images/Team/JonathanPerlow.INSERTFORMAT"
+import JonathanPerlow from "../../Images/Team/JonathanPerlow.jpg"
 import RobertGrimsborn from "../../Images/Team/jag4.jpg"
 // import AdamTollin from "../../Images/Team/AdamTollin.INSERTFORMAT"
 
@@ -83,7 +83,7 @@ export default function Contact() {
 
         <div className="row2">
           <ContactCard
-            image={Image}
+            image={JonathanPerlow}
             fullName={"Jonathan Perlow"}
             occupation={".Net Developer"}
             availableAtLinkedIn={true}

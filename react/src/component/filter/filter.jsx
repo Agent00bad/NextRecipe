@@ -4,10 +4,8 @@ import "../../scss/colorscheme.scss";
 import "../../scss/filter.scss";
 import "../../scss/button.scss";
 import arrowDown from "../../Images/arrow-down.png";
-import CheckMarkSquare from "../../images/pink-square.png";
 import { useOutletContext } from "react-router-dom";
-import { Link, useLocation } from "react-router-dom";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Filter({onMobile = true}) {
   const [activeFilters, setActiveFilters] = useOutletContext();
@@ -148,11 +146,8 @@ export default function Filter({onMobile = true}) {
     );
   }
 
-  // -------    BOTH    -------
-
   function ApplyClearPills({ types, id }) {
     return (
-      <>
         <div className="filterandbutton">
           {types.map((data) => (
             <button
@@ -166,54 +161,6 @@ export default function Filter({onMobile = true}) {
             </button>
           ))}
         </div>
-      </>
-    );
-  }
-
-  // -------    DESKTOP    -------
-
-  function DesktopCheckbox({ types }) {
-    return types.map((item, index) => (
-      <div key={index}>
-               {" "}
-        <label className="container">
-          {item}
-                    <input type="checkbox" />         {" "}
-          <span className="checkmark"></span>       {" "}
-        </label>
-             {" "}
-      </div>
-    ));
-  }
-
-  function MatchCheckbox() {
-    return (
-      <label className="container">
-        Match meal with time?       <input type="checkbox" />     {" "}
-        <span className="checkmark"></span>   {" "}
-      </label>
-    );
-  }
-
-  function SectionDesktop({ header }) {
-    return (
-      <>
-             {" "}
-        <div>
-                  <h2>{header}</h2>        {/* <button id="arrowButton"> */}   
-               {" "}
-          <img
-            className="arrow"
-            src={arrowDown}
-            alt="Arrow down"
-            style={{ maxWidth: "30px" }}
-          />
-                  {/* </button> */}     {" "}
-        </div>
-              <hr />   {" "}
-      </>
     );
   }
 }
-
-// return( //   <> //     <SectionDesktop header="Meal Options"/> //     <DesktopCheckbox types={mealType}/> //     <MatchCheckbox/> //     <hr /> //     <SectionDesktop header="Meal Allergies/Diet"/> //     <DesktopCheckbox types={allergies}/> //     <hr /> //     <SectionDesktop header="Drinks"/> //     <DesktopCheckbox types={proteins}/> //     <hr /> //     <div className="flex-container apply-clear"> //       <ApplyClearPills types={apply} id="apply-button"/> //       <ApplyClearPills types={clear} id="clear-button"/> //     </div> //   </> // )

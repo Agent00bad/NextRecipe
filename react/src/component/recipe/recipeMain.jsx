@@ -3,14 +3,9 @@ import "../../SCSS/colorscheme.scss";
 import "../../SCSS/recipe.scss";
 import "../../SCSS/HeaderFooter.scss";
 import HeadImage from "./recipeHeadImage";
-import Description from "./recipeDescription";
+import Title from "./recipeTitle";
 import DrinkGroup from "./recipeDrinkGroup";
-import RecipeImage from "../../Images/image.jpg";
 import RecipeListCard from "./recipeListCard";
-import RecDrinkImage from "../../Images/wine.jpg";
-
-// import CarbonFont from "../../Images/CarbonFont.jpg"
-
 import { useLocation } from "react-router-dom";
 import { winePairingKeywords } from "../../JS/winePairingKeywords";
 import { fetchApiSpoonacular } from "../../JS/fetchApiSpoonacular";
@@ -20,13 +15,6 @@ import Nutrition from "./recipeNutrition";
 export default function Recipe() {
   let { state } = useLocation();
   const [wineData, setWineData] = useState(null);
-  const defaultWine = {
-    description:
-      "As with any wine tasting experience, it begins with the aromas rising from the glass. For Riesling wine, the aromas can be intense even when the wine is ice cold. The initial aromas of a Riesling wine are orchard fruits like nectarine, honey-crisp apple, pear, and apricot. Plus, you might also note softer, more soothing scents like jasmine, honeycomb, or lime zest.",
-    image:
-      "https://latahcreek.com/assets/uploads/post/What-Does-Riesling-Taste-Like.jpg",
-    title: "Riesling ",
-  };
 
   useEffect(() => {
     const getWine = async () => {
@@ -55,109 +43,53 @@ export default function Recipe() {
       }
     };
     getWine();
-    console.log(wineData);
-    // if(!wineData){
-    //   console.log("setting default")
-    //   setWineData(defaultWine)
-    // }
   }, []);
 
   return (
-    <div className="main recipe" >
-      {/* style={{backgroundImage:CarbonFont}} */}
-      {/* Description */}
-      <Description
-        description={`Cuisine type: ${state.recipe.cuisineType}`}
-        title={state.recipe.label}
-      />
-      <image src = ""></image>
-
-      {/* <div className="CarbonFont flex-rows" style={{backgroundColor: "red"}}> */}
-      {/* <div className="CarbonFont flex-rows" > */}
-      <div className=" row_1" >
-        
-      {/* CarbonFont
-        <img CarbonFont /> */}
-        {/* Flex container - Left */}
-        <div className="static-flex-column">
-          <div className="fixedMargin">
-            {/* Head Image */}
+    <div className="recipe">
+      <div>
+        <Title
+          cuisine={`Cuisine type: ${state.recipe.cuisineType}`}
+          title={state.recipe.label}
+        />
+        <div className="horizontal-wrap">
+          <div>
             <HeadImage
-              description="HeadDesciption"
+              alt={`Image of:  ${state.recipe.label}`}
               recipeImage={state.recipe.image}
             />
-          </div>
-
-          <div className="fixedMargin listCard">
-            {/* Portion */}
             <Portion
               nutrient={state.recipe.totalNutrients}
               portions={state.recipe.yield}
               weight={state.recipe.totalWeight}
             />
           </div>
-
-          <div className="visible-1024-1300">
-          {wineIsNull(wineData)}
-          </div>
-          {/* How to */}
-          {/* <RecipeListCard isOrdered={true} Listitems={HowToList} /> */}
-        </div>
-        {/* Flex container - Left */}
-
-        {/* Flex container - Center */}
-        <div className="dynamic-flex-column">
-          <div className="fixedMargin">
-            {/* Ingredients */}
-            <RecipeListCard
-              
-              isOrdered={false}
-              Listitems={state.recipe.ingredientLines}
+          <div>
+            <RecipeListCard ingredients={state.recipe.ingredientLines} />
+            <Nutrition
+              nutrient={state.recipe.totalNutrients}
+              weight={state.recipe.totalWeight}
             />
           </div>
-
-          <div className="fixedMargin listCard">
-          <Nutrition
-          nutrient = {state.recipe.totalNutrients}
-          weight={state.recipe.totalWeight}
-          
-          />
-
-          
-
-          </div>
-          {/* Flex container - Center */}
+          <div>{fetchedWine(wineData)}</div>
         </div>
-        {/* Flex container Right */}
-        <div className="visible-1301">
-        {wineIsNull(wineData)}
-        </div>
-        {/* Flex container Right */}
       </div>
     </div>
   );
 }
 
-
-function wineIsNull(wineData){
-if(wineData != null){
-  return(
-<div    className="dynamic-flex-column">
-          {/* Recommended Drink */}
-          {wineData && (
-            <div className="loaded-drink fixedMargin">
-              <DrinkGroup
-                drinkImage={wineData.image}
-                drinkDescription={wineData.description}
-                drinkTitle={wineData.title}
-              />
-            </div>
-          )}
-          {/* Flex container Right */}
-
-          
-        </div>
-
-  )
-}
+function fetchedWine(wineData) {
+  if (wineData != null) {
+    return (
+      <>
+        {wineData && (
+          <DrinkGroup
+            drinkImage={wineData.image}
+            drinkDescription={wineData.description}
+            drinkTitle={wineData.title}
+          />
+        )}
+      </>
+    );
+  }
 }

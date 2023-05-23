@@ -69,11 +69,19 @@ main{
     }
     .logo{
         width: 100%;
+        transition: 1s;
     }
     .logoBox{
         width: 70%;
         min-width: 150px;
         // margin: 10px;
+    }
+    .logoBox:active>.logo{
+        background: rgba(0,0,0,.2);
+        border-radius: 50%;
+        -webkit-animation: scale(0);
+        -moz-transform: scale(0);
+        transform: scale(0);
     }
 
 
@@ -92,9 +100,25 @@ main{
     }
     #cross{
         width: 50px;
+        transition: 1s;
     }
     .filterBox >img{
         width: 50px;
+        transition: 1s;
+    }
+    .menu-link:active>#cross{
+        background: rgba(0,0,0,.2);
+        border-radius: 50%;
+        -webkit-animation: scale(0);
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+    .menu-link:active>.filterBox >img{
+        background: rgba(0,0,0,.2);
+        border-radius: 50%;
+        -webkit-animation: scale(0);
+        -moz-transform: scale(0);
+        transform: scale(0);
     }
 
     .footer {

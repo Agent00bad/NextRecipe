@@ -28,7 +28,7 @@ Linnea Willebrand Vinnberg.
 
 Länkar till externa resurser:
 Github:
-https://github.com/Agent00bad/NextRecipe/settings
+https://github.com/Agent00bad/NextRecipe
 
 Figma:
 https://www.figma.com/file/nxeKpaf5QlVEQnb9zu9ykV/Recipe---Design?type=design&node-id=0-1&t=GsRGypvhMUk5gHg5-0
